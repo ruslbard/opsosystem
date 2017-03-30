@@ -122,24 +122,112 @@
 		    (object Class "client"
 			quid       	"58D632FD0272"
 			stereotype 	"Actor")
-		    (object UseCase "Просмотр тарифов"
+		    (object UseCase "Работа с тарифами"
 			quid       	"58D6331002F4")
+		    (object UseCase "Просмотреть свою детальную иформацию"
+			quid       	"58DC1A150208")
+		    (object UseCase "Изменить набор опций"
+			quid       	"58DC1A460112")
 		    (object Association "$UNNAMED$0"
 			quid       	"58D633210082"
 			roles      	(list role_list
 			    (object Role "$UNNAMED$1"
 				quid       	"58D6332103AD"
-				supplier   	"Use Case View::Business Use-Case Model::Просмотр тарифов"
+				supplier   	"Use Case View::Business Use-Case Model::Работа с тарифами"
 				quidu      	"58D6331002F4"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$2"
 				quid       	"58D6332103AF"
 				supplier   	"Use Case View::Business Use-Case Model::client"
+				quidu      	"58D632FD0272")))
+		    (object Association "$UNNAMED$3"
+			quid       	"58DC19220364"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$4"
+				quid       	"58DC192302AC"
+				supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Options"
+				quidu      	"58D634250345"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$5"
+				quid       	"58DC192302AE"
+				supplier   	"Use Case View::Use-Case Model::Actors::Operator"
+				quidu      	"58DC188D0297")))
+		    (object Association "$UNNAMED$6"
+			quid       	"58DC193A0357"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$7"
+				quid       	"58DC193B023A"
+				supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Block Number"
+				quidu      	"58D633C6035D"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$8"
+				quid       	"58DC193B023C"
+				supplier   	"Use Case View::Use-Case Model::Actors::Operator"
+				quidu      	"58DC188D0297")))
+		    (object Association "$UNNAMED$9"
+			quid       	"58DC193E0171"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$10"
+				quid       	"58DC193F0060"
+				supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::View Contract Detail"
+				quidu      	"58D6357800D1"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$11"
+				quid       	"58DC193F0062"
+				supplier   	"Use Case View::Use-Case Model::Actors::Operator"
+				quidu      	"58DC188D0297")))
+		    (object Association "$UNNAMED$12"
+			quid       	"58DC194100C9"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$13"
+				quid       	"58DC19410346"
+				supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Unblock Number"
+				quidu      	"58D6340001CC"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$14"
+				quid       	"58DC19410348"
+				supplier   	"Use Case View::Use-Case Model::Actors::Operator"
+				quidu      	"58DC188D0297")))
+		    (object Association "$UNNAMED$15"
+			quid       	"58DC194401C3"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$16"
+				quid       	"58DC194403C8"
+				supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Tariffs"
+				quidu      	"34E37FB203D4"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$17"
+				quid       	"58DC194403CB"
+				supplier   	"Use Case View::Use-Case Model::Actors::Operator"
+				quidu      	"58DC188D0297")))
+		    (object Association "$UNNAMED$18"
+			quid       	"58DC1A340120"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$19"
+				quid       	"58DC1A35004C"
+				supplier   	"Use Case View::Business Use-Case Model::Просмотреть свою детальную иформацию"
+				quidu      	"58DC1A150208"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$20"
+				quid       	"58DC1A35004E"
+				supplier   	"Use Case View::Business Use-Case Model::client"
+				quidu      	"58D632FD0272")))
+		    (object Association "$UNNAMED$21"
+			quid       	"58DC1A5902F9"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$22"
+				quid       	"58DC1A5A00C8"
+				supplier   	"Use Case View::Business Use-Case Model::Изменить набор опций"
+				quidu      	"58DC1A460112"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$23"
+				quid       	"58DC1A5A00CA"
+				supplier   	"Use Case View::Business Use-Case Model::client"
 				quidu      	"58D632FD0272"))))
 		logical_presentations 	(list unit_reference_list
-		    (object UseCaseDiagram "Global View of Business Actors and Business Use Cases"
+		    (object UseCaseDiagram "Client buisiness use-cases"
 			quid       	"35C0DFF50172"
-			title      	"Global View of Business Actors and Business Use Cases"
+			title      	"Client buisiness use-cases"
 			documentation 	"This is a global view of the system showing all Busines Use Cases and Business Actors.  It is intended to be an overview diagram, so if the diagram becomes too complex for easy comprehension, use several diagrams, each of which should focus on a different aspect of the system.  Usually, organizing use case diagrams around actors is a good approach."
 			zoom       	100
 			max_height 	28350
@@ -147,8 +235,8 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object UseCaseView "Use Case View::Business Use-Case Model::Просмотр тарифов" @1
-				location   	(2416, 672)
+			    (object UseCaseView "Use Case View::Business Use-Case Model::Работа с тарифами" @1
+				location   	(2624, 1360)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -161,22 +249,19 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1
-				    location   	(2416, 810)
+				    location   	(2624, 1498)
 				    anchor_loc 	1
 				    nlines     	2
 				    max_width  	630
 				    justify    	0
-				    label      	"Просмотр тарифов")
+				    label      	"Работа с тарифами")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"58D6331002F4"
 				height     	118)
-			    (object ClassView "Class" "Use Case View::Business Use-Case Model::client" @2
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(1776, 672)
+			    (object UseCaseView "Use Case View::Business Use-Case Model::Просмотреть свою детальную иформацию" @2
+				location   	(2432, 736)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -189,7 +274,34 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@2
-				    location   	(1776, 832)
+				    location   	(2432, 874)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	630
+				    justify    	0
+				    label      	"Просмотреть свою детальную иформацию")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"58DC1A150208")
+			    (object ClassView "Class" "Use Case View::Business Use-Case Model::client" @3
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(1744, 1136)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@3
+				    location   	(1744, 1296)
 				    anchor_loc 	1
 				    nlines     	2
 				    max_width  	325
@@ -201,8 +313,8 @@
 				quidu      	"58D632FD0272"
 				annotation 	8
 				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$0" @3
-				location   	(2069, 672)
+			    (object AssociationViewNew "$UNNAMED$0" @4
+				location   	(2156, 1239)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -217,29 +329,133 @@
 				line_color 	3342489
 				quidu      	"58D633210082"
 				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$1" @4
-					Parent_View 	@3
-					location   	(293, 0)
+				    (object RoleView "$UNNAMED$1" @5
+					Parent_View 	@4
+					location   	(380, 567)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"58D6332103AD"
-					client     	@3
+					client     	@4
 					supplier   	@1
 					vertices   	(list Points
-					    (2069, 672)
-					    (2304, 672))
+					    (2156, 1239)
+					    (2512, 1329))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$2" @5
-					Parent_View 	@3
-					location   	(293, 0)
+				    (object RoleView "$UNNAMED$2" @6
+					Parent_View 	@4
+					location   	(380, 567)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"58D6332103AF"
-					client     	@3
+					client     	@4
+					supplier   	@3
+					vertices   	(list Points
+					    (2156, 1239)
+					    (1801, 1149))
+					line_style 	0)))
+			    (object AssociationViewNew "$UNNAMED$18" @7
+				location   	(1977, 998)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"58DC1A340120"
+				roleview_list 	(list RoleViews
+				    (object RoleView "$UNNAMED$19" @8
+					Parent_View 	@7
+					location   	(409, -90)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"58DC1A35004C"
+					client     	@7
 					supplier   	@2
 					vertices   	(list Points
-					    (2069, 672)
-					    (1833, 672))
+					    (1977, 998)
+					    (2153, 898))
+					line_style 	0)
+				    (object RoleView "$UNNAMED$20" @9
+					Parent_View 	@7
+					location   	(409, -90)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"58DC1A35004E"
+					client     	@7
+					supplier   	@3
+					vertices   	(list Points
+					    (1977, 998)
+					    (1801, 1098))
+					line_style 	0)))
+			    (object UseCaseView "Use Case View::Business Use-Case Model::Изменить набор опций" @10
+				location   	(1296, 784)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@10
+				    location   	(1296, 922)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	630
+				    justify    	0
+				    label      	"Изменить набор опций")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"58DC1A460112")
+			    (object AssociationViewNew "$UNNAMED$21" @11
+				location   	(1593, 1016)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"58DC1A5902F9"
+				roleview_list 	(list RoleViews
+				    (object RoleView "$UNNAMED$22" @12
+					Parent_View 	@11
+					location   	(-151, -120)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"58DC1A5A00C8"
+					client     	@11
+					supplier   	@10
+					vertices   	(list Points
+					    (1593, 1016)
+					    (1503, 945))
+					line_style 	0)
+				    (object RoleView "$UNNAMED$23" @13
+					Parent_View 	@11
+					location   	(-151, -120)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"58DC1A5A00CA"
+					client     	@11
+					supplier   	@3
+					vertices   	(list Points
+					    (1593, 1016)
+					    (1684, 1088))
 					line_style 	0)))))))
 	    (object Class_Category "Use-Case Model"
 		quid       	"35B677F4010E"
@@ -276,6 +492,9 @@
 |- Activity: Find Actors and Use Cases
 |- Guidelines: Actor>>
 				
+				stereotype 	"Actor")
+			    (object Class "Operator"
+				quid       	"58DC188D0297"
 				stereotype 	"Actor"))
 			logical_presentations 	(list unit_reference_list))
 		    (object Class_Category "Use Cases"
@@ -294,12 +513,12 @@
 			
 			exportControl 	"Public"
 			logical_models 	(list unit_reference_list
-			    (object Class_Category "<Use Case Name>"
+			    (object Class_Category "Operator use-cases"
 				quid       	"35C0EC150366"
 				documentation 	" A separate package is recommended for each Use Case to facilitate access and version control of related use case artifacts."
 				exportControl 	"Public"
 				logical_models 	(list unit_reference_list
-				    (object UseCase "Change Tatrifs"
+				    (object UseCase "Change Tariffs"
 					quid       	"34E37FB203D4"
 					documentation 	
 |<<The brief description of the use case is entered here.  For guidance on what should go in this description, see the following Rational Unified Process references:
@@ -318,7 +537,7 @@
 						origin_x   	0
 						origin_y   	0
 						items      	(list diagram_item_list
-						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Tatrifs" @6
+						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Tariffs" @14
 							location   	(2800, 1600)
 							font       	(object Font
 							    size       	9
@@ -331,20 +550,20 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@6
+							    Parent_View 	@14
 							    location   	(2800, 1738)
 							    anchor_loc 	1
 							    nlines     	2
-							    max_width  	631
+							    max_width  	634
 							    justify    	0
-							    label      	"Change Tatrifs")
+							    label      	"Change Tariffs")
 							icon_style 	"Icon"
 							line_color 	3342489
 							fill_color 	13434879
 							quidu      	"34E37FB203D4"
 							height     	118
 							autoResize 	TRUE)
-						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Block Number" @7
+						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::Block Number" @15
 							location   	(1392, 512)
 							font       	(object Font
 							    size       	9
@@ -357,7 +576,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@7
+							    Parent_View 	@15
 							    location   	(1392, 650)
 							    anchor_loc 	1
 							    nlines     	2
@@ -369,7 +588,7 @@
 							fill_color 	13434879
 							quidu      	"58D633C6035D"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Unblock Number" @8
+						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::Unblock Number" @16
 							location   	(2624, 720)
 							font       	(object Font
 							    size       	9
@@ -382,7 +601,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@8
+							    Parent_View 	@16
 							    location   	(2624, 858)
 							    anchor_loc 	1
 							    nlines     	2
@@ -394,7 +613,7 @@
 							fill_color 	13434879
 							quidu      	"58D6340001CC"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Options" @9
+						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Options" @17
 							location   	(1632, 1824)
 							font       	(object Font
 							    size       	9
@@ -407,7 +626,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@9
+							    Parent_View 	@17
 							    location   	(1632, 1962)
 							    anchor_loc 	1
 							    nlines     	2
@@ -419,7 +638,7 @@
 							fill_color 	13434879
 							quidu      	"58D634250345"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::View Contract Detail" @10
+						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::View Contract Detail" @18
 							location   	(1040, 1280)
 							font       	(object Font
 							    size       	9
@@ -432,7 +651,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@10
+							    Parent_View 	@18
 							    location   	(1040, 1418)
 							    anchor_loc 	1
 							    nlines     	2
@@ -444,7 +663,7 @@
 							fill_color 	13434879
 							quidu      	"58D6357800D1"
 							height     	118)
-						    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::client" @11
+						    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::client" @19
 							ShowCompartmentStereotypes 	TRUE
 							IncludeAttribute 	TRUE
 							IncludeOperation 	TRUE
@@ -460,7 +679,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@11
+							    Parent_View 	@19
 							    location   	(1904, 1328)
 							    anchor_loc 	1
 							    nlines     	2
@@ -473,7 +692,7 @@
 							quidu      	"353D5816026C"
 							annotation 	8
 							autoResize 	TRUE)
-						    (object AssociationViewNew "" @12
+						    (object AssociationViewNew "" @20
 							location   	(2325, 1369)
 							font       	(object Font
 							    size       	9
@@ -489,31 +708,31 @@
 							line_color 	3342489
 							quidu      	"35C0ED3A00F0"
 							roleview_list 	(list RoleViews
-							    (object RoleView "" @13
-								Parent_View 	@12
+							    (object RoleView "" @21
+								Parent_View 	@20
 								location   	(2085, 185)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"35C0ED3B0118"
-								client     	@12
-								supplier   	@6
+								client     	@20
+								supplier   	@14
 								vertices   	(list Points
 								    (2325, 1369)
-								    (2690, 1544))
+								    (2690, 1545))
 								line_style 	0)
-							    (object RoleView "" @14
-								Parent_View 	@12
+							    (object RoleView "" @22
+								Parent_View 	@20
 								location   	(2085, 185)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"35C0ED3B0119"
-								client     	@12
-								supplier   	@11
+								client     	@20
+								supplier   	@19
 								vertices   	(list Points
 								    (2325, 1369)
 								    (1961, 1194))
 								line_style 	0)))
-						    (object AssociationViewNew "" @15
+						    (object AssociationViewNew "" @23
 							location   	(1680, 883)
 							font       	(object Font
 							    size       	9
@@ -529,32 +748,32 @@
 							line_color 	3342489
 							quidu      	"58D633E903E3"
 							roleview_list 	(list RoleViews
-							    (object RoleView "" @16
-								Parent_View 	@15
+							    (object RoleView "" @24
+								Parent_View 	@23
 								location   	(1232, -141)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D633EA0242"
-								client     	@15
-								supplier   	@7
+								client     	@23
+								supplier   	@15
 								vertices   	(list Points
 								    (1680, 883)
 								    (1516, 673))
 								line_style 	0)
-							    (object RoleView "" @17
-								Parent_View 	@15
+							    (object RoleView "" @25
+								Parent_View 	@23
 								location   	(1232, -141)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D633EA0244"
-								client     	@15
-								supplier   	@11
+								client     	@23
+								supplier   	@19
 								vertices   	(list Points
 								    (1680, 883)
 								    (1845, 1093))
 								line_style 	0)))
-						    (object AssociationViewNew "" @18
-							location   	(2220, 967)
+						    (object AssociationViewNew "" @26
+							location   	(2162, 1004)
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -569,32 +788,32 @@
 							line_color 	3342489
 							quidu      	"58D6340D0074"
 							roleview_list 	(list RoleViews
-							    (object RoleView "" @19
-								Parent_View 	@18
-								location   	(1772, -57)
+							    (object RoleView "" @27
+								Parent_View 	@26
+								location   	(1714, -20)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D6340E002A"
-								client     	@18
-								supplier   	@8
+								client     	@26
+								supplier   	@16
 								vertices   	(list Points
-								    (2220, 967)
-								    (2360, 881))
+								    (2162, 1004)
+								    (2364, 881))
 								line_style 	0)
-							    (object RoleView "" @20
-								Parent_View 	@18
-								location   	(1772, -57)
+							    (object RoleView "" @28
+								Parent_View 	@26
+								location   	(1714, -20)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D6340E0039"
-								client     	@18
-								supplier   	@11
+								client     	@26
+								supplier   	@19
 								vertices   	(list Points
-								    (2220, 967)
-								    (1961, 1127))
+								    (2162, 1004)
+								    (1961, 1128))
 								line_style 	0)))
-						    (object AssociationViewNew "" @21
-							location   	(1732, 1579)
+						    (object AssociationViewNew "" @29
+							location   	(1740, 1558)
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -609,31 +828,31 @@
 							line_color 	3342489
 							quidu      	"58D63436033A"
 							roleview_list 	(list RoleViews
-							    (object RoleView "" @22
-								Parent_View 	@21
-								location   	(-172, 411)
+							    (object RoleView "" @30
+								Parent_View 	@29
+								location   	(-164, 390)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D634370242"
-								client     	@21
-								supplier   	@9
+								client     	@29
+								supplier   	@17
 								vertices   	(list Points
-								    (1732, 1579)
+								    (1740, 1558)
 								    (1652, 1765))
 								line_style 	0)
-							    (object RoleView "" @23
-								Parent_View 	@21
-								location   	(-172, 411)
+							    (object RoleView "" @31
+								Parent_View 	@29
+								location   	(-164, 390)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D634370244"
-								client     	@21
-								supplier   	@11
+								client     	@29
+								supplier   	@19
 								vertices   	(list Points
-								    (1732, 1579)
-								    (1830, 1351))
+								    (1740, 1558)
+								    (1829, 1351))
 								line_style 	0)))
-						    (object AssociationViewNew "" @24
+						    (object AssociationViewNew "" @32
 							location   	(1495, 1217)
 							font       	(object Font
 							    size       	9
@@ -649,29 +868,29 @@
 							line_color 	3342489
 							quidu      	"58D635840379"
 							roleview_list 	(list RoleViews
-							    (object RoleView "" @25
-								Parent_View 	@24
+							    (object RoleView "" @33
+								Parent_View 	@32
 								location   	(-409, 49)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D635860065"
-								client     	@24
-								supplier   	@10
+								client     	@32
+								supplier   	@18
 								vertices   	(list Points
 								    (1495, 1217)
-								    (1148, 1260))
+								    (1148, 1263))
 								line_style 	0)
-							    (object RoleView "" @26
-								Parent_View 	@24
+							    (object RoleView "" @34
+								Parent_View 	@32
 								location   	(-409, 49)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"58D635860067"
-								client     	@24
-								supplier   	@11
+								client     	@32
+								supplier   	@19
 								vertices   	(list Points
 								    (1495, 1217)
-								    (1845, 1172))
+								    (1843, 1172))
 								line_style 	0)))))))
 				    (object UseCase "Block Number"
 					quid       	"58D633C6035D")
@@ -681,82 +900,66 @@
 					quid       	"58D634250345")
 				    (object UseCase "View Contract Detail"
 					quid       	"58D6357800D1")
-				    (object Association "$UNNAMED$3"
+				    (object Association "$UNNAMED$24"
 					quid       	"35C0ED3A00F0"
 					roles      	(list role_list
-					    (object Role "$UNNAMED$4"
+					    (object Role "$UNNAMED$25"
 						quid       	"35C0ED3B0118"
-						supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Tatrifs"
+						supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Tariffs"
 						quidu      	"34E37FB203D4"
 						is_navigable 	TRUE)
-					    (object Role "$UNNAMED$5"
+					    (object Role "$UNNAMED$26"
 						quid       	"35C0ED3B0119"
 						supplier   	"Use Case View::Use-Case Model::Actors::client"
 						quidu      	"353D5816026C")))
-				    (object Association "$UNNAMED$6"
+				    (object Association "$UNNAMED$27"
 					quid       	"58D633E903E3"
 					roles      	(list role_list
-					    (object Role "$UNNAMED$7"
+					    (object Role "$UNNAMED$28"
 						quid       	"58D633EA0242"
-						supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Block Number"
+						supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Block Number"
 						quidu      	"58D633C6035D"
 						is_navigable 	TRUE)
-					    (object Role "$UNNAMED$8"
+					    (object Role "$UNNAMED$29"
 						quid       	"58D633EA0244"
 						supplier   	"Use Case View::Use-Case Model::Actors::client"
 						quidu      	"353D5816026C")))
-				    (object Association "$UNNAMED$9"
+				    (object Association "$UNNAMED$30"
 					quid       	"58D6340D0074"
 					roles      	(list role_list
-					    (object Role "$UNNAMED$10"
+					    (object Role "$UNNAMED$31"
 						quid       	"58D6340E002A"
-						supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Unblock Number"
+						supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Unblock Number"
 						quidu      	"58D6340001CC"
 						is_navigable 	TRUE)
-					    (object Role "$UNNAMED$11"
+					    (object Role "$UNNAMED$32"
 						quid       	"58D6340E0039"
 						supplier   	"Use Case View::Use-Case Model::Actors::client"
 						quidu      	"353D5816026C")))
-				    (object Association "$UNNAMED$12"
+				    (object Association "$UNNAMED$33"
 					quid       	"58D63436033A"
 					roles      	(list role_list
-					    (object Role "$UNNAMED$13"
+					    (object Role "$UNNAMED$34"
 						quid       	"58D634370242"
-						supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Options"
+						supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Options"
 						quidu      	"58D634250345"
 						is_navigable 	TRUE)
-					    (object Role "$UNNAMED$14"
+					    (object Role "$UNNAMED$35"
 						quid       	"58D634370244"
 						supplier   	"Use Case View::Use-Case Model::Actors::client"
 						quidu      	"353D5816026C")))
-				    (object Association "$UNNAMED$15"
+				    (object Association "$UNNAMED$36"
 					quid       	"58D635840379"
 					roles      	(list role_list
-					    (object Role "$UNNAMED$16"
+					    (object Role "$UNNAMED$37"
 						quid       	"58D635860065"
-						supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::View Contract Detail"
+						supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::View Contract Detail"
 						quidu      	"58D6357800D1"
 						is_navigable 	TRUE)
-					    (object Role "$UNNAMED$17"
+					    (object Role "$UNNAMED$38"
 						quid       	"58D635860067"
 						supplier   	"Use Case View::Use-Case Model::Actors::client"
 						quidu      	"353D5816026C"))))
-				logical_presentations 	(list unit_reference_list))
-			    (object Class_Category "Included Use Cases"
-				quid       	"35C0E0BB0366"
-				documentation 	
-|This package contains "common" use cases which are textually included in one or more other use cases.  They are organized in this package to promote greater reuse.
-|
-				
-				exportControl 	"Public"
-				logical_models 	(list unit_reference_list
-				    (object Class_Category "<Use Case Name>"
-					quid       	"37BB995102BF"
-					exportControl 	"Public"
-					logical_models 	(list unit_reference_list
-					    (object UseCase "<anIncludedUseCase>"
-						quid       	"37BB997903CB"))
-					logical_presentations 	(list unit_reference_list)))
 				logical_presentations 	(list unit_reference_list)))
 			logical_presentations 	(list unit_reference_list
 			    (object UseCaseDiagram "Architecturally Significant Use-Cases"
@@ -769,7 +972,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object NoteView @27
+				    (object NoteView @35
 					location   	(432, 384)
 					font       	(object Font
 					    size       	9
@@ -782,7 +985,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@27
+					    Parent_View 	@35
 					    location   	(44, 28)
 					    fill_color 	13434879
 					    nlines     	15
@@ -803,7 +1006,7 @@
 					fill_color 	13434879
 					width      	800
 					height     	725)
-				    (object NoteView @28
+				    (object NoteView @36
 					location   	(1216, 160)
 					font       	(object Font
 					    size       	9
@@ -816,7 +1019,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@28
+					    Parent_View 	@36
 					    location   	(878, 29)
 					    fill_color 	13434879
 					    nlines     	5
@@ -844,7 +1047,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @29
+			    (object NoteView @37
 				location   	(448, 304)
 				font       	(object Font
 				    size       	9
@@ -857,7 +1060,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@29
+				    Parent_View 	@37
 				    location   	(38, 23)
 				    fill_color 	13434879
 				    nlines     	12
@@ -878,7 +1081,7 @@
 				fill_color 	13434879
 				width      	844
 				height     	574)
-			    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::client" @30
+			    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::client" @38
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -894,7 +1097,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@30
+				    Parent_View 	@38
 				    location   	(528, 1136)
 				    anchor_loc 	1
 				    nlines     	2
@@ -907,7 +1110,7 @@
 				quidu      	"353D5816026C"
 				annotation 	8
 				autoResize 	TRUE)
-			    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Tatrifs" @31
+			    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Tariffs" @39
 				location   	(1264, 976)
 				font       	(object Font
 				    size       	9
@@ -920,20 +1123,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@31
+				    Parent_View 	@39
 				    location   	(1264, 1114)
 				    anchor_loc 	1
 				    nlines     	2
-				    max_width  	631
+				    max_width  	637
 				    justify    	0
-				    label      	"Change Tatrifs")
+				    label      	"Change Tariffs")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"34E37FB203D4"
 				height     	118
 				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$3" @32
+			    (object AssociationViewNew "$UNNAMED$24" @40
 				location   	(868, 976)
 				font       	(object Font
 				    size       	9
@@ -949,8 +1152,8 @@
 				line_color 	3342489
 				quidu      	"35C0ED3A00F0"
 				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$5" @33
-					Parent_View 	@32
+				    (object RoleView "$UNNAMED$26" @41
+					Parent_View 	@40
 					location   	(-284, 48)
 					font       	(object Font
 					    size       	9
@@ -962,8 +1165,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @34
-					    Parent_View 	@33
+					label      	(object SegLabel @42
+					    Parent_View 	@41
 					    location   	(643, 935)
 					    font       	(object Font
 						size       	9
@@ -988,14 +1191,14 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35C0ED3B0119"
-					client     	@32
-					supplier   	@30
+					client     	@40
+					supplier   	@38
 					vertices   	(list Points
 					    (868, 976)
 					    (585, 976))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$4" @35
-					Parent_View 	@32
+				    (object RoleView "$UNNAMED$25" @43
+					Parent_View 	@40
 					location   	(-284, 48)
 					font       	(object Font
 					    size       	9
@@ -1007,8 +1210,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @36
-					    Parent_View 	@35
+					label      	(object SegLabel @44
+					    Parent_View 	@43
 					    location   	(1095, 935)
 					    font       	(object Font
 						size       	9
@@ -1033,11 +1236,11 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35C0ED3B0118"
-					client     	@32
-					supplier   	@31
+					client     	@40
+					supplier   	@39
 					vertices   	(list Points
 					    (868, 976)
-					    (1154, 976))
+					    (1152, 976))
 					line_style 	0))))))))
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
@@ -1052,7 +1255,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Use Case View::Use-Case Model" @37
+		    (object CategoryView "Use Case View::Use-Case Model" @45
 			location   	(384, 880)
 			font       	(object Font
 			    size       	10
@@ -1065,7 +1268,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@37
+			    Parent_View 	@45
 			    location   	(189, 779)
 			    fill_color 	13434879
 			    nlines     	2
@@ -1078,7 +1281,7 @@
 			quidu      	"35B677F4010E"
 			width      	402
 			height     	215)
-		    (object NoteView @38
+		    (object NoteView @46
 			location   	(1040, 560)
 			font       	(object Font
 			    size       	10
@@ -1091,7 +1294,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@38
+			    Parent_View 	@46
 			    location   	(813, 358)
 			    fill_color 	13434879
 			    nlines     	9
@@ -1102,7 +1305,7 @@
 			fill_color 	13434879
 			width      	479
 			height     	416)
-		    (object CategoryView "Use Case View::Business Use-Case Model" @39
+		    (object CategoryView "Use Case View::Business Use-Case Model" @47
 			location   	(384, 320)
 			font       	(object Font
 			    size       	9
@@ -1115,7 +1318,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@39
+			    Parent_View 	@47
 			    location   	(189, 229)
 			    fill_color 	13434879
 			    nlines     	2
@@ -1128,21 +1331,21 @@
 			quidu      	"35B677D701B8"
 			width      	403
 			height     	194)
-		    (object ImportView "" @40
+		    (object ImportView "" @48
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"35C633DA030C"
-			client     	@37
-			supplier   	@39
+			client     	@45
+			supplier   	@47
 			vertices   	(list Points
 			    (384, 718)
 			    (384, 417))
 			line_style 	0)
-		    (object AttachView "" @41
+		    (object AttachView "" @49
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@40
-			supplier   	@38
+			client     	@48
+			supplier   	@46
 			vertices   	(list Points
 			    (384, 567)
 			    (800, 561))
@@ -1293,16 +1496,16 @@
 			
 			exportControl 	"Public"
 			logical_models 	(list unit_reference_list
-			    (object Association "$UNNAMED$18"
+			    (object Association "$UNNAMED$39"
 				quid       	"35409E9D02A8"
 				stereotype 	"realize"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$19"
+				    (object Role "$UNNAMED$40"
 					quid       	"35409E9E0294"
-					supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Tatrifs"
+					supplier   	"Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Tariffs"
 					quidu      	"34E37FB203D4"
 					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$20"
+				    (object Role "$UNNAMED$41"
 					quid       	"35409E9E0295"
 					supplier   	"Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>"
 					quidu      	"352F38180276")))
@@ -1319,9 +1522,9 @@
 					
 					stereotype 	"use-case realization"
 					logical_models 	(list unit_reference_list
-					    (object Mechanism @42
+					    (object Mechanism @50
 						logical_models 	(list unit_reference_list))
-					    (object Mechanism @43
+					    (object Mechanism @51
 						logical_models 	(list unit_reference_list)))
 					logical_presentations 	(list unit_reference_list
 					    (object ClassDiagram "<Use Case Name> -  Realize Dependencies"
@@ -1345,7 +1548,7 @@
 						origin_y   	0
 						items      	(list diagram_item_list))
 					    (object InteractionDiagram "<Use Case Name> -  Basic Flow"
-						mechanism_ref 	@42
+						mechanism_ref 	@50
 						quid       	"35081E3603A2"
 						title      	"<Use Case Name> -  Basic Flow"
 						zoom       	100
@@ -1355,7 +1558,7 @@
 						origin_y   	0
 						items      	(list diagram_item_list))
 					    (object InteractionDiagram "<Use Case Name> -  <Flow Type>"
-						mechanism_ref 	@43
+						mechanism_ref 	@51
 						quid       	"3540A0B901AE"
 						title      	"<Use Case Name> -  <Flow Type>"
 						zoom       	100
@@ -1375,7 +1578,7 @@
 					origin_x   	0
 					origin_y   	0
 					items      	(list diagram_item_list
-					    (object NoteView @44
+					    (object NoteView @52
 						location   	(704, 144)
 						font       	(object Font
 						    size       	9
@@ -1388,7 +1591,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@44
+						    Parent_View 	@52
 						    location   	(38, 25)
 						    fill_color 	13434879
 						    nlines     	5
@@ -1402,7 +1605,7 @@
 						fill_color 	13434879
 						width      	1356
 						height     	250)
-					    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::Change Tatrifs" @45
+					    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::Operator use-cases::Change Tariffs" @53
 						location   	(1152, 528)
 						font       	(object Font
 						    size       	9
@@ -1415,20 +1618,20 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@45
+						    Parent_View 	@53
 						    location   	(1152, 666)
 						    anchor_loc 	1
 						    nlines     	2
 						    max_width  	631
 						    justify    	0
-						    label      	"Change Tatrifs")
+						    label      	"Change Tariffs")
 						icon_style 	"Icon"
 						line_color 	3342489
 						fill_color 	13434879
 						quidu      	"34E37FB203D4"
 						height     	118
 						autoResize 	TRUE)
-					    (object UseCaseView "Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>" @46
+					    (object UseCaseView "Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>" @54
 						location   	(608, 960)
 						font       	(object Font
 						    size       	9
@@ -1441,7 +1644,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@46
+						    Parent_View 	@54
 						    location   	(608, 1148)
 						    anchor_loc 	1
 						    nlines     	2
@@ -1449,7 +1652,7 @@
 						    justify    	0
 						    label      	"<Use-Case Name>")
 						stereotype 	(object ItemLabel
-						    Parent_View 	@46
+						    Parent_View 	@54
 						    location   	(608, 1078)
 						    anchor     	10
 						    anchor_loc 	1
@@ -1463,7 +1666,7 @@
 						fill_color 	13434879
 						quidu      	"352F38180276"
 						autoResize 	TRUE)
-					    (object AssociationViewNew "$UNNAMED$18" @47
+					    (object AssociationViewNew "$UNNAMED$39" @55
 						location   	(813, 794)
 						font       	(object Font
 						    size       	9
@@ -1475,8 +1678,8 @@
 						    strike     	FALSE
 						    color      	0
 						    default_color 	TRUE)
-						stereotype 	(object SegLabel @48
-						    Parent_View 	@47
+						stereotype 	(object SegLabel @56
+						    Parent_View 	@55
 						    location   	(811, 799)
 						    font       	(object Font
 							size       	9
@@ -1500,29 +1703,29 @@
 						line_color 	3342489
 						quidu      	"35409E9D02A8"
 						roleview_list 	(list RoleViews
-						    (object RoleView "$UNNAMED$19" @49
-							Parent_View 	@47
+						    (object RoleView "$UNNAMED$40" @57
+							Parent_View 	@55
 							location   	(173, -486)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"35409E9E0294"
-							client     	@47
-							supplier   	@45
+							client     	@55
+							supplier   	@53
 							vertices   	(list Points
 							    (813, 794)
-							    (947, 689))
+							    (948, 689))
 							line_style 	0)
-						    (object RoleView "$UNNAMED$20" @50
-							Parent_View 	@47
+						    (object RoleView "$UNNAMED$41" @58
+							Parent_View 	@55
 							location   	(173, -486)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"35409E9E0295"
-							client     	@47
-							supplier   	@46
+							client     	@55
+							supplier   	@54
 							vertices   	(list Points
 							    (813, 794)
-							    (680, 898))
+							    (679, 899))
 							line_style 	0))))))))
 			logical_presentations 	(list unit_reference_list))
 		    (object Class_Category "Process View"
@@ -1538,16 +1741,16 @@
 				quid       	"35DB3CB002BC"
 				documentation 	"This is a sub-process or thread within the <name of process of which this thread is a sub-process> process which handles <enter a description of what this thread does>.  A separate thread was chosen for this to be able to <enter the rationale for creating a separate thread>."
 				stereotype 	"thread")
-			    (object Association "$UNNAMED$21"
+			    (object Association "$UNNAMED$42"
 				quid       	"35DB3E72017C"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$22"
+				    (object Role "$UNNAMED$43"
 					quid       	"35DB3E73005A"
 					supplier   	"Logical View::Design Model::Process View::<Process Name>"
 					quidu      	"35DB3C8302D0"
 					is_navigable 	TRUE
 					is_aggregate 	TRUE)
-				    (object Role "$UNNAMED$23"
+				    (object Role "$UNNAMED$44"
 					quid       	"35DB3E730096"
 					supplier   	"Logical View::Design Model::Process View::<Thread Name>"
 					quidu      	"35DB3CB002BC"
@@ -1564,7 +1767,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Logical View::Design Model::Process View::<Process Name>" @51
+				    (object ClassView "Class" "Logical View::Design Model::Process View::<Process Name>" @59
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -1580,7 +1783,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@51
+					    Parent_View 	@59
 					    location   	(122, 436)
 					    fill_color 	13434879
 					    nlines     	1
@@ -1588,7 +1791,7 @@
 					    justify    	0
 					    label      	"<Process Name>")
 					stereotype 	(object ItemLabel
-					    Parent_View 	@51
+					    Parent_View 	@59
 					    location   	(122, 389)
 					    fill_color 	13434879
 					    anchor     	10
@@ -1604,7 +1807,7 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Design Model::Process View::<Thread Name>" @52
+				    (object ClassView "Class" "Logical View::Design Model::Process View::<Thread Name>" @60
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -1620,7 +1823,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@52
+					    Parent_View 	@60
 					    location   	(740, 436)
 					    fill_color 	13434879
 					    nlines     	1
@@ -1628,7 +1831,7 @@
 					    justify    	0
 					    label      	"<Thread Name>")
 					stereotype 	(object ItemLabel
-					    Parent_View 	@52
+					    Parent_View 	@60
 					    location   	(740, 389)
 					    fill_color 	13434879
 					    anchor     	10
@@ -1644,32 +1847,32 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$21" @53
+				    (object AssociationViewNew "$UNNAMED$42" @61
 					location   	(596, 464)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35DB3E72017C"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$22" @54
-						Parent_View 	@53
+					    (object RoleView "$UNNAMED$43" @62
+						Parent_View 	@61
 						location   	(-300, 0)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"35DB3E73005A"
-						client     	@53
-						supplier   	@51
+						client     	@61
+						supplier   	@59
 						vertices   	(list Points
 						    (596, 464)
 						    (463, 464))
 						line_style 	0)
-					    (object RoleView "$UNNAMED$23" @55
-						Parent_View 	@53
+					    (object RoleView "$UNNAMED$44" @63
+						Parent_View 	@61
 						location   	(-300, 0)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"35DB3E730096"
-						client     	@53
-						supplier   	@52
+						client     	@61
+						supplier   	@60
 						vertices   	(list Points
 						    (596, 464)
 						    (730, 464))
@@ -1685,7 +1888,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @56
+			    (object NoteView @64
 				location   	(672, 304)
 				font       	(object Font
 				    size       	9
@@ -1698,7 +1901,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@56
+				    Parent_View 	@64
 				    location   	(28, 19)
 				    fill_color 	13434879
 				    nlines     	13
@@ -1722,7 +1925,7 @@
 				fill_color 	13434879
 				width      	1313
 				height     	582)
-			    (object NoteView @57
+			    (object NoteView @65
 				location   	(1696, 160)
 				font       	(object Font
 				    size       	9
@@ -1735,7 +1938,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@57
+				    Parent_View 	@65
 				    location   	(1358, 29)
 				    fill_color 	13434879
 				    nlines     	5
@@ -1771,7 +1974,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @58
+			    (object NoteView @66
 				location   	(576, 256)
 				font       	(object Font
 				    size       	9
@@ -1784,7 +1987,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@58
+				    Parent_View 	@66
 				    location   	(44, 31)
 				    fill_color 	13434879
 				    nlines     	9
@@ -1804,7 +2007,7 @@
 				fill_color 	13434879
 				width      	1088
 				height     	463)
-			    (object NoteView @59
+			    (object NoteView @67
 				location   	(1520, 176)
 				font       	(object Font
 				    size       	9
@@ -1817,7 +2020,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@59
+				    Parent_View 	@67
 				    location   	(1182, 45)
 				    fill_color 	13434879
 				    nlines     	5
@@ -1944,60 +2147,6 @@
 				quid       	"58D5BB6F0195"
 				stereotype 	"Table"
 				operations 	(list Operations
-				    (object Operation "TC_TARFFS"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"IsConstraint"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintType"
-						value      	"Unique")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"TC_TARFFS")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"CodeName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DeferalMode"
-						value      	"Not Deferable")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"IsCluster"
-						value      	FALSE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"FillFactor"
-						value      	0)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"KeyList"
-						value      	"58D9A8050132"))
-					quid       	"58D5BDB3009E"
-					stereotype 	"Unique"
-					visible_modules 	(list dependency_list
-					    (object Dependency_Relationship
-						attributes 	(list Attribute_Set
-						    (object Attribute
-							tool       	"Data Modeler"
-							name       	"Order"
-							value      	"1"))
-						quid       	"58D9A8050155"
-						stereotype 	"Unique"
-						supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS::ID"
-						quidu      	"58D9A8050132"))
-					concurrency 	"Sequential"
-					opExportControl 	"Public"
-					uid        	0)
 				    (object Operation "PK_TARIFFS"
 					attributes 	(list Attribute_Set
 					    (object Attribute
@@ -5402,7 +5551,7 @@
 				module     	"Component View::OPSOSYSTEM-DB::OPSOSYS"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
-			    (object Association "$UNNAMED$24"
+			    (object Association "$UNNAMED$45"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"Data Modeler"
@@ -5459,7 +5608,7 @@
 				quid       	"58D5C378007E"
 				stereotype 	"Identifying"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$25"
+				    (object Role "$UNNAMED$46"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -5479,685 +5628,6 @@
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Value"
 					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$26"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5BE0803C8"))
-					quid       	"58D5C3780232"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
-					quidu      	"58D5BC600033"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$27"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D5C3A701B8"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$28"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5C3A803C7"))
-					quid       	"58D5C3A80348"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS_OPTIONS_LINK"
-					quidu      	"58D5C197014E"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$29"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5BDB300E4"))
-					quid       	"58D5C3A8034C"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS"
-					quidu      	"58D5BB6F0195"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$30"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D5CB3D0397"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$31"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5CB3E0295"))
-					quid       	"58D5CB3E0228"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::CONTRACTS"
-					quidu      	"58D5C88100DE"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$32"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5C86B00CB"))
-					quid       	"58D5CB3E022A"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::CLIENT"
-					quidu      	"58D5C4FB007D"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$33"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D5CB9F0025"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$34"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5CBA00031"))
-					quid       	"58D5CB9F0346"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::CONTRACTS"
-					quidu      	"58D5C88100DE"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$35"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5BDB300E4"))
-					quid       	"58D5CB9F034A"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS"
-					quidu      	"58D5BB6F0195"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$36"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D7D4100291"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$37"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D7D41102AC"))
-					quid       	"58D7D4110200"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::INCLUDE_OPTION"
-					quidu      	"58D7D3FD014D"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$38"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5BE0803C8"))
-					quid       	"58D7D4110202"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
-					quidu      	"58D5BC600033"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$39"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D7D45101F9"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$40"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D7D45201FA"))
-					quid       	"58D7D4520197"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::INCLUDE_OPTION"
-					quidu      	"58D7D3FD014D"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$41"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5BE0803C8"))
-					quid       	"58D7D4520199"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
-					quidu      	"58D5BC600033"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$42"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D7D4A60240"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$43"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D7D4A700EC"))
-					quid       	"58D7D4A70059"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::EXCLUDE_OPTION"
-					quidu      	"58D7D4980398"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$44"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D5BE0803C8"))
-					quid       	"58D7D4A7005B"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
-					quidu      	"58D5BC600033"
-					client_cardinality 	(value cardinality "1")
-					is_navigable 	TRUE
-					is_aggregate 	TRUE)))
-			    (object Association "$UNNAMED$45"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"dmItem"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"IsRelationship"
-					value      	TRUE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"DMName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"CodeName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"RIMethod"
-					value      	"DRI")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRule"
-					value      	"No Action")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicity"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentUpdateRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ParentDeleteRuleName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrict"
-					value      	FALSE)
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildInsertRestrictName"
-					value      	"")
-				    (object Attribute
-					tool       	"Data Modeler"
-					name       	"ChildMultiplicityName"
-					value      	""))
-				quid       	"58D7D4CF02D3"
-				stereotype 	"Identifying"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$46"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintName"
-						value      	"58D7D4D00151"))
-					quid       	"58D7D4D000FF"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::EXCLUDE_OPTION"
-					quidu      	"58D7D4980398"
-					client_cardinality 	(value cardinality "0..*")
-					Containment 	"By Value"
-					is_navigable 	TRUE)
 				    (object Role "$UNNAMED$47"
 					attributes 	(list Attribute_Set
 					    (object Attribute
@@ -6172,7 +5642,7 @@
 						tool       	"Data Modeler"
 						name       	"ConstraintName"
 						value      	"58D5BE0803C8"))
-					quid       	"58D7D4D00101"
+					quid       	"58D5C3780232"
 					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
 					quidu      	"58D5BC600033"
 					client_cardinality 	(value cardinality "1")
@@ -6232,7 +5702,7 @@
 					tool       	"Data Modeler"
 					name       	"ChildMultiplicityName"
 					value      	""))
-				quid       	"58D9A9DD03B9"
+				quid       	"58D5C3A701B8"
 				stereotype 	"Identifying"
 				roles      	(list role_list
 				    (object Role "$UNNAMED$49"
@@ -6248,10 +5718,10 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"ConstraintName"
-						value      	"58D9A9DE035C"))
-					quid       	"58D9A9DE02A1"
-					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS_PRICES_HISTORY"
-					quidu      	"58D7C28E0208"
+						value      	"58D5C3A803C7"))
+					quid       	"58D5C3A80348"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS_OPTIONS_LINK"
+					quidu      	"58D5C197014E"
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Value"
 					is_navigable 	TRUE)
@@ -6269,7 +5739,7 @@
 						tool       	"Data Modeler"
 						name       	"ConstraintName"
 						value      	"58D5BDB300E4"))
-					quid       	"58D9A9DE02A3"
+					quid       	"58D5C3A8034C"
 					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS"
 					quidu      	"58D5BB6F0195"
 					client_cardinality 	(value cardinality "1")
@@ -6329,10 +5799,689 @@
 					tool       	"Data Modeler"
 					name       	"ChildMultiplicityName"
 					value      	""))
+				quid       	"58D5CB3D0397"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$52"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5CB3E0295"))
+					quid       	"58D5CB3E0228"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::CONTRACTS"
+					quidu      	"58D5C88100DE"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$53"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5C86B00CB"))
+					quid       	"58D5CB3E022A"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::CLIENT"
+					quidu      	"58D5C4FB007D"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$54"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
+				quid       	"58D5CB9F0025"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$55"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5CBA00031"))
+					quid       	"58D5CB9F0346"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::CONTRACTS"
+					quidu      	"58D5C88100DE"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$56"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5BDB300E4"))
+					quid       	"58D5CB9F034A"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS"
+					quidu      	"58D5BB6F0195"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$57"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
+				quid       	"58D7D4100291"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$58"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D7D41102AC"))
+					quid       	"58D7D4110200"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::INCLUDE_OPTION"
+					quidu      	"58D7D3FD014D"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$59"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5BE0803C8"))
+					quid       	"58D7D4110202"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
+					quidu      	"58D5BC600033"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$60"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
+				quid       	"58D7D45101F9"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$61"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D7D45201FA"))
+					quid       	"58D7D4520197"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::INCLUDE_OPTION"
+					quidu      	"58D7D3FD014D"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$62"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5BE0803C8"))
+					quid       	"58D7D4520199"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
+					quidu      	"58D5BC600033"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$63"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
+				quid       	"58D7D4A60240"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$64"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D7D4A700EC"))
+					quid       	"58D7D4A70059"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::EXCLUDE_OPTION"
+					quidu      	"58D7D4980398"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$65"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5BE0803C8"))
+					quid       	"58D7D4A7005B"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
+					quidu      	"58D5BC600033"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$66"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
+				quid       	"58D7D4CF02D3"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$67"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D7D4D00151"))
+					quid       	"58D7D4D000FF"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::EXCLUDE_OPTION"
+					quidu      	"58D7D4980398"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$68"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5BE0803C8"))
+					quid       	"58D7D4D00101"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::OPTION"
+					quidu      	"58D5BC600033"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$69"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
+				quid       	"58D9A9DD03B9"
+				stereotype 	"Identifying"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$70"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D9A9DE035C"))
+					quid       	"58D9A9DE02A1"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS_PRICES_HISTORY"
+					quidu      	"58D7C28E0208"
+					client_cardinality 	(value cardinality "0..*")
+					Containment 	"By Value"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$71"
+					attributes 	(list Attribute_Set
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"dmItem"
+						value      	TRUE)
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ConstraintName"
+						value      	"58D5BDB300E4"))
+					quid       	"58D9A9DE02A3"
+					supplier   	"Logical View::Schemas::OPSOSYSTEM::TARIFFS"
+					quidu      	"58D5BB6F0195"
+					client_cardinality 	(value cardinality "1")
+					is_navigable 	TRUE
+					is_aggregate 	TRUE)))
+			    (object Association "$UNNAMED$72"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"dmItem"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"IsRelationship"
+					value      	TRUE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"DMName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"CodeName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"RIMethod"
+					value      	"DRI")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRule"
+					value      	"No Action")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicity"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentUpdateRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ParentDeleteRuleName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrict"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildInsertRestrictName"
+					value      	"")
+				    (object Attribute
+					tool       	"Data Modeler"
+					name       	"ChildMultiplicityName"
+					value      	""))
 				quid       	"58D9AACA0008"
 				stereotype 	"Non-Identifying"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$52"
+				    (object Role "$UNNAMED$73"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -6352,7 +6501,7 @@
 					client_cardinality 	(value cardinality "1..*")
 					Containment 	"By Reference"
 					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$53"
+				    (object Role "$UNNAMED$74"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -6371,7 +6520,7 @@
 					quidu      	"58D5C88100DE"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE)))
-			    (object Association "$UNNAMED$54"
+			    (object Association "$UNNAMED$75"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"Data Modeler"
@@ -6428,7 +6577,7 @@
 				quid       	"58D9AB53019E"
 				stereotype 	"Non-Identifying"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$55"
+				    (object Role "$UNNAMED$76"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -6448,7 +6597,7 @@
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Reference"
 					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$56"
+				    (object Role "$UNNAMED$77"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -6482,7 +6631,7 @@
 				origin_x   	553
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::INCLUDE_OPTION" @60
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::INCLUDE_OPTION" @68
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -6498,7 +6647,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@60
+					    Parent_View 	@68
 					    location   	(2759, 302)
 					    fill_color 	13434879
 					    nlines     	1
@@ -6511,7 +6660,7 @@
 					fill_color 	13434879
 					quidu      	"58D7D3FD014D"
 					compartment 	(object Compartment
-					    Parent_View 	@60
+					    Parent_View 	@68
 					    location   	(2759, 360)
 					    font       	(object Font
 						size       	9
@@ -6533,7 +6682,7 @@
 					height     	458
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::EXCLUDE_OPTION" @61
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::EXCLUDE_OPTION" @69
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -6549,7 +6698,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@61
+					    Parent_View 	@69
 					    location   	(1783, 1070)
 					    fill_color 	13434879
 					    nlines     	1
@@ -6562,7 +6711,7 @@
 					fill_color 	13434879
 					quidu      	"58D7D4980398"
 					compartment 	(object Compartment
-					    Parent_View 	@61
+					    Parent_View 	@69
 					    location   	(1783, 1128)
 					    font       	(object Font
 						size       	9
@@ -6584,7 +6733,7 @@
 					height     	458
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::OPTION" @62
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::OPTION" @70
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -6600,7 +6749,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@62
+					    Parent_View 	@70
 					    location   	(1664, 247)
 					    fill_color 	13434879
 					    nlines     	1
@@ -6613,7 +6762,7 @@
 					fill_color 	13434879
 					quidu      	"58D5BC600033"
 					compartment 	(object Compartment
-					    Parent_View 	@62
+					    Parent_View 	@70
 					    location   	(1664, 305)
 					    font       	(object Font
 						size       	9
@@ -6635,7 +6784,7 @@
 					height     	504
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$36" @63
+				    (object AssociationViewNew "$UNNAMED$57" @71
 					location   	(2555, 93)
 					font       	(object Font
 					    size       	9
@@ -6647,8 +6796,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @64
-					    Parent_View 	@63
+					stereotype 	(object SegLabel @72
+					    Parent_View 	@71
 					    location   	(2555, 0)
 					    font       	(object Font
 						size       	9
@@ -6672,8 +6821,8 @@
 					line_color 	3342489
 					quidu      	"58D7D4100291"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$37" @65
-						Parent_View 	@63
+					    (object RoleView "$UNNAMED$58" @73
+						Parent_View 	@71
 						location   	(587, -307)
 						font       	(object Font
 						    size       	9
@@ -6688,14 +6837,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4110200"
-						client     	@63
-						supplier   	@60
+						client     	@71
+						supplier   	@68
 						vertices   	(list Points
 						    (2555, 93)
 						    (2749, 211))
 						line_style 	0
-						label      	(object SegLabel @66
-						    Parent_View 	@65
+						label      	(object SegLabel @74
+						    Parent_View 	@73
 						    location   	(2703, 246)
 						    font       	(object Font
 							size       	9
@@ -6716,8 +6865,8 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))
-					    (object RoleView "$UNNAMED$38" @67
-						Parent_View 	@63
+					    (object RoleView "$UNNAMED$59" @75
+						Parent_View 	@71
 						location   	(587, -307)
 						font       	(object Font
 						    size       	9
@@ -6732,15 +6881,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4110202"
-						client     	@63
-						supplier   	@62
+						client     	@71
+						supplier   	@70
 						vertices   	(list Points
 						    (2555, 93)
 						    (2504, 62)
 						    (2281, 200))
 						line_style 	0
-						label      	(object SegLabel @68
-						    Parent_View 	@67
+						label      	(object SegLabel @76
+						    Parent_View 	@75
 						    location   	(2337, 229)
 						    font       	(object Font
 							size       	9
@@ -6761,7 +6910,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))))
-				    (object AssociationViewNew "$UNNAMED$39" @69
+				    (object AssociationViewNew "$UNNAMED$60" @77
 					location   	(2484, 646)
 					font       	(object Font
 					    size       	9
@@ -6773,8 +6922,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @70
-					    Parent_View 	@69
+					stereotype 	(object SegLabel @78
+					    Parent_View 	@77
 					    location   	(2484, 539)
 					    font       	(object Font
 						size       	9
@@ -6798,8 +6947,8 @@
 					line_color 	3342489
 					quidu      	"58D7D45101F9"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$40" @71
-						Parent_View 	@69
+					    (object RoleView "$UNNAMED$61" @79
+						Parent_View 	@77
 						location   	(516, 246)
 						font       	(object Font
 						    size       	9
@@ -6814,15 +6963,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4520197"
-						client     	@69
-						supplier   	@60
+						client     	@77
+						supplier   	@68
 						vertices   	(list Points
 						    (2484, 646)
 						    (2538, 672)
 						    (2749, 582))
 						line_style 	0
-						label      	(object SegLabel @72
-						    Parent_View 	@71
+						label      	(object SegLabel @80
+						    Parent_View 	@79
 						    location   	(2742, 644)
 						    font       	(object Font
 							size       	9
@@ -6843,8 +6992,8 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))
-					    (object RoleView "$UNNAMED$41" @73
-						Parent_View 	@69
+					    (object RoleView "$UNNAMED$62" @81
+						Parent_View 	@77
 						location   	(516, 246)
 						font       	(object Font
 						    size       	9
@@ -6859,14 +7008,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4520199"
-						client     	@69
-						supplier   	@62
+						client     	@77
+						supplier   	@70
 						vertices   	(list Points
 						    (2484, 646)
 						    (2281, 548))
 						line_style 	0
-						label      	(object SegLabel @74
-						    Parent_View 	@73
+						label      	(object SegLabel @82
+						    Parent_View 	@81
 						    location   	(2280, 608)
 						    font       	(object Font
 							size       	9
@@ -6887,7 +7036,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))))
-				    (object AssociationViewNew "$UNNAMED$42" @75
+				    (object AssociationViewNew "$UNNAMED$63" @83
 					location   	(2287, 854)
 					font       	(object Font
 					    size       	9
@@ -6899,8 +7048,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @76
-					    Parent_View 	@75
+					stereotype 	(object SegLabel @84
+					    Parent_View 	@83
 					    location   	(2287, 747)
 					    font       	(object Font
 						size       	9
@@ -6924,8 +7073,8 @@
 					line_color 	3342489
 					quidu      	"58D7D4A60240"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$43" @77
-						Parent_View 	@75
+					    (object RoleView "$UNNAMED$64" @85
+						Parent_View 	@83
 						location   	(319, 454)
 						font       	(object Font
 						    size       	9
@@ -6940,14 +7089,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4A70059"
-						client     	@75
-						supplier   	@61
+						client     	@83
+						supplier   	@69
 						vertices   	(list Points
 						    (2287, 854)
 						    (2232, 970))
 						line_style 	0
-						label      	(object SegLabel @78
-						    Parent_View 	@77
+						label      	(object SegLabel @86
+						    Parent_View 	@85
 						    location   	(2287, 981)
 						    font       	(object Font
 							size       	9
@@ -6968,8 +7117,8 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$44" @79
-						Parent_View 	@75
+					    (object RoleView "$UNNAMED$65" @87
+						Parent_View 	@83
 						location   	(319, 454)
 						font       	(object Font
 						    size       	9
@@ -6984,15 +7133,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4A7005B"
-						client     	@75
-						supplier   	@62
+						client     	@83
+						supplier   	@70
 						vertices   	(list Points
 						    (2287, 854)
 						    (2313, 800)
 						    (2184, 652))
 						line_style 	0
-						label      	(object SegLabel @80
-						    Parent_View 	@79
+						label      	(object SegLabel @88
+						    Parent_View 	@87
 						    location   	(2242, 638)
 						    font       	(object Font
 							size       	9
@@ -7013,7 +7162,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object AssociationViewNew "$UNNAMED$45" @81
+				    (object AssociationViewNew "$UNNAMED$66" @89
 					location   	(1731, 830)
 					font       	(object Font
 					    size       	9
@@ -7025,8 +7174,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @82
-					    Parent_View 	@81
+					stereotype 	(object SegLabel @90
+					    Parent_View 	@89
 					    location   	(1731, 723)
 					    font       	(object Font
 						size       	9
@@ -7050,8 +7199,8 @@
 					line_color 	3342489
 					quidu      	"58D7D4CF02D3"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$46" @83
-						Parent_View 	@81
+					    (object RoleView "$UNNAMED$67" @91
+						Parent_View 	@89
 						location   	(-237, 430)
 						font       	(object Font
 						    size       	9
@@ -7066,15 +7215,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4D000FF"
-						client     	@81
-						supplier   	@61
+						client     	@89
+						supplier   	@69
 						vertices   	(list Points
 						    (1731, 830)
 						    (1688, 909)
 						    (1782, 970))
 						line_style 	0
-						label      	(object SegLabel @84
-						    Parent_View 	@83
+						label      	(object SegLabel @92
+						    Parent_View 	@91
 						    location   	(1794, 915)
 						    font       	(object Font
 							size       	9
@@ -7095,8 +7244,8 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$47" @85
-						Parent_View 	@81
+					    (object RoleView "$UNNAMED$68" @93
+						Parent_View 	@89
 						location   	(-237, 430)
 						font       	(object Font
 						    size       	9
@@ -7111,14 +7260,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D7D4D00101"
-						client     	@81
-						supplier   	@62
+						client     	@89
+						supplier   	@70
 						vertices   	(list Points
 						    (1731, 830)
 						    (1827, 652))
 						line_style 	0
-						label      	(object SegLabel @86
-						    Parent_View 	@85
+						label      	(object SegLabel @94
+						    Parent_View 	@93
 						    location   	(1866, 697)
 						    font       	(object Font
 							size       	9
@@ -7139,7 +7288,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::TARIFFS_OPTIONS_LINK" @87
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::TARIFFS_OPTIONS_LINK" @95
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7155,7 +7304,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@87
+					    Parent_View 	@95
 					    location   	(145, 174)
 					    fill_color 	13434879
 					    nlines     	1
@@ -7168,7 +7317,7 @@
 					fill_color 	13434879
 					quidu      	"58D5C197014E"
 					compartment 	(object Compartment
-					    Parent_View 	@87
+					    Parent_View 	@95
 					    location   	(145, 232)
 					    font       	(object Font
 						size       	9
@@ -7190,7 +7339,7 @@
 					height     	458
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$24" @88
+				    (object AssociationViewNew "$UNNAMED$45" @96
 					location   	(1399, 358)
 					font       	(object Font
 					    size       	9
@@ -7202,8 +7351,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @89
-					    Parent_View 	@88
+					stereotype 	(object SegLabel @97
+					    Parent_View 	@96
 					    location   	(1387, 292)
 					    font       	(object Font
 						size       	9
@@ -7227,8 +7376,8 @@
 					line_color 	3342489
 					quidu      	"58D5C378007E"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$25" @90
-						Parent_View 	@88
+					    (object RoleView "$UNNAMED$46" @98
+						Parent_View 	@96
 						location   	(-137, -122)
 						font       	(object Font
 						    size       	9
@@ -7243,14 +7392,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5C378022F"
-						client     	@88
-						supplier   	@87
+						client     	@96
+						supplier   	@95
 						vertices   	(list Points
 						    (1399, 358)
 						    (1144, 340))
 						line_style 	0
-						label      	(object SegLabel @91
-						    Parent_View 	@90
+						label      	(object SegLabel @99
+						    Parent_View 	@98
 						    location   	(1185, 406)
 						    font       	(object Font
 							size       	9
@@ -7271,8 +7420,8 @@
 						    pctDist    	0.828209
 						    height     	63
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$26" @92
-						Parent_View 	@88
+					    (object RoleView "$UNNAMED$47" @100
+						Parent_View 	@96
 						location   	(-137, -122)
 						font       	(object Font
 						    size       	9
@@ -7287,14 +7436,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5C3780232"
-						client     	@88
-						supplier   	@62
+						client     	@96
+						supplier   	@70
 						vertices   	(list Points
 						    (1399, 358)
 						    (1654, 376))
 						line_style 	0
-						label      	(object SegLabel @93
-						    Parent_View 	@92
+						label      	(object SegLabel @101
+						    Parent_View 	@100
 						    location   	(1625, 428)
 						    font       	(object Font
 							size       	9
@@ -7315,7 +7464,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::CLIENT" @94
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::CLIENT" @102
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7331,7 +7480,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@94
+					    Parent_View 	@102
 					    location   	(3076, 1121)
 					    fill_color 	13434879
 					    nlines     	1
@@ -7344,7 +7493,7 @@
 					fill_color 	13434879
 					quidu      	"58D5C4FB007D"
 					compartment 	(object Compartment
-					    Parent_View 	@94
+					    Parent_View 	@102
 					    location   	(3076, 1179)
 					    font       	(object Font
 						size       	9
@@ -7366,7 +7515,7 @@
 					height     	740
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::TARIFFS" @95
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::TARIFFS" @103
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7382,8 +7531,8 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@95
-					    location   	(327, 935)
+					    Parent_View 	@103
+					    location   	(327, 958)
 					    fill_color 	13434879
 					    nlines     	1
 					    max_width  	594
@@ -7395,8 +7544,8 @@
 					fill_color 	13434879
 					quidu      	"58D5BB6F0195"
 					compartment 	(object Compartment
-					    Parent_View 	@95
-					    location   	(327, 993)
+					    Parent_View 	@103
+					    location   	(327, 1016)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7410,15 +7559,15 @@
 					    icon_style 	"Icon"
 					    fill_color 	13434879
 					    anchor     	2
-					    nlines     	7
+					    nlines     	6
 					    max_width  	531
 					    justify    	1)
 					width      	612
-					height     	504
+					height     	458
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$27" @96
-					location   	(632, 684)
+				    (object AssociationViewNew "$UNNAMED$48" @104
+					location   	(631, 695)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -7429,9 +7578,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @97
-					    Parent_View 	@96
-					    location   	(792, 657)
+					stereotype 	(object SegLabel @105
+					    Parent_View 	@104
+					    location   	(791, 668)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7454,9 +7603,9 @@
 					line_color 	3342489
 					quidu      	"58D5C3A701B8"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$28" @98
-						Parent_View 	@96
-						location   	(72, 140)
+					    (object RoleView "$UNNAMED$49" @106
+						Parent_View 	@104
+						location   	(71, 151)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7470,14 +7619,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5C3A80348"
-						client     	@96
-						supplier   	@87
+						client     	@104
+						supplier   	@95
 						vertices   	(list Points
-						    (632, 684)
+						    (631, 695)
 						    (635, 533))
 						line_style 	0
-						label      	(object SegLabel @99
-						    Parent_View 	@98
+						label      	(object SegLabel @107
+						    Parent_View 	@106
 						    location   	(592, 541)
 						    font       	(object Font
 							size       	9
@@ -7498,9 +7647,9 @@
 						    pctDist    	0.953406
 						    height     	44
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$29" @100
-						Parent_View 	@96
-						location   	(72, 140)
+					    (object RoleView "$UNNAMED$50" @108
+						Parent_View 	@104
+						location   	(71, 151)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7514,15 +7663,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5C3A8034C"
-						client     	@96
-						supplier   	@95
+						client     	@104
+						supplier   	@103
 						vertices   	(list Points
-						    (632, 684)
-						    (629, 835))
+						    (631, 695)
+						    (628, 858))
 						line_style 	0
-						label      	(object SegLabel @101
-						    Parent_View 	@100
-						    location   	(576, 819)
+						label      	(object SegLabel @109
+						    Parent_View 	@108
+						    location   	(575, 842)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7542,7 +7691,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::TARIFFS_PRICES_HISTORY" @102
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::TARIFFS_PRICES_HISTORY" @110
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7558,7 +7707,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@102
+					    Parent_View 	@110
 					    location   	(208, 1943)
 					    fill_color 	13434879
 					    nlines     	1
@@ -7571,7 +7720,7 @@
 					fill_color 	13434879
 					quidu      	"58D7C28E0208"
 					compartment 	(object Compartment
-					    Parent_View 	@102
+					    Parent_View 	@110
 					    location   	(208, 2001)
 					    font       	(object Font
 						size       	9
@@ -7593,8 +7742,8 @@
 					height     	504
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$48" @103
-					location   	(631, 1591)
+				    (object AssociationViewNew "$UNNAMED$69" @111
+					location   	(631, 1580)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -7605,9 +7754,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @104
-					    Parent_View 	@103
-					    location   	(631, 1484)
+					stereotype 	(object SegLabel @112
+					    Parent_View 	@111
+					    location   	(631, 1473)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7630,9 +7779,9 @@
 					line_color 	3342489
 					quidu      	"58D9A9DD03B9"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$49" @105
-						Parent_View 	@103
-						location   	(7, 503)
+					    (object RoleView "$UNNAMED$70" @113
+						Parent_View 	@111
+						location   	(7, 492)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7646,15 +7795,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D9A9DE02A1"
-						client     	@103
-						supplier   	@102
+						client     	@111
+						supplier   	@110
 						vertices   	(list Points
-						    (631, 1591)
+						    (631, 1580)
 						    (635, 1843))
 						line_style 	0
-						label      	(object SegLabel @106
-						    Parent_View 	@105
-						    location   	(689, 1818)
+						label      	(object SegLabel @114
+						    Parent_View 	@113
+						    location   	(689, 1817)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7674,9 +7823,9 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$50" @107
-						Parent_View 	@103
-						location   	(7, 503)
+					    (object RoleView "$UNNAMED$71" @115
+						Parent_View 	@111
+						location   	(7, 492)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7690,15 +7839,15 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D9A9DE02A3"
-						client     	@103
-						supplier   	@95
+						client     	@111
+						supplier   	@103
 						vertices   	(list Points
-						    (631, 1591)
-						    (628, 1340))
+						    (631, 1580)
+						    (627, 1317))
 						line_style 	0
-						label      	(object SegLabel @108
-						    Parent_View 	@107
-						    location   	(682, 1365)
+						label      	(object SegLabel @116
+						    Parent_View 	@115
+						    location   	(681, 1343)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7718,7 +7867,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::PHONE_NUMBERS" @109
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::PHONE_NUMBERS" @117
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7734,7 +7883,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@109
+					    Parent_View 	@117
 					    location   	(2934, 1999)
 					    fill_color 	13434879
 					    nlines     	1
@@ -7747,7 +7896,7 @@
 					fill_color 	13434879
 					quidu      	"58D5C9510247"
 					compartment 	(object Compartment
-					    Parent_View 	@109
+					    Parent_View 	@117
 					    location   	(2934, 2057)
 					    font       	(object Font
 						size       	9
@@ -7769,7 +7918,7 @@
 					height     	552
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::CONTRACTS" @110
+				    (object ClassView "Class" "Logical View::Schemas::OPSOSYSTEM::CONTRACTS" @118
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7785,7 +7934,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@110
+					    Parent_View 	@118
 					    location   	(1499, 1799)
 					    fill_color 	13434879
 					    nlines     	1
@@ -7798,7 +7947,7 @@
 					fill_color 	13434879
 					quidu      	"58D5C88100DE"
 					compartment 	(object Compartment
-					    Parent_View 	@110
+					    Parent_View 	@118
 					    location   	(1499, 1857)
 					    font       	(object Font
 						size       	9
@@ -7820,7 +7969,7 @@
 					height     	600
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$30" @111
+				    (object AssociationViewNew "$UNNAMED$51" @119
 					location   	(2676, 1690)
 					font       	(object Font
 					    size       	9
@@ -7832,8 +7981,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @112
-					    Parent_View 	@111
+					stereotype 	(object SegLabel @120
+					    Parent_View 	@119
 					    location   	(2676, 1583)
 					    font       	(object Font
 						size       	9
@@ -7857,8 +8006,8 @@
 					line_color 	3342489
 					quidu      	"58D5CB3D0397"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$31" @113
-						Parent_View 	@111
+					    (object RoleView "$UNNAMED$52" @121
+						Parent_View 	@119
 						location   	(-780, 1082)
 						font       	(object Font
 						    size       	9
@@ -7873,14 +8022,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5CB3E0228"
-						client     	@111
-						supplier   	@110
+						client     	@119
+						supplier   	@118
 						vertices   	(list Points
 						    (2676, 1690)
 						    (2286, 1843))
 						line_style 	0
-						label      	(object SegLabel @114
-						    Parent_View 	@113
+						label      	(object SegLabel @122
+						    Parent_View 	@121
 						    location   	(2411, 1848)
 						    font       	(object Font
 							size       	9
@@ -7901,8 +8050,8 @@
 						    pctDist    	0.729390
 						    height     	51
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$32" @115
-						Parent_View 	@111
+					    (object RoleView "$UNNAMED$53" @123
+						Parent_View 	@119
 						location   	(-780, 1082)
 						font       	(object Font
 						    size       	9
@@ -7917,14 +8066,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5CB3E022A"
-						client     	@111
-						supplier   	@94
+						client     	@119
+						supplier   	@102
 						vertices   	(list Points
 						    (2676, 1690)
 						    (3066, 1537))
 						line_style 	0
-						label      	(object SegLabel @116
-						    Parent_View 	@115
+						label      	(object SegLabel @124
+						    Parent_View 	@123
 						    location   	(3046, 1603)
 						    font       	(object Font
 							size       	9
@@ -7945,7 +8094,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object AssociationViewNew "$UNNAMED$33" @117
+				    (object AssociationViewNew "$UNNAMED$54" @125
 					location   	(1209, 1510)
 					font       	(object Font
 					    size       	9
@@ -7957,8 +8106,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @118
-					    Parent_View 	@117
+					stereotype 	(object SegLabel @126
+					    Parent_View 	@125
 					    location   	(1209, 1403)
 					    font       	(object Font
 						size       	9
@@ -7982,8 +8131,8 @@
 					line_color 	3342489
 					quidu      	"58D5CB9F0025"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$34" @119
-						Parent_View 	@117
+					    (object RoleView "$UNNAMED$55" @127
+						Parent_View 	@125
 						location   	(-679, 454)
 						font       	(object Font
 						    size       	9
@@ -7998,14 +8147,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5CB9F0346"
-						client     	@117
-						supplier   	@110
+						client     	@125
+						supplier   	@118
 						vertices   	(list Points
 						    (1209, 1510)
 						    (1489, 1712))
 						line_style 	0
-						label      	(object SegLabel @120
-						    Parent_View 	@119
+						label      	(object SegLabel @128
+						    Parent_View 	@127
 						    location   	(1492, 1648)
 						    font       	(object Font
 							size       	9
@@ -8026,8 +8175,8 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$35" @121
-						Parent_View 	@117
+					    (object RoleView "$UNNAMED$56" @129
+						Parent_View 	@125
 						location   	(-679, 454)
 						font       	(object Font
 						    size       	9
@@ -8042,14 +8191,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D5CB9F034A"
-						client     	@117
-						supplier   	@95
+						client     	@125
+						supplier   	@103
 						vertices   	(list Points
 						    (1209, 1510)
 						    (930, 1308))
 						line_style 	0
-						label      	(object SegLabel @122
-						    Parent_View 	@121
+						label      	(object SegLabel @130
+						    Parent_View 	@129
 						    location   	(990, 1285)
 						    font       	(object Font
 							size       	9
@@ -8070,7 +8219,7 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	1))))
-				    (object AssociationViewNew "$UNNAMED$54" @123
+				    (object AssociationViewNew "$UNNAMED$75" @131
 					location   	(2605, 2086)
 					font       	(object Font
 					    size       	9
@@ -8082,8 +8231,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					stereotype 	(object SegLabel @124
-					    Parent_View 	@123
+					stereotype 	(object SegLabel @132
+					    Parent_View 	@131
 					    location   	(2605, 1979)
 					    font       	(object Font
 						size       	9
@@ -8107,8 +8256,8 @@
 					line_color 	3342489
 					quidu      	"58D9AB53019E"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$55" @125
-						Parent_View 	@123
+					    (object RoleView "$UNNAMED$76" @133
+						Parent_View 	@131
 						location   	(-723, -90)
 						font       	(object Font
 						    size       	9
@@ -8123,14 +8272,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D9AB5400FC"
-						client     	@123
-						supplier   	@110
+						client     	@131
+						supplier   	@118
 						vertices   	(list Points
 						    (2605, 2086)
 						    (2286, 2047))
 						line_style 	0
-						label      	(object SegLabel @126
-						    Parent_View 	@125
+						label      	(object SegLabel @134
+						    Parent_View 	@133
 						    location   	(2312, 2105)
 						    font       	(object Font
 							size       	9
@@ -8151,8 +8300,8 @@
 						    pctDist    	0.900000
 						    height     	54
 						    orientation 	0))
-					    (object RoleView "$UNNAMED$56" @127
-						Parent_View 	@123
+					    (object RoleView "$UNNAMED$77" @135
+						Parent_View 	@131
 						location   	(-723, -90)
 						font       	(object Font
 						    size       	9
@@ -8167,14 +8316,14 @@
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"58D9AB5400FF"
-						client     	@123
-						supplier   	@109
+						client     	@131
+						supplier   	@117
 						vertices   	(list Points
 						    (2605, 2086)
 						    (2924, 2126))
 						line_style 	0
-						label      	(object SegLabel @128
-						    Parent_View 	@127
+						label      	(object SegLabel @136
+						    Parent_View 	@135
 						    location   	(2886, 2176)
 						    font       	(object Font
 							size       	9
@@ -8217,7 +8366,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @129
+		    (object NoteView @137
 			location   	(768, 384)
 			font       	(object Font
 			    size       	9
@@ -8230,7 +8379,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@129
+			    Parent_View 	@137
 			    location   	(121, 96)
 			    fill_color 	13434879
 			    nlines     	14
@@ -8290,7 +8439,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @130
+			    (object NoteView @138
 				location   	(624, 160)
 				font       	(object Font
 				    size       	9
@@ -8303,7 +8452,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@130
+				    Parent_View 	@138
 				    location   	(21, 26)
 				    fill_color 	13434879
 				    nlines     	5
@@ -8461,7 +8610,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object SubSysView "Component View::Implementation Model" @131
+		    (object SubSysView "Component View::Implementation Model" @139
 			location   	(736, 800)
 			font       	(object Font
 			    size       	9
@@ -8474,7 +8623,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@131
+			    Parent_View 	@139
 			    location   	(552, 713)
 			    fill_color 	13434879
 			    nlines     	2
@@ -8537,7 +8686,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ProcessorView "<processor name>" @132
+		    (object ProcessorView "<processor name>" @140
 			location   	(512, 1056)
 			font       	(object Font
 			    size       	9
@@ -8550,7 +8699,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@132
+			    Parent_View 	@140
 			    location   	(276, 900)
 			    nlines     	2
 			    max_width  	400
@@ -8561,7 +8710,7 @@
 			width      	475
 			height     	381
 			annotation 	3)
-		    (object DeviceView "<device name>" @133
+		    (object DeviceView "<device name>" @141
 			location   	(1040, 1056)
 			font       	(object Font
 			    size       	9
@@ -8574,7 +8723,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@133
+			    Parent_View 	@141
 			    location   	(867, 950)
 			    nlines     	2
 			    max_width  	275
@@ -8585,16 +8734,16 @@
 			width      	350
 			height     	282
 			annotation 	0)
-		    (object ConnectionView "" @134
+		    (object ConnectionView "" @142
 			stereotype 	TRUE
 			quidu      	"34DBBD4B008C"
-			client     	@132
-			supplier   	@133
+			client     	@140
+			supplier   	@141
 			vertices   	(list Points
 			    (718, 1056)
 			    (865, 1056))
 			line_style 	0)
-		    (object NoteView @135
+		    (object NoteView @143
 			location   	(816, 304)
 			font       	(object Font
 			    size       	9
@@ -8607,7 +8756,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@135
+			    Parent_View 	@143
 			    location   	(38, 29)
 			    fill_color 	13434879
 			    nlines     	11
