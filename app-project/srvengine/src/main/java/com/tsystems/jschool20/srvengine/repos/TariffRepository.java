@@ -16,5 +16,4 @@ public interface TariffRepository extends JpaRepository<Tariff, Long> {
     @Query("select t from Tariff t")
     List<Tariff> findAll();
 
-
 }

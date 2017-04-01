@@ -5,43 +5,51 @@ package com.tsystems.jschool20.srvengine.entites;
  */
 public class AbstractTariff {
 
-    private long id;
+    protected long id;
 
-    private String name;
+    protected String name;
 
-    private double price;
+    protected long price;
 
-    private char isDeleted;
+    protected char isDeleted;
 
     public long getId() {
+
         return id;
     }
 
     public String getName() {
+
         return name;
     }
 
-    public double getPrice() {
+    public long getPrice() {
+
         return price;
     }
 
     public char getDeleted() {
+
         return isDeleted;
     }
 
     public void setId(long id) {
+
         this.id = id;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
+
         this.price = price;
     }
 
     public void setDeleted(char deleted) {
+
         this.isDeleted = deleted;
     }
 }

@@ -15,19 +15,11 @@ import java.io.Serializable;
 public class Tariff extends AbstractTariff implements Serializable{
 
 
-    private long id;
-
-    private String name;
-
-    private double price;
-
-    private char isDeleted;
-
     public Tariff(){
 
     }
 
-    public Tariff(String name, double price){
+    public Tariff(String name, long price){
 
         this.id = getId();
         this.name = name;
@@ -38,41 +30,29 @@ public class Tariff extends AbstractTariff implements Serializable{
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment", strategy = "increment")
+    @GeneratedValue(generator="tariff_sequence")
+    @SequenceGenerator(name="tariff_sequence",sequenceName="TARIFFS_ID_SEQ", allocationSize=1)
     public long getId() {
+
         return id;
     }
 
     @Column(name = "NAME")
     public String getName() {
+
         return name;
     }
 
     @Column(name = "PRICE")
-    public double getPrice() {
+    public long getPrice() {
+
         return price;
     }
 
     @Column(name = "ISDELETED")
     @ColumnDefault("N")
     public char getDeleted() {
+
         return isDeleted;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setDeleted(char deleted) {
-        this.isDeleted = deleted;
     }
 }

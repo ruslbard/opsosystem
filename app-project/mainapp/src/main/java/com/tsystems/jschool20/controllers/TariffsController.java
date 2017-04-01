@@ -21,13 +21,19 @@ public class TariffsController {
     public String tarrifs(Model model){
         model.addAttribute("tariffs", tariffService.getAllTariffs());
         System.out.println("From TariffController");
-        return "hello";
+        return "tariffs";
     }
 
     @ResponseBody
     @RequestMapping(path = "/tariffsJson", produces = "application/json")
     public Object tarrifsJson(){
         return tariffService.getAllTariffs();
+    }
+
+    @RequestMapping("/addtariff")
+    public Object addNewTariff(Model model){
+        model.addAttribute("newtariff", tariffService.createNewTariff("add new tariff", 46675));
+        return "tariffcreated";
     }
 
 }

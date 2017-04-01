@@ -27,8 +27,8 @@ public class ApplicationConfiguration {
         DriverManagerDataSource dmDS = new DriverManagerDataSource();
         dmDS.setDriverClassName("oracle.jdbc.driver.OracleDriver");
         dmDS.setUrl("jdbc:oracle:thin:@127.0.0.1:1521:OPSOSYS");
-        dmDS.setUsername("OPSOSYSTEM");
-        dmDS.setPassword("opsos");
+        dmDS.setUsername("OPSYSTEM");
+        dmDS.setPassword("opsys");
         return dmDS;
     }
 

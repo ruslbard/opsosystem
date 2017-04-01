@@ -1,5 +1,6 @@
 package com.tsystems.jschool20.srvengine.api;
 
+import com.tsystems.jschool20.srvengine.entites.AbstractTariff;
 import com.tsystems.jschool20.srvengine.entites.Tariff;
 
 import java.util.Collection;
@@ -10,4 +11,5 @@ import java.util.Collection;
 public interface TariffService {
 
     Collection<Tariff> getAllTariffs();
+    AbstractTariff createNewTariff(String name, long price);
 }
