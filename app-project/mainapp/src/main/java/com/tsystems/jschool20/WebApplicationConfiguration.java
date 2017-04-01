@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.tsystems.jschool20", "com.tsystems.jschool20.srvengine"})
+@ComponentScan({"com.tsystems.jschool20"})
 public class WebApplicationConfiguration extends WebMvcConfigurerAdapter {
 
     @Override

@@ -5,13 +5,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Created by ruslbard on 27.03.2017.
  */
 @Entity
 @Table(name = "TARIFFS")
-public class Tariff {
+public class Tariff implements Serializable{
 
 
     private long id;
