@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "TARIFFS")
-public class Tariff implements Serializable{
+public class Tariff extends AbstractTariff implements Serializable{
 
 
     private long id;
@@ -29,7 +29,7 @@ public class Tariff implements Serializable{
 
     public Tariff(String name, double price){
 
-        this.id = 1L;
+        this.id = getId();
         this.name = name;
         this.price = price;
         this.isDeleted = 'N';

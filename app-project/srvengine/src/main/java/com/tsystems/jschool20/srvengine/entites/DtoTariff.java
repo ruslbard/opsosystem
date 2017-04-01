@@ -1,4 +1,4 @@
-package com.tsystems.jschool20.srvengine.dtos;
+package com.tsystems.jschool20.srvengine.entites;
 
 import org.springframework.stereotype.Component;
 
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
  * Created by ruslbard on 29.03.2017.
  */
 @Component
-public class Tariff_DTO {
+public class DtoTariff extends AbstractTariff{
 
     private String textname;
     private Double price;
@@ -19,7 +19,7 @@ public class Tariff_DTO {
         this.textname = textname;
     }
 
-    public Double getPrice() {
+    public Long getPrice() {
         return price;
     }
 

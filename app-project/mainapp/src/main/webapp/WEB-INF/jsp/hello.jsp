@@ -24,7 +24,7 @@ href="<c:url value="/resources/style.css" />" >
         </tr>
         <c:forEach var="tariff" items="${tariffs}">
             <tr>
-                <td>${tariff.textname}</td>
+                <td>${tariff.name}</td>
                 <td>${tariff.price}</td>
             </tr>
         </c:forEach>
