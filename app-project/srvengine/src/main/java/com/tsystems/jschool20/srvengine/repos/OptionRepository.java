@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.JoinTable;
 import java.util.List;
 
 /**
@@ -14,9 +13,7 @@ import java.util.List;
 @Transactional
 public interface OptionRepository extends JpaRepository<Option, Long> {
 
-    @Query("SELECT o FROM OPTIONS o")
+    @Query("SELECT o FROM Option o")
     List<Option> findAll();
 
-//    @Query("SELECT o FROM Options o, INCLUDE_OPTIONS WHERE o.ID  ")
-//    List<Option> findAllIncludeOptions(Long id);
 }

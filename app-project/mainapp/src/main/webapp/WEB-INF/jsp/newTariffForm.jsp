@@ -29,7 +29,9 @@ href="<c:url value="/resources/style.css" />" >
                 <td>${option.name}</td>
                 <td>${option.price}</td>
                 <td>${option.add_coast}</td>
-                <td>${option.active}</td>
+                <td>${option.isActive}</td>
+                <td>${option.includeOptionsIds}</td>
+                <td>${option.excludeOptionsIds}</td>
             </tr>
         </c:forEach>
     </table>

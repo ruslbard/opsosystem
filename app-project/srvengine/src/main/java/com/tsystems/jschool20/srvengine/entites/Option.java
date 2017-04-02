@@ -1,10 +1,8 @@
 package com.tsystems.jschool20.srvengine.entites;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by ruslbard on 02.04.2017.
@@ -50,7 +48,7 @@ public class Option implements Serializable{
         return add_coast;
     }
 
-    @Column(name = "ISACTIVE")
+    @Column(name = "ACTIVE")
     public char getIsActive() {
         return isActive;
     }
@@ -59,7 +57,7 @@ public class Option implements Serializable{
     @JoinTable(
                 name = "INCLUDE_OPTIONS",
                 joinColumns = {@JoinColumn(name = "ID", referencedColumnName = "ID")},
-                inverseJoinColumns = {@JoinColumn(name = "CHILD_ID", referencedColumnName = "ID")}
+                inverseJoinColumns = {@JoinColumn(name = "CHILD_OPTION_ID", referencedColumnName = "ID")}
     )
     public Collection<Option> getIncludeOptions() {
         return includeOptions;
@@ -69,9 +67,37 @@ public class Option implements Serializable{
     @JoinTable(
             name = "EXCLUDE_OPTIONS",
             joinColumns = {@JoinColumn(name = "ID", referencedColumnName = "ID")},
-            inverseJoinColumns = {@JoinColumn(name = "CHILD_ID", referencedColumnName = "ID")}
+            inverseJoinColumns = {@JoinColumn(name = "CHILD_OPTION_ID", referencedColumnName = "ID")}
     )
     public Collection<Option> getExcludeOptions() {
         return excludeOptions;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
+    }
+
+    public void setAdd_coast(long add_coast) {
+        this.add_coast = add_coast;
+    }
+
+    public void setIsActive(char isActive) {
+        this.isActive = isActive;
+    }
+
+    public void setIncludeOptions(Collection<Option> includeOptions) {
+        this.includeOptions = includeOptions;
+    }
+
+    public void setExcludeOptions(Collection<Option> excludeOptions) {
+        this.excludeOptions = excludeOptions;
     }
 }

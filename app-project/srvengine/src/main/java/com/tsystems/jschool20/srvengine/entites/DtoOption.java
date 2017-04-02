@@ -15,22 +15,22 @@ public class DtoOption {
     protected long add_coast;
     protected char isActive;
 
-    protected Collection<DtoOption> includeOptions;
-    protected Collection<DtoOption> excludeOptions;
+    protected Collection<Long> includeOptionsIds;
+    protected Collection<Long> excludeOptionsIds;
 
     public DtoOption(){
 
     }
 
-    public DtoOption(long id, String name, long price, long add_coast, char isActive, Collection<DtoOption> includeOptions, Collection<DtoOption> excludeOptions) {
+    public DtoOption(long id, String name, long price, long add_coast, char isActive, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
 
         this.id = id;
         this.name = name;
         this.price = price;
         this.add_coast = add_coast;
         this.isActive = isActive;
-        this.includeOptions = includeOptions;
-        this.excludeOptions = excludeOptions;
+        this.includeOptionsIds = includeOptionsIds;
+        this.excludeOptionsIds = excludeOptionsIds;
     }
 
 
@@ -54,12 +54,12 @@ public class DtoOption {
         this.isActive = isActive;
     }
 
-    public void setIncludeOptions(Collection<DtoOption> includeOptions) {
-        this.includeOptions = includeOptions;
+    public void setIncludeOptionsIds(Collection<Long> includeOptionsIds) {
+        this.includeOptionsIds = includeOptionsIds;
     }
 
-    public void setExcludeOptions(Collection<DtoOption> excludeOptions) {
-        this.excludeOptions = excludeOptions;
+    public void setExcludeOptionsIds(Collection<Long> excludeOptionsIds) {
+        this.excludeOptionsIds = excludeOptionsIds;
     }
 
     public long getId() {
@@ -82,11 +82,11 @@ public class DtoOption {
         return isActive;
     }
 
-    public Collection<DtoOption> getIncludeOptions() {
-        return includeOptions;
+    public Collection<Long> getIncludeOptionsIds() {
+        return includeOptionsIds;
     }
 
-    public Collection<DtoOption> getExcludeOptions() {
-        return excludeOptions;
+    public Collection<Long> getExcludeOptionsIds() {
+        return excludeOptionsIds;
     }
 }
