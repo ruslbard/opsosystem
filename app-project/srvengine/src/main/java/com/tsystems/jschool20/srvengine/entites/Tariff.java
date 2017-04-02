@@ -1,7 +1,6 @@
 package com.tsystems.jschool20.srvengine.entites;
 
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.persistence.Table;

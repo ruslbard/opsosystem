@@ -43,7 +43,7 @@
 	(object Attribute
 	    tool       	"Data Modeler"
 	    name       	"TriggerCounter"
-	    value      	0)
+	    value      	1)
 	(object Attribute
 	    tool       	"Data Modeler"
 	    name       	"IndexCounter"
@@ -414,7 +414,7 @@
 					supplier   	@1
 					vertices   	(list Points
 					    (1415, 1112)
-					    (1356, 961))
+					    (1357, 961))
 					line_style 	0)
 				    (object RoleView "$UNNAMED$29" @7
 					Parent_View 	@5
@@ -426,7 +426,7 @@
 					supplier   	@4
 					vertices   	(list Points
 					    (1415, 1112)
-					    (1470, 1264))
+					    (1473, 1264))
 					line_style 	0)))
 			    (object AssociationViewNew "$UNNAMED$30" @8
 				location   	(1872, 1099)
@@ -454,7 +454,7 @@
 					supplier   	@2
 					vertices   	(list Points
 					    (1872, 1099)
-					    (2183, 897))
+					    (2184, 897))
 					line_style 	0)
 				    (object RoleView "$UNNAMED$32" @10
 					Parent_View 	@8
@@ -2423,11 +2423,11 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Length"
-						value      	5)
+						value      	10)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Scale"
-						value      	2)
+						value      	0)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"NullsAllowed"
@@ -2449,7 +2449,7 @@
 						name       	"DefaultValueType"
 						value      	"No Default Value"))
 					quid       	"58D9A80501A7"
-					type       	"NUMBER(5, 2)"
+					type       	"NUMBER(10, 0)"
 					exportControl 	"Neither")
 				    (object ClassAttribute "ISDELETED"
 					attributes 	(list Attribute_Set
@@ -2505,10 +2505,10 @@
 					type       	"CHAR(1)"
 					initv      	"'N'"
 					exportControl 	"Neither"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
-			    (object Class "OPTION"
+			    (object Class "OPTIONS"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"Data Modeler"
@@ -2549,60 +2549,6 @@
 				quid       	"58D5BC600033"
 				stereotype 	"Table"
 				operations 	(list Operations
-				    (object Operation "TC_OPTIONS"
-					attributes 	(list Attribute_Set
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"IsConstraint"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"ConstraintType"
-						value      	"Unique")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"dmItem"
-						value      	TRUE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"TC_OPTIONS")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"CodeName"
-						value      	"")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"DeferalMode"
-						value      	"Not Deferable")
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"IsCluster"
-						value      	FALSE)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"FillFactor"
-						value      	0)
-					    (object Attribute
-						tool       	"Data Modeler"
-						name       	"KeyList"
-						value      	"58D7BFE7014E"))
-					quid       	"58D5BE0803C3"
-					stereotype 	"Unique"
-					visible_modules 	(list dependency_list
-					    (object Dependency_Relationship
-						attributes 	(list Attribute_Set
-						    (object Attribute
-							tool       	"Data Modeler"
-							name       	"Order"
-							value      	"1"))
-						quid       	"58D7BFE70170"
-						stereotype 	"Unique"
-						supplier   	"Logical View::Schemas::OPSYSTEM::OPTION::id"
-						quidu      	"58D7BFE7014E"))
-					concurrency 	"Sequential"
-					opExportControl 	"Public"
-					uid        	0)
 				    (object Operation "PK_OPTIONS"
 					attributes 	(list Attribute_Set
 					    (object Attribute
@@ -2652,13 +2598,13 @@
 							value      	"1"))
 						quid       	"58D7BFE7017E"
 						stereotype 	"PK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::OPTION::id"
+						supplier   	"Logical View::Schemas::OPSYSTEM::OPTIONS::ID"
 						quidu      	"58D7BFE7014E"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
 					uid        	0))
 				class_attributes 	(list class_attribute_list
-				    (object ClassAttribute "id"
+				    (object ClassAttribute "ID"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -2675,7 +2621,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"id")
+						value      	"ID")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Ordinal"
@@ -2716,7 +2662,7 @@
 					type       	"NUMBER(5, 0)"
 					initv      	"UID"
 					exportControl 	"Primary")
-				    (object ClassAttribute "price"
+				    (object ClassAttribute "PRICE"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -2733,7 +2679,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"price")
+						value      	"PRICE")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Ordinal"
@@ -2741,11 +2687,11 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Length"
-						value      	5)
+						value      	10)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Scale"
-						value      	2)
+						value      	0)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"NullsAllowed"
@@ -2767,9 +2713,9 @@
 						name       	"DefaultValueType"
 						value      	"No Default Value"))
 					quid       	"58D7BFE70193"
-					type       	"NUMBER(5, 2)"
+					type       	"NUMBER(10, 0)"
 					exportControl 	"Neither")
-				    (object ClassAttribute "add_coast"
+				    (object ClassAttribute "ADD_COAST"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -2786,7 +2732,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"add_coast")
+						value      	"ADD_COAST")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Ordinal"
@@ -2794,11 +2740,11 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Length"
-						value      	5)
+						value      	10)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Scale"
-						value      	2)
+						value      	0)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"NullsAllowed"
@@ -2820,9 +2766,9 @@
 						name       	"DefaultValueType"
 						value      	"No Default Value"))
 					quid       	"58D7BFE701BA"
-					type       	"NUMBER(5, 2)"
+					type       	"NUMBER(10, 0)"
 					exportControl 	"Neither")
-				    (object ClassAttribute "active"
+				    (object ClassAttribute "ACTIVE"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -2831,7 +2777,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"active")
+						value      	"ACTIVE")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"CodeName"
@@ -2876,7 +2822,7 @@
 					type       	"CHAR(1)"
 					initv      	"'Y'"
 					exportControl 	"Neither"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
 			    (object Class "TARIFFS_OPTIONS_LINK"
@@ -3183,10 +3129,10 @@
 					quid       	"58D9A7E1034E"
 					type       	"NUMBER(5, 0)"
 					exportControl 	"Both"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
-			    (object Class "CLIENT"
+			    (object Class "CLIENTS"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"Data Modeler"
@@ -3276,7 +3222,7 @@
 							value      	"1"))
 						quid       	"58D5C86B00DE"
 						stereotype 	"PK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::CLIENT::ID"
+						supplier   	"Logical View::Schemas::OPSYSTEM::CLIENTS::ID"
 						quidu      	"58D5C86B00DA"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
@@ -3777,7 +3723,7 @@
 					quid       	"58D5C86B00FF"
 					type       	"VARCHAR2(255)"
 					exportControl 	"Neither"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
 			    (object Class "CONTRACTS"
@@ -4251,7 +4197,7 @@
 					quid       	"58D9AB55010D"
 					type       	"NUMBER(5, 0)"
 					exportControl 	"Foreign"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
 			    (object Class "PHONE_NUMBERS"
@@ -4664,7 +4610,7 @@
 					quid       	"58D9AACB0286"
 					type       	"NUMBER(5, 0)"
 					exportControl 	"Foreign"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
 			    (object Class "TARIFFS_PRICES_HISTORY"
@@ -4991,11 +4937,11 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Length"
-						value      	5)
+						value      	10)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Scale"
-						value      	2)
+						value      	0)
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"NullsAllowed"
@@ -5021,12 +4967,12 @@
 						name       	"DefaultValueType"
 						value      	"No Default Value"))
 					quid       	"58D9AA31011E"
-					type       	"NUMBER(5, 2)"
+					type       	"NUMBER(10, 0)"
 					exportControl 	"Neither"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
-			    (object Class "INCLUDE_OPTION"
+			    (object Class "INCLUDE_OPTIONS"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"Data Modeler"
@@ -5039,7 +4985,7 @@
 				    (object Attribute
 					tool       	"Data Modeler"
 					name       	"DMName"
-					value      	"include_option")
+					value      	"INCLUDE_OPTIONS")
 				    (object Attribute
 					tool       	"Data Modeler"
 					name       	"CodeName"
@@ -5104,7 +5050,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"KeyList"
-						value      	"58D7D4520298,58D7D4520263"))
+						value      	"58E08F3802BE,58E08F3802A7"))
 					quid       	"58D7D4110281"
 					stereotype 	"PK"
 					visible_modules 	(list dependency_list
@@ -5114,20 +5060,20 @@
 							tool       	"Data Modeler"
 							name       	"Order"
 							value      	"1"))
-						quid       	"58D7D45202CA"
+						quid       	"58E08F3802C7"
 						stereotype 	"PK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION::child_option_id"
-						quidu      	"58D7D4520298")
+						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS::CHILD_OPTION_ID"
+						quidu      	"58E08F3802BE")
 					    (object Dependency_Relationship
 						attributes 	(list Attribute_Set
 						    (object Attribute
 							tool       	"Data Modeler"
 							name       	"Order"
 							value      	"2"))
-						quid       	"58D7D45202CD"
+						quid       	"58E08F3802C9"
 						stereotype 	"PK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION::parent_option_id"
-						quidu      	"58D7D4520263"))
+						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS::ID"
+						quidu      	"58E08F3802A7"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
 					uid        	0)
@@ -5160,7 +5106,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"KeyList"
-						value      	"58D7D4520263"))
+						value      	"58E08F3802A7"))
 					quid       	"58D7D41102AC"
 					stereotype 	"FK"
 					visible_modules 	(list dependency_list
@@ -5170,10 +5116,10 @@
 							tool       	"Data Modeler"
 							name       	"Order"
 							value      	"1"))
-						quid       	"58D7D452028D"
+						quid       	"58E08F3802B9"
 						stereotype 	"FK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION::parent_option_id"
-						quidu      	"58D7D4520263"))
+						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS::ID"
+						quidu      	"58E08F3802A7"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
 					uid        	0)
@@ -5218,13 +5164,13 @@
 							value      	"1"))
 						quid       	"58D7D45202B7"
 						stereotype 	"FK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION::child_option_id"
+						supplier   	"CHILD_OPTION_ID"
 						quidu      	"58D7D4520298"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
 					uid        	0))
 				class_attributes 	(list class_attribute_list
-				    (object ClassAttribute "parent_option_id"
+				    (object ClassAttribute "ID"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -5241,7 +5187,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"parent_option_id")
+						value      	"ID")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Ordinal"
@@ -5274,10 +5220,10 @@
 						tool       	"Data Modeler"
 						name       	"DefaultValueType"
 						value      	"No Default Value"))
-					quid       	"58D7D4520263"
+					quid       	"58E08F3802A7"
 					type       	"NUMBER(5, 0)"
 					exportControl 	"Both")
-				    (object ClassAttribute "child_option_id"
+				    (object ClassAttribute "CHILD_OPTION_ID"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -5285,12 +5231,16 @@
 						value      	TRUE)
 					    (object Attribute
 						tool       	"Data Modeler"
-						name       	"DMName"
-						value      	"child_option_id")
-					    (object Attribute
-						tool       	"Data Modeler"
 						name       	"CodeName"
 						value      	"")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"ExplicitNullable"
+						value      	"False")
+					    (object Attribute
+						tool       	"Data Modeler"
+						name       	"DMName"
+						value      	"CHILD_OPTION_ID")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Ordinal"
@@ -5317,23 +5267,19 @@
 						value      	FALSE)
 					    (object Attribute
 						tool       	"Data Modeler"
-						name       	"ExplicitNullable"
-						value      	"False")
-					    (object Attribute
-						tool       	"Data Modeler"
 						name       	"ColumnType"
 						value      	"Native")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DefaultValueType"
 						value      	"No Default Value"))
-					quid       	"58D7D4520298"
+					quid       	"58E08F3802BE"
 					type       	"NUMBER(5, 0)"
-					exportControl 	"Both"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+					exportControl 	"Primary"))
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
-			    (object Class "EXCLUDE_OPTION"
+			    (object Class "EXCLUDE_OPTIONS"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"Data Modeler"
@@ -5423,7 +5369,7 @@
 							value      	"1"))
 						quid       	"58D7D4D00207"
 						stereotype 	"PK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION::child_option_id"
+						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS::CHILD_OPTION_ID"
 						quidu      	"58D7D4D001E2")
 					    (object Dependency_Relationship
 						attributes 	(list Attribute_Set
@@ -5433,7 +5379,7 @@
 							value      	"2"))
 						quid       	"58D7D4D00209"
 						stereotype 	"PK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION::parent_option_id"
+						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS::ID"
 						quidu      	"58D7D4D001A4"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
@@ -5479,7 +5425,7 @@
 							value      	"1"))
 						quid       	"58D7D4D001C7"
 						stereotype 	"FK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION::parent_option_id"
+						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS::ID"
 						quidu      	"58D7D4D001A4"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
@@ -5525,13 +5471,13 @@
 							value      	"1"))
 						quid       	"58D7D4D00202"
 						stereotype 	"FK"
-						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION::child_option_id"
+						supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS::CHILD_OPTION_ID"
 						quidu      	"58D7D4D001E2"))
 					concurrency 	"Sequential"
 					opExportControl 	"Public"
 					uid        	0))
 				class_attributes 	(list class_attribute_list
-				    (object ClassAttribute "parent_option_id"
+				    (object ClassAttribute "ID"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -5548,7 +5494,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"parent_option_id")
+						value      	"ID")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"Ordinal"
@@ -5584,7 +5530,7 @@
 					quid       	"58D7D4D001A4"
 					type       	"NUMBER(5, 0)"
 					exportControl 	"Both")
-				    (object ClassAttribute "child_option_id"
+				    (object ClassAttribute "CHILD_OPTION_ID"
 					attributes 	(list Attribute_Set
 					    (object Attribute
 						tool       	"Data Modeler"
@@ -5593,7 +5539,7 @@
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"DMName"
-						value      	"child_option_id")
+						value      	"CHILD_OPTION_ID")
 					    (object Attribute
 						tool       	"Data Modeler"
 						name       	"CodeName"
@@ -5637,7 +5583,7 @@
 					quid       	"58D7D4D001E2"
 					type       	"NUMBER(5, 0)"
 					exportControl 	"Both"))
-				module     	"Component View::OPSOSYSTEM-DB::OPSYSTEM"
+				module     	"Component View::OPSYSTEM-DB::OPSYSTEM"
 				quidu      	"58D5BB80017E"
 				language   	"Data Modeler")
 			    (object Association "$UNNAMED$57"
@@ -5732,7 +5678,7 @@
 						name       	"ConstraintName"
 						value      	"58D5BE0803C8"))
 					quid       	"58D5C3780232"
-					supplier   	"Logical View::Schemas::OPSYSTEM::OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::OPTIONS"
 					quidu      	"58D5BC600033"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE
@@ -5926,7 +5872,7 @@
 						name       	"ConstraintName"
 						value      	"58D5C86B00CB"))
 					quid       	"58D5CB3E022A"
-					supplier   	"Logical View::Schemas::OPSYSTEM::CLIENT"
+					supplier   	"Logical View::Schemas::OPSYSTEM::CLIENTS"
 					quidu      	"58D5C4FB007D"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE
@@ -6100,7 +6046,7 @@
 						name       	"ConstraintName"
 						value      	"58D7D41102AC"))
 					quid       	"58D7D4110200"
-					supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS"
 					quidu      	"58D7D3FD014D"
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Value"
@@ -6120,7 +6066,7 @@
 						name       	"ConstraintName"
 						value      	"58D5BE0803C8"))
 					quid       	"58D7D4110202"
-					supplier   	"Logical View::Schemas::OPSYSTEM::OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::OPTIONS"
 					quidu      	"58D5BC600033"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE
@@ -6197,7 +6143,7 @@
 						name       	"ConstraintName"
 						value      	"58D7D45201FA"))
 					quid       	"58D7D4520197"
-					supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS"
 					quidu      	"58D7D3FD014D"
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Value"
@@ -6217,7 +6163,7 @@
 						name       	"ConstraintName"
 						value      	"58D5BE0803C8"))
 					quid       	"58D7D4520199"
-					supplier   	"Logical View::Schemas::OPSYSTEM::OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::OPTIONS"
 					quidu      	"58D5BC600033"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE
@@ -6294,7 +6240,7 @@
 						name       	"ConstraintName"
 						value      	"58D7D4A700EC"))
 					quid       	"58D7D4A70059"
-					supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS"
 					quidu      	"58D7D4980398"
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Value"
@@ -6314,7 +6260,7 @@
 						name       	"ConstraintName"
 						value      	"58D5BE0803C8"))
 					quid       	"58D7D4A7005B"
-					supplier   	"Logical View::Schemas::OPSYSTEM::OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::OPTIONS"
 					quidu      	"58D5BC600033"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE
@@ -6391,7 +6337,7 @@
 						name       	"ConstraintName"
 						value      	"58D7D4D00151"))
 					quid       	"58D7D4D000FF"
-					supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS"
 					quidu      	"58D7D4980398"
 					client_cardinality 	(value cardinality "0..*")
 					Containment 	"By Value"
@@ -6411,7 +6357,7 @@
 						name       	"ConstraintName"
 						value      	"58D5BE0803C8"))
 					quid       	"58D7D4D00101"
-					supplier   	"Logical View::Schemas::OPSYSTEM::OPTION"
+					supplier   	"Logical View::Schemas::OPSYSTEM::OPTIONS"
 					quidu      	"58D5BC600033"
 					client_cardinality 	(value cardinality "1")
 					is_navigable 	TRUE
@@ -6720,7 +6666,7 @@
 				origin_x   	553
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION" @69
+				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS" @69
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -6737,22 +6683,41 @@
 					    default_color 	TRUE)
 					label      	(object ItemLabel
 					    Parent_View 	@69
-					    location   	(2881, 426)
+					    location   	(2870, 317)
 					    fill_color 	13434879
 					    nlines     	1
-					    max_width  	446
+					    max_width  	468
 					    justify    	0
-					    label      	"INCLUDE_OPTION")
+					    label      	"INCLUDE_OPTIONS")
 					icon       	"Table"
 					icon_style 	"Decoration"
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"58D7D3FD014D"
-					width      	464
-					height     	210
+					compartment 	(object Compartment
+					    Parent_View 	@69
+					    location   	(2870, 375)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						charSet    	204
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    fill_color 	13434879
+					    anchor     	2
+					    nlines     	6
+					    max_width  	16
+					    justify    	1)
+					width      	486
+					height     	428
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION" @70
+				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS" @70
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -6769,22 +6734,41 @@
 					    default_color 	TRUE)
 					label      	(object ItemLabel
 					    Parent_View 	@70
-					    location   	(1904, 1194)
+					    location   	(1892, 1085)
 					    fill_color 	13434879
 					    nlines     	1
-					    max_width  	448
+					    max_width  	472
 					    justify    	0
-					    label      	"EXCLUDE_OPTION")
+					    label      	"EXCLUDE_OPTIONS")
 					icon       	"Table"
 					icon_style 	"Decoration"
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"58D7D4980398"
-					width      	466
-					height     	210
+					compartment 	(object Compartment
+					    Parent_View 	@70
+					    location   	(1892, 1143)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						charSet    	204
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    fill_color 	13434879
+					    anchor     	2
+					    nlines     	6
+					    max_width  	16
+					    justify    	1)
+					width      	490
+					height     	428
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::OPTION" @71
+				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::OPTIONS" @71
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -6801,23 +6785,42 @@
 					    default_color 	TRUE)
 					label      	(object ItemLabel
 					    Parent_View 	@71
-					    location   	(1839, 394)
+					    location   	(1832, 264)
 					    fill_color 	13434879
 					    nlines     	1
-					    max_width  	258
+					    max_width  	272
 					    justify    	0
-					    label      	"OPTION")
+					    label      	"OPTIONS")
 					icon       	"Table"
 					icon_style 	"Decoration"
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"58D5BC600033"
-					width      	276
-					height     	210
+					compartment 	(object Compartment
+					    Parent_View 	@71
+					    location   	(1832, 322)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						charSet    	204
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    fill_color 	13434879
+					    anchor     	2
+					    nlines     	6
+					    max_width  	16
+					    justify    	1)
+					width      	290
+					height     	470
 					annotation 	8
 					autoResize 	TRUE)
 				    (object AssociationViewNew "$UNNAMED$69" @72
-					location   	(2555, 93)
+					location   	(2453, 94)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -6830,7 +6833,7 @@
 					    default_color 	TRUE)
 					stereotype 	(object SegLabel @73
 					    Parent_View 	@72
-					    location   	(2555, 0)
+					    location   	(2453, 0)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -6855,7 +6858,7 @@
 					roleview_list 	(list RoleViews
 					    (object RoleView "$UNNAMED$70" @74
 						Parent_View 	@72
-						location   	(587, -307)
+						location   	(485, -306)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -6872,12 +6875,13 @@
 						client     	@72
 						supplier   	@69
 						vertices   	(list Points
-						    (2555, 93)
-						    (2934, 326))
+						    (2453, 94)
+						    (2504, 62)
+						    (2860, 281))
 						line_style 	0
 						label      	(object SegLabel @75
 						    Parent_View 	@74
-						    location   	(2869, 348)
+						    location   	(2792, 302)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -6899,7 +6903,7 @@
 						    orientation 	1))
 					    (object RoleView "$UNNAMED$71" @76
 						Parent_View 	@72
-						location   	(587, -307)
+						location   	(485, -306)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -6916,13 +6920,12 @@
 						client     	@72
 						supplier   	@71
 						vertices   	(list Points
-						    (2555, 93)
-						    (2504, 62)
-						    (2106, 312))
+						    (2453, 94)
+						    (2113, 306))
 						line_style 	0
 						label      	(object SegLabel @77
 						    Parent_View 	@76
-						    location   	(2181, 329)
+						    location   	(2177, 330)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -6943,7 +6946,7 @@
 						    height     	54
 						    orientation 	0))))
 				    (object AssociationViewNew "$UNNAMED$72" @78
-					location   	(2484, 646)
+					location   	(2483, 646)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -6956,7 +6959,7 @@
 					    default_color 	TRUE)
 					stereotype 	(object SegLabel @79
 					    Parent_View 	@78
-					    location   	(2484, 539)
+					    location   	(2483, 539)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -6981,7 +6984,7 @@
 					roleview_list 	(list RoleViews
 					    (object RoleView "$UNNAMED$73" @80
 						Parent_View 	@78
-						location   	(516, 246)
+						location   	(515, 246)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -6998,13 +7001,13 @@
 						client     	@78
 						supplier   	@69
 						vertices   	(list Points
-						    (2484, 646)
+						    (2483, 646)
 						    (2538, 672)
-						    (2871, 529))
+						    (2860, 535))
 						line_style 	0
 						label      	(object SegLabel @81
 						    Parent_View 	@80
-						    location   	(2852, 596)
+						    location   	(2843, 601)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7026,7 +7029,7 @@
 						    orientation 	1))
 					    (object RoleView "$UNNAMED$74" @82
 						Parent_View 	@78
-						location   	(516, 246)
+						location   	(515, 246)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7043,12 +7046,12 @@
 						client     	@78
 						supplier   	@71
 						vertices   	(list Points
-						    (2484, 646)
-						    (2106, 465))
+						    (2483, 646)
+						    (2113, 469))
 						line_style 	0
 						label      	(object SegLabel @83
 						    Parent_View 	@82
-						    location   	(2123, 533)
+						    location   	(2129, 536)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7126,11 +7129,11 @@
 						vertices   	(list Points
 						    (2274, 755)
 						    (2313, 800)
-						    (2175, 1094))
+						    (2225, 985))
 						line_style 	0
 						label      	(object SegLabel @87
 						    Parent_View 	@86
-						    location   	(2241, 1081)
+						    location   	(2286, 984)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7170,11 +7173,11 @@
 						supplier   	@71
 						vertices   	(list Points
 						    (2274, 755)
-						    (2058, 505))
+						    (2113, 569))
 						line_style 	0
 						label      	(object SegLabel @89
 						    Parent_View 	@88
-						    location   	(2121, 497)
+						    location   	(2171, 555)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7195,7 +7198,7 @@
 						    height     	54
 						    orientation 	1))))
 				    (object AssociationViewNew "$UNNAMED$78" @90
-					location   	(1718, 854)
+					location   	(1717, 856)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -7208,7 +7211,7 @@
 					    default_color 	TRUE)
 					stereotype 	(object SegLabel @91
 					    Parent_View 	@90
-					    location   	(1718, 747)
+					    location   	(1717, 749)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7233,7 +7236,7 @@
 					roleview_list 	(list RoleViews
 					    (object RoleView "$UNNAMED$79" @92
 						Parent_View 	@90
-						location   	(-250, 454)
+						location   	(-251, 456)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7250,13 +7253,13 @@
 						client     	@90
 						supplier   	@70
 						vertices   	(list Points
-						    (1718, 854)
+						    (1717, 856)
 						    (1688, 909)
-						    (1969, 1094))
+						    (1882, 1036))
 						line_style 	0
 						label      	(object SegLabel @93
 						    Parent_View 	@92
-						    location   	(1964, 1027)
+						    location   	(1888, 976)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7278,7 +7281,7 @@
 						    orientation 	0))
 					    (object RoleView "$UNNAMED$80" @94
 						Parent_View 	@90
-						location   	(-250, 454)
+						location   	(-251, 456)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7295,12 +7298,12 @@
 						client     	@90
 						supplier   	@71
 						vertices   	(list Points
-						    (1718, 854)
-						    (1909, 505))
+						    (1717, 856)
+						    (1837, 635))
 						line_style 	0
 						label      	(object SegLabel @95
 						    Parent_View 	@94
-						    location   	(1937, 566)
+						    location   	(1872, 683)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7348,12 +7351,31 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"58D5C197014E"
+					compartment 	(object Compartment
+					    Parent_View 	@96
+					    location   	(369, 356)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						charSet    	204
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    fill_color 	13434879
+					    anchor     	2
+					    nlines     	6
+					    max_width  	0
+					    justify    	1)
 					width      	560
 					height     	210
 					annotation 	8
 					autoResize 	TRUE)
 				    (object AssociationViewNew "$UNNAMED$57" @97
-					location   	(1374, 356)
+					location   	(1371, 356)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -7366,7 +7388,7 @@
 					    default_color 	TRUE)
 					stereotype 	(object SegLabel @98
 					    Parent_View 	@97
-					    location   	(1362, 290)
+					    location   	(1359, 290)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7391,7 +7413,7 @@
 					roleview_list 	(list RoleViews
 					    (object RoleView "$UNNAMED$58" @99
 						Parent_View 	@97
-						location   	(-162, -124)
+						location   	(-165, -124)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7408,12 +7430,12 @@
 						client     	@97
 						supplier   	@96
 						vertices   	(list Points
-						    (1374, 356)
+						    (1371, 356)
 						    (920, 324))
 						line_style 	0
 						label      	(object SegLabel @100
 						    Parent_View 	@99
-						    location   	(995, 392)
+						    location   	(995, 393)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7435,7 +7457,7 @@
 						    orientation 	0))
 					    (object RoleView "$UNNAMED$59" @101
 						Parent_View 	@97
-						location   	(-162, -124)
+						location   	(-165, -124)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7452,12 +7474,12 @@
 						client     	@97
 						supplier   	@71
 						vertices   	(list Points
-						    (1374, 356)
-						    (1829, 389))
+						    (1371, 356)
+						    (1822, 389))
 						line_style 	0
 						label      	(object SegLabel @102
 						    Parent_View 	@101
-						    location   	(1780, 440)
+						    location   	(1774, 440)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7505,11 +7527,30 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"58D7C28E0208"
+					compartment 	(object Compartment
+					    Parent_View 	@103
+					    location   	(339, 2148)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						charSet    	204
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    fill_color 	13434879
+					    anchor     	2
+					    nlines     	7
+					    max_width  	0
+					    justify    	1)
 					width      	620
 					height     	210
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::CLIENT" @104
+				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::CLIENTS" @104
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -7526,12 +7567,12 @@
 					    default_color 	TRUE)
 					label      	(object ItemLabel
 					    Parent_View 	@104
-					    location   	(3320, 1386)
+					    location   	(3309, 1151)
 					    fill_color 	13434879
 					    nlines     	1
-					    max_width  	240
+					    max_width  	262
 					    justify    	0
-					    label      	"CLIENT")
+					    label      	"CLIENTS")
 					icon       	"Table"
 					icon_style 	"Decoration"
 					line_color 	3342489
@@ -7539,7 +7580,7 @@
 					quidu      	"58D5C4FB007D"
 					compartment 	(object Compartment
 					    Parent_View 	@104
-					    location   	(3320, 1444)
+					    location   	(3309, 1209)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7554,10 +7595,10 @@
 					    fill_color 	13434879
 					    anchor     	2
 					    nlines     	12
-					    max_width  	0
+					    max_width  	16
 					    justify    	1)
-					width      	258
-					height     	210
+					width      	280
+					height     	680
 					annotation 	8
 					autoResize 	TRUE)
 				    (object ClassView "Class" "Logical View::Schemas::OPSYSTEM::TARIFFS" @105
@@ -7588,6 +7629,25 @@
 					line_color 	3342489
 					fill_color 	13434879
 					quidu      	"58D5BB6F0195"
+					compartment 	(object Compartment
+					    Parent_View 	@105
+					    location   	(495, 1140)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						charSet    	204
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    fill_color 	13434879
+					    anchor     	2
+					    nlines     	6
+					    max_width  	0
+					    justify    	1)
 					width      	276
 					height     	210
 					annotation 	8
@@ -7894,7 +7954,7 @@
 					annotation 	8
 					autoResize 	TRUE)
 				    (object AssociationViewNew "$UNNAMED$63" @119
-					location   	(2686, 1685)
+					location   	(2681, 1688)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -7907,7 +7967,7 @@
 					    default_color 	TRUE)
 					stereotype 	(object SegLabel @120
 					    Parent_View 	@119
-					    location   	(2686, 1578)
+					    location   	(2681, 1581)
 					    font       	(object Font
 						size       	9
 						face       	"Arial"
@@ -7932,7 +7992,7 @@
 					roleview_list 	(list RoleViews
 					    (object RoleView "$UNNAMED$64" @121
 						Parent_View 	@119
-						location   	(-770, 1077)
+						location   	(-775, 1080)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7949,12 +8009,12 @@
 						client     	@119
 						supplier   	@118
 						vertices   	(list Points
-						    (2686, 1685)
+						    (2681, 1688)
 						    (2063, 1930))
 						line_style 	0
 						label      	(object SegLabel @122
 						    Parent_View 	@121
-						    location   	(2251, 1911)
+						    location   	(2249, 1911)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -7976,7 +8036,7 @@
 						    orientation 	0))
 					    (object RoleView "$UNNAMED$65" @123
 						Parent_View 	@119
-						location   	(-770, 1077)
+						location   	(-775, 1080)
 						font       	(object Font
 						    size       	9
 						    face       	"Arial"
@@ -7993,12 +8053,12 @@
 						client     	@119
 						supplier   	@104
 						vertices   	(list Points
-						    (2686, 1685)
-						    (3310, 1441))
+						    (2681, 1688)
+						    (3299, 1446))
 						line_style 	0
 						label      	(object SegLabel @124
 						    Parent_View 	@123
-						    location   	(3267, 1516)
+						    location   	(3257, 1520)
 						    font       	(object Font
 							size       	9
 							face       	"Arial"
@@ -8424,7 +8484,7 @@
 				fill_color 	13434879
 				width      	1230
 				height     	281)))))
-	    (object SubSystem "OPSOSYSTEM-DB"
+	    (object SubSystem "OPSYSTEM-DB"
 		quid       	"58D5BB80017D"
 		physical_models 	(list unit_reference_list
 		    (object module "OPSYSTEM" "NotAModuleType" "NotAModulePart"
@@ -8475,17 +8535,15 @@
 					name       	"CodeName"
 					value      	""))
 				quid       	"58D5BBAD002E"
-				supplier   	"Component View::OPSOSYSTEM-DB::USERS"
+				supplier   	"Component View::OPSYSTEM-DB::USERS"
 				quidu      	"58D5BBAD0027"
 				supplier_is_spec 	TRUE))
 			language   	"Data Modeler"
-			class      	"Logical View::Schemas::OPSYSTEM::CLIENT"
+			class      	"Logical View::Schemas::OPSYSTEM::CLIENTS"
 			quidu      	"58D5C4FB007D"
-			class      	"Logical View::Schemas::OPSYSTEM::OPTION"
+			class      	"Logical View::Schemas::OPSYSTEM::OPTIONS"
 			quidu      	"58D5BC600033"
-			class      	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTION"
-			quidu      	"58D7D3FD014D"
-			class      	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTION"
+			class      	"Logical View::Schemas::OPSYSTEM::EXCLUDE_OPTIONS"
 			quidu      	"58D7D4980398"
 			class      	"Logical View::Schemas::OPSYSTEM::TARIFFS_OPTIONS_LINK"
 			quidu      	"58D5C197014E"
@@ -8496,7 +8554,9 @@
 			class      	"Logical View::Schemas::OPSYSTEM::PHONE_NUMBERS"
 			quidu      	"58D5C9510247"
 			class      	"Logical View::Schemas::OPSYSTEM::CONTRACTS"
-			quidu      	"58D5C88100DE")
+			quidu      	"58D5C88100DE"
+			class      	"Logical View::Schemas::OPSYSTEM::INCLUDE_OPTIONS"
+			quidu      	"58D7D3FD014D")
 		    (object module "USERS" "NotAModuleType" "NotAModulePart"
 			attributes 	(list Attribute_Set
 			    (object Attribute
