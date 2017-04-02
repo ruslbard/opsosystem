@@ -23,6 +23,8 @@ href="<c:url value="/resources/style.css" />" >
             <th>Price</th>
             <th>Add coast</th>
             <th>Active</th>
+            <th>Included</th>
+            <th>Excluded</th>
         </tr>
         <c:forEach var="option" items="${options}">
             <tr>
