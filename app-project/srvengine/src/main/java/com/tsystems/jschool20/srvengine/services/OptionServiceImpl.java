@@ -1,7 +1,7 @@
 package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.OptionService;
-import com.tsystems.jschool20.srvengine.entites.DtoOption;
+import com.tsystems.jschool20.srvengine.entites.DTOOption;
 import com.tsystems.jschool20.srvengine.entites.Option;
 import com.tsystems.jschool20.srvengine.repos.OptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +26,13 @@ public class OptionServiceImpl implements OptionService {
     }
 
     @Transactional
-    public Collection<DtoOption> getAllOptions() {
+    public Collection<DTOOption> getAllOptions() {
 
         Collection<Option> allOptions = this.optionRepository.findAll();
-        Collection<DtoOption> dtos = new ArrayList<DtoOption>(allOptions.size());
+        Collection<DTOOption> dtos = new ArrayList<DTOOption>(allOptions.size());
         for (Option option : allOptions) {
 
-            DtoOption dto = new DtoOption();
+            DTOOption dto = new DTOOption();
             dto.setId(option.getId());
             dto.setName(option.getName());
             dto.setPrice(option.getPrice());

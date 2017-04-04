@@ -1,6 +1,6 @@
 package com.tsystems.jschool20.srvengine.api;
 
-import com.tsystems.jschool20.srvengine.entites.DtoOption;
+import com.tsystems.jschool20.srvengine.entites.DTOOption;
 import java.util.Collection;
 
 /**
@@ -8,6 +8,6 @@ import java.util.Collection;
  */
 public interface OptionService {
 
-    Collection<DtoOption> getAllOptions();
+    Collection<DTOOption> getAllOptions();
 
 }

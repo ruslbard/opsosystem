@@ -1,44 +1,24 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
-<head>
-<title>Spittr</title>
-<link rel="stylesheet"
-type="text/css"
-href="<c:url value="/resources/style.css" />" >
-</head>
-<body>
-<h1>Add new tariff form</h1>
+<%@include file="/WEB-INF/jspf/header.jspf" %>
 
-<c:choose>
-    <c:when test="${empty options}">
-        <h3>No options found.</h3>
-    </c:when>
-    <c:otherwise>
-    <h2>Options:</h2>
-    <div class="scroll-table">
-    <table class="table table-striped">
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Add coast</th>
-            <th>Active</th>
-            <th>Included</th>
-            <th>Excluded</th>
-        </tr>
-        <c:forEach var="option" items="${options}">
-            <tr>
-                <td>${option.name}</td>
-                <td>${option.price}</td>
-                <td>${option.add_coast}</td>
-                <td>${option.isActive}</td>
-                <td>${option.includeOptionsIds}</td>
-                <td>${option.excludeOptionsIds}</td>
-            </tr>
-        </c:forEach>
-    </table>
+<section>
+    <h2>Add tariff</h2>
+    <div style="width: 250px">
+    <form role="form" class="addTariff">
+        <div class="form-group">
+        <p><label>Tariff Title</label>
+            <input class="form-control" type="text" id="tariffTitle"></p>
+        <p><label>Price per Minute</label>
+            <input class="form-control" type="number" step="0.01" id="pricePerMinute"></p>
+
+            <input class="btn btn-success" id = "addTariffButton" type="button" value="Add Tariff to Op!System">
+            <div>
+                <span id="errorMessage"></span>
+            </div>
+        </div>
+    </form>
     </div>
-</c:otherwise>
-</c:choose>
-</body>
-</html>
+
+    <p id="test_p"></p>
+</section>
+<script src="static/scripts/addNewTariffForm.js"></script>
+<%@include file="/WEB-INF/jspf/footer.jspf" %>

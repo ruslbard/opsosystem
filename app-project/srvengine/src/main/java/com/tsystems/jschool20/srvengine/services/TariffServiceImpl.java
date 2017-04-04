@@ -2,7 +2,7 @@ package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.TariffService;
 import com.tsystems.jschool20.srvengine.entites.AbstractTariff;
-import com.tsystems.jschool20.srvengine.entites.DtoTariff;
+import com.tsystems.jschool20.srvengine.entites.DTOTariff;
 import com.tsystems.jschool20.srvengine.entites.Tariff;
 import com.tsystems.jschool20.srvengine.repos.TariffRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +37,7 @@ public class TariffServiceImpl implements TariffService {
     public AbstractTariff createNewTariff(String name, long price) {
 
         Tariff newTariff = new Tariff(name, price);
-        DtoTariff dto = new DtoTariff(newTariff.getId(), newTariff.getName(), newTariff.getPrice(), newTariff.getDeleted());
+        DTOTariff dto = new DTOTariff(newTariff.getId(), newTariff.getName(), newTariff.getPrice(), newTariff.getDeleted());
         tariffRepository.save(newTariff);
         return dto;
     }

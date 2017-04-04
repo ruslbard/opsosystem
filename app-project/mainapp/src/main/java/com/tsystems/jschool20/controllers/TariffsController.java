@@ -22,9 +22,6 @@ public class TariffsController {
     @Autowired
     private TariffService tariffService;
 
-    @Autowired
-    private OptionService optionService;
-
     private static final Logger logger = LoggerFactory.getLogger("com.tsystems.jschool20.srvengine.api.TariffService");
 
     @RequestMapping("/allTariffsListForm")
@@ -44,7 +41,6 @@ public class TariffsController {
     @RequestMapping("/addNewTariffForm")
     public String addNewTariffForm(Model model){
 
-        model.addAttribute("options", optionService.getAllOptions());
         return "newTariffForm";
     }
 

@@ -5,24 +5,24 @@ import java.util.Collection;
 /**
  * Created by ruslbard on 02.04.2017.
  */
-public class DtoOption {
+public class DTOOption {
 
 
 
-    protected long id;
-    protected String name;
-    protected long price;
-    protected long add_coast;
-    protected char isActive;
+    private long id;
+    private String name;
+    private long price;
+    private long add_coast;
+    private char isActive;
 
-    protected Collection<Long> includeOptionsIds;
-    protected Collection<Long> excludeOptionsIds;
+    private Collection<Long> includeOptionsIds;
+    private Collection<Long> excludeOptionsIds;
 
-    public DtoOption(){
+    public DTOOption(){
 
     }
 
-    public DtoOption(long id, String name, long price, long add_coast, char isActive, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
+    public DTOOption(long id, String name, long price, long add_coast, char isActive, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
 
         this.id = id;
         this.name = name;

@@ -12,14 +12,14 @@ import java.util.Collection;
 public class Option implements Serializable{
 
 
-    protected long id;
-    protected String name;
-    protected long price;
-    protected long add_coast;
-    protected char isActive;
+    private long id;
+    private String name;
+    private long price;
+    private long add_coast;
+    private char isActive;
 
-    protected Collection<Option> includeOptions;
-    protected Collection<Option> excludeOptions;
+    private Collection<Option> includeOptions;
+    private Collection<Option> excludeOptions;
 
     public Option() {
 
