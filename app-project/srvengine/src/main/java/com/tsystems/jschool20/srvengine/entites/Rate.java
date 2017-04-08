@@ -26,7 +26,7 @@ public class Rate implements Serializable{
     private Collection<Option> options;
 
     public Rate(){
-
+        this.isDeleted = 'N';
     }
 
     @Id
@@ -51,7 +51,6 @@ public class Rate implements Serializable{
     }
 
     @Column(name = "ISDELETED")
-    @ColumnDefault("N")
     public char getIsDeleted() {
 
         return isDeleted;

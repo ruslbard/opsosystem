@@ -13,7 +13,7 @@ import java.util.List;
 @Transactional
 public interface RateRepository extends JpaRepository<Rate, Long> {
 
-    @Query("select t from Rate t")
+    @Query("SELECT t FROM Rate t")
     List<Rate> findAll();
 
 }

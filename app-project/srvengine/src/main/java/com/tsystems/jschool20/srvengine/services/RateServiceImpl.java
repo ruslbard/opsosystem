@@ -32,9 +32,23 @@ public class RateServiceImpl implements RateService {
     }
 
 
-    public Collection<Rate> getAllRates() {
+    public Collection<DTORate> getAllRates() {
 
-        return rateRepository.findAll();
+
+        Collection<Rate> rates = rateRepository.findAll();
+        Collection<DTORate> dtos = new ArrayList<DTORate>(rates.size());
+
+        for (Rate rate : rates) {
+
+            DTORate dto = new DTORate();
+
+            dto.setId(rate.getId());
+            dto.setName(rate.getName());
+
+            dtos.add(dto);
+        }
+
+        return dtos;
     }
 
     public DTORate createNewRate(DTORate dto) {
@@ -42,7 +56,10 @@ public class RateServiceImpl implements RateService {
         Rate newRate = new Rate();
 
         newRate.setName(dto.getName());
-        newRate.setPrice(dto.getPrice());
+        newRate.setPrice((long)dto.getPrice()*100);
+
+        System.out.println(dto.getPrice());
+        System.out.println(newRate.getPrice());
 
         Collection<Option> options = new ArrayList<Option>(dto.getOptionsIds().size());
 

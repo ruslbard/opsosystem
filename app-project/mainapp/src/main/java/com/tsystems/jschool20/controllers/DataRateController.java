@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
+
 /**
  * Created by ruslbard on 06.04.2017.
  */
@@ -23,5 +25,11 @@ public class DataRateController {
         System.out.println(dto.toString());
         rateService.createNewRate(dto);
 
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/allRatesList", produces = "application/json")
+    public Collection<DTORate> getAllRates(){
+
+        return rateService.getAllRates();
     }
 }

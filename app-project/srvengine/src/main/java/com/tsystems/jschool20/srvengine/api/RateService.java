@@ -10,6 +10,6 @@ import java.util.Collection;
  */
 public interface RateService {
 
-    Collection<Rate> getAllRates();
+    Collection<DTORate> getAllRates();
     DTORate createNewRate(DTORate dto);
 }

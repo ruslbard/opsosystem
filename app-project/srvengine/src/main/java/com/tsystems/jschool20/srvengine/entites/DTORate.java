@@ -11,7 +11,7 @@ public class DTORate {
 
     private String name;
 
-    private long price;
+    private double price;
 
     private Collection<Long> optionsIds;
 
@@ -23,7 +23,7 @@ public class DTORate {
         return name;
     }
 
-    public long getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -39,7 +39,7 @@ public class DTORate {
         this.name = name;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
