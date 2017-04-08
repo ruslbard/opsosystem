@@ -14,6 +14,7 @@ public class DTOOption {
     private long price;
     private long add_coast;
     private char isActive;
+    private char defaultForRates;
 
     private Collection<Long> includeOptionsIds;
     private Collection<Long> excludeOptionsIds;
@@ -22,13 +23,14 @@ public class DTOOption {
 
     }
 
-    public DTOOption(long id, String name, long price, long add_coast, char isActive, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
+    public DTOOption(long id, String name, long price, long add_coast, char isActive, char defaultForRates, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
 
         this.id = id;
         this.name = name;
         this.price = price;
         this.add_coast = add_coast;
         this.isActive = isActive;
+        this.defaultForRates = defaultForRates;
         this.includeOptionsIds = includeOptionsIds;
         this.excludeOptionsIds = excludeOptionsIds;
     }
@@ -52,6 +54,10 @@ public class DTOOption {
 
     public void setIsActive(char isActive) {
         this.isActive = isActive;
+    }
+
+    public void setDefaultForRates(char defaultForRates) {
+        this.defaultForRates = defaultForRates;
     }
 
     public void setIncludeOptionsIds(Collection<Long> includeOptionsIds) {
@@ -80,6 +86,10 @@ public class DTOOption {
 
     public char getIsActive() {
         return isActive;
+    }
+
+    public char getDefaultForRates() {
+        return defaultForRates;
     }
 
     public Collection<Long> getIncludeOptionsIds() {

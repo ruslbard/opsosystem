@@ -17,6 +17,7 @@ public class Option implements Serializable{
     private long price;
     private long add_coast;
     private char isActive;
+    private char defaultForRates;
 
     private Collection<Option> includeOptions;
     private Collection<Option> excludeOptions;
@@ -51,6 +52,11 @@ public class Option implements Serializable{
     @Column(name = "ACTIVE")
     public char getIsActive() {
         return isActive;
+    }
+
+    @Column(name = "DEFAULT_FOR_RATES")
+    public char getDefaultForRates() {
+        return defaultForRates;
     }
 
     @ManyToMany(cascade = CascadeType.ALL)
@@ -91,6 +97,10 @@ public class Option implements Serializable{
 
     public void setIsActive(char isActive) {
         this.isActive = isActive;
+    }
+
+    public void setDefaultForRates(char defaultForRates) {
+        this.defaultForRates = defaultForRates;
     }
 
     public void setIncludeOptions(Collection<Option> includeOptions) {

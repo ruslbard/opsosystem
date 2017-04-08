@@ -1,55 +1,49 @@
 package com.tsystems.jschool20.srvengine.entites;
 
+import java.util.Collection;
+
 /**
- * Created by ruslbard on 01.04.2017.
+ * Created by ruslbard on 29.03.2017.
  */
-public class AbstractTariff {
+public class DTORate {
 
-    protected long id;
+    private long id;
 
-    protected String name;
+    private String name;
 
-    protected long price;
+    private long price;
 
-    protected char isDeleted;
+    private Collection<Long> optionsIds;
 
     public long getId() {
-
         return id;
     }
 
     public String getName() {
-
         return name;
     }
 
     public long getPrice() {
-
         return price;
     }
 
-    public char getDeleted() {
-
-        return isDeleted;
+    public Collection<Long> getOptionsIds() {
+        return optionsIds;
     }
 
     public void setId(long id) {
-
         this.id = id;
     }
 
     public void setName(String name) {
-
         this.name = name;
     }
 
     public void setPrice(long price) {
-
         this.price = price;
     }
 
-    public void setDeleted(char deleted) {
-
-        this.isDeleted = deleted;
+    public void setOptionsIds(Collection<Long> optionsIds) {
+        this.optionsIds = optionsIds;
     }
 }

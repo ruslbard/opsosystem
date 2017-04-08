@@ -38,6 +38,7 @@ public class OptionServiceImpl implements OptionService {
             dto.setPrice(option.getPrice());
             dto.setAdd_coast(option.getAdd_coast());
             dto.setIsActive(option.getIsActive());
+            dto.setDefaultForRates(option.getDefaultForRates());
 
             Collection<Option> includeOptions = option.getIncludeOptions();
 
