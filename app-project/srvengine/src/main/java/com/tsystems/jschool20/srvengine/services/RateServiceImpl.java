@@ -75,4 +75,28 @@ public class RateServiceImpl implements RateService {
         return dto;
     }
 
+    public DTORate getRate(long id){
+
+        Rate rate = rateRepository.getOne(id);
+
+        DTORate dto = new DTORate();
+
+        dto.setId(rate.getId());
+        dto.setName(rate.getName());
+        dto.setPrice(rate.getPrice());
+
+        Collection<Long> optionsIds = new ArrayList<Long>(rate.getOptions().size());
+
+        for (Option option : rate.getOptions()) {
+
+            Long optionId = option.getId();
+            optionsIds.add(optionId);
+
+        }
+
+        dto.setOptionsIds(optionsIds);
+
+        return dto;
+    }
+
 }

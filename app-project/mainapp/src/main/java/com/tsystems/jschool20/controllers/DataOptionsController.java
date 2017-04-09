@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by ruslbard on 03.04.2017.
  */
 @Controller
-public class OptionController {
+public class DataOptionsController {
 
     @Autowired
     private OptionService optionService;
 
     @ResponseBody
-    @RequestMapping(value = "/listOptions", produces = "application/json")
+    @RequestMapping(value = "/getAllOptions", produces = "application/json")
     public Object getAllOptions(){
         return optionService.getAllOptions();
     }

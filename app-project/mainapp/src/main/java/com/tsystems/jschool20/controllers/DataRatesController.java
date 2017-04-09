@@ -14,12 +14,12 @@ import java.util.Collection;
  * Created by ruslbard on 06.04.2017.
  */
 @RestController
-public class DataRateController {
+public class DataRatesController {
 
     @Autowired
     private RateService rateService;
 
-    @RequestMapping(method = RequestMethod.POST, path = "/addRate", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST, path = "/addNewRate", consumes = "application/json")
     public void addNewRate(@RequestBody DTORate dto){
 
         System.out.println(dto.toString());
@@ -27,7 +27,7 @@ public class DataRateController {
 
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/allRatesList", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, path = "/getAllRates", produces = "application/json")
     public Collection<DTORate> getAllRates(){
 
         return rateService.getAllRates();
