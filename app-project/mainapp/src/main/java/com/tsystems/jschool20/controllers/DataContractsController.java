@@ -1,7 +1,7 @@
 package com.tsystems.jschool20.controllers;
 
 import com.tsystems.jschool20.srvengine.api.ContractService;
-import com.tsystems.jschool20.srvengine.entites.DTOContract;
+import com.tsystems.jschool20.srvengine.dtos.DTOContract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

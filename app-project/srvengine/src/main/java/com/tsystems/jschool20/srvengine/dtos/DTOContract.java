@@ -1,4 +1,4 @@
-package com.tsystems.jschool20.srvengine.entites;
+package com.tsystems.jschool20.srvengine.dtos;
 
 /**
  * Created by ruslbard on 09.04.2017.

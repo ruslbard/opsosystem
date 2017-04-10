@@ -1,7 +1,8 @@
 package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.RateService;
-import com.tsystems.jschool20.srvengine.entites.DTORate;
+import com.tsystems.jschool20.srvengine.dtos.DTOOption;
+import com.tsystems.jschool20.srvengine.dtos.DTORate;
 import com.tsystems.jschool20.srvengine.entites.Option;
 import com.tsystems.jschool20.srvengine.entites.Rate;
 import com.tsystems.jschool20.srvengine.repos.OptionRepository;
@@ -97,6 +98,59 @@ public class RateServiceImpl implements RateService {
         dto.setOptionsIds(optionsIds);
 
         return dto;
+    }
+
+    public Collection<DTOOption> getAllRateOptions(long id) {
+
+        Rate rate = rateRepository.getOne(id);
+
+        Collection<Option> rateOptions = rate.getOptions();
+        Collection<DTOOption> dtos = new ArrayList<DTOOption>(rateOptions.size());
+
+        System.out.println(rateOptions.toString());
+
+        for (Option option : rateOptions) {
+
+            DTOOption dto = new DTOOption();
+            dto.setId(option.getId());
+            dto.setName(option.getName());
+            dto.setPrice(option.getPrice());
+            dto.setAdd_coast(option.getAdd_coast());
+            dto.setIsActive(option.getIsActive());
+            dto.setDefaultForRates(option.getDefaultForRates());
+
+            Collection<Option> includeOptions = option.getIncludeOptions();
+
+            if (!includeOptions.isEmpty()) {
+
+                dto.setIncludeOptionsIds(new ArrayList<Long>(includeOptions.size()));
+
+                for (Option includeOption : includeOptions) {
+
+                    dto.getIncludeOptionsIds().add(includeOption.getId());
+                }
+
+            }
+
+            Collection<Option> excludeOptions = option.getExcludeOptions();
+
+            if (!excludeOptions.isEmpty()) {
+
+                dto.setExcludeOptionsIds(new ArrayList<Long>(excludeOptions.size()));
+
+                for (Option excludeOption : excludeOptions) {
+
+                    dto.getExcludeOptionsIds().add(excludeOption.getId());
+                }
+
+            }
+
+
+            dtos.add(dto);
+
+        }
+
+        return dtos;
     }
 
 }

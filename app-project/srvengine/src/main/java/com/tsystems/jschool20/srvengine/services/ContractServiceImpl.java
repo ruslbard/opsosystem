@@ -1,7 +1,7 @@
 package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.ContractService;
-import com.tsystems.jschool20.srvengine.entites.DTOContract;
+import com.tsystems.jschool20.srvengine.dtos.DTOContract;
 import com.tsystems.jschool20.srvengine.repos.AbonentRepository;
 import com.tsystems.jschool20.srvengine.repos.ContractRepository;
 import org.springframework.beans.factory.annotation.Autowired;

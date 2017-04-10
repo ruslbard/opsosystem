@@ -1,6 +1,6 @@
 package com.tsystems.jschool20.srvengine.api;
 
-import com.tsystems.jschool20.srvengine.entites.DTOOption;
+import com.tsystems.jschool20.srvengine.dtos.DTOOption;
 import java.util.Collection;
 
 /**

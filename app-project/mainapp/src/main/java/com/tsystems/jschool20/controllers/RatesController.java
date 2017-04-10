@@ -1,7 +1,6 @@
 package com.tsystems.jschool20.controllers;
 
 import com.tsystems.jschool20.srvengine.api.*;
-import com.tsystems.jschool20.srvengine.entites.DTORate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -14,7 +14,6 @@ import java.util.Collection;
 @Table(name = "RATES")
 public class Rate implements Serializable{
 
-
     private long id;
 
     private String name;

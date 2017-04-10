@@ -1,12 +1,10 @@
 package com.tsystems.jschool20.controllers;
 
 import com.tsystems.jschool20.srvengine.api.RateService;
-import com.tsystems.jschool20.srvengine.entites.DTORate;
+import com.tsystems.jschool20.srvengine.dtos.DTOOption;
+import com.tsystems.jschool20.srvengine.dtos.DTORate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -31,5 +29,12 @@ public class DataRatesController {
     public Collection<DTORate> getAllRates(){
 
         return rateService.getAllRates();
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, path = "/getAllRateOptions", produces = "application/json")
+    public Collection<DTOOption> getAllOptionsForRate(@RequestParam ("id") long id){
+
+        return rateService.getAllRateOptions(id);
     }
 }

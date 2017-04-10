@@ -1,7 +1,8 @@
 package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.OptionService;
-import com.tsystems.jschool20.srvengine.entites.DTOOption;
+import com.tsystems.jschool20.srvengine.api.RateService;
+import com.tsystems.jschool20.srvengine.dtos.DTOOption;
 import com.tsystems.jschool20.srvengine.entites.Option;
 import com.tsystems.jschool20.srvengine.repos.OptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,12 @@ import java.util.Collection;
 public class OptionServiceImpl implements OptionService {
 
     private OptionRepository optionRepository;
+    private RateService rateService;
 
     @Autowired
-    public OptionServiceImpl(OptionRepository optionRepository) {
+    public OptionServiceImpl(OptionRepository optionRepository, RateService rateService) {
         this.optionRepository = optionRepository;
+        this.rateService = rateService;
     }
 
     @Transactional
@@ -73,4 +76,5 @@ public class OptionServiceImpl implements OptionService {
 
         return dtos;
     }
+
 }

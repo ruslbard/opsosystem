@@ -57,8 +57,15 @@
               </select>
             </div>
 
-            <div class="form-group" id="allOptionsOfSelectedRate">
+            <div class="form-group" id="allOptionsOfSelectedRate"></div>
+
+            <h3>Phone Number Info</h3>
+            <div class="form-group">
+              <label for="allPhoneNumbersSelect">Select Phone Number</label>
+              <select class="form-control" id="allPhoneNumbersSelect">
+              </select>
             </div>
+
 
             <div class="form-group">
                 <input class="btn btn-success" id="addContractButton" type="button" value="Save">
