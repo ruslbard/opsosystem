@@ -7,5 +7,5 @@ import com.tsystems.jschool20.srvengine.dtos.DTOContract;
  */
 public interface ContractService {
 
-    DTOContract createNewContract(DTOContract newContract);
+    DTOContract saveNewContract(DTOContract newContract);
 }

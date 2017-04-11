@@ -1,5 +1,7 @@
 package com.tsystems.jschool20.srvengine.entites;
 
+import com.tsystems.jschool20.srvengine.dtos.DTOPerson;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -8,8 +10,8 @@ import java.util.Date;
  * Created by ruslbard on 09.04.2017.
  */
 @Entity
-@Table(name = "ABONENTS")
-public class Abonent implements Serializable {
+@Table(name = "PERSONS")
+public class Person implements Serializable {
 
     private long id;
     private String firstName;
@@ -21,14 +23,14 @@ public class Abonent implements Serializable {
     private Date passIssuedDate;
     private String email;
 
-    public Abonent(){
+    public Person(){
 
     }
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(generator = "abonent_sequence")
-    @SequenceGenerator(name = "abonent_sequence", sequenceName = "ABONENTS_ID_SEQ", allocationSize = 1)
+    @GeneratedValue(generator = "person_sequence")
+    @SequenceGenerator(name = "person_sequence", sequenceName = "PERSONS_ID_SEQ", allocationSize = 1)
     public long getId() {
         return id;
     }
@@ -58,12 +60,12 @@ public class Abonent implements Serializable {
         return passNumber;
     }
 
-    @Column(name = "PASS_ISSUEDBY")
+    @Column(name = "PASS_ISSUED_BY")
     public String getPassIssuedBy() {
         return passIssuedBy;
     }
 
-    @Column(name = "PASS_ISSUEDDATE")
+    @Column(name = "PASS_ISSUED_DATE")
     public Date getPassIssuedDate() {
         return passIssuedDate;
     }
@@ -108,4 +110,5 @@ public class Abonent implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }

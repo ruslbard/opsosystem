@@ -24,6 +24,14 @@ public class PhoneNumbersServiceImpl implements PhoneNumbersService{
         this.phoneNumberRepository = phoneNumberRepository;
     }
 
+    public static PhoneNumber phoneNumberFactory(DTOPhoneNumber dto){
+
+        PhoneNumber entity = new PhoneNumber();
+        entity.setId(dto.getId());
+
+        return entity;
+    }
+
     public Collection<DTOPhoneNumber> getAllPhoneNumbers() {
 
         Collection<PhoneNumber> allPhoneNumbers = phoneNumberRepository.findAll();

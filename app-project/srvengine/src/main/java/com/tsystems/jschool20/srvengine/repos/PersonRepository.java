@@ -1,6 +1,6 @@
 package com.tsystems.jschool20.srvengine.repos;
 
-import com.tsystems.jschool20.srvengine.entites.Abonent;
+import com.tsystems.jschool20.srvengine.entites.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,5 +8,5 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by ruslbard on 09.04.2017.
  */
 @Transactional
-public interface AbonentRepository extends JpaRepository<Abonent, Long> {
+public interface PersonRepository extends JpaRepository<Person, Long> {
 }

@@ -12,7 +12,7 @@ public class Contract  implements Serializable {
 
     private long id;
     private Rate rate;
-    private Abonent abonent;
+    private Person person;
     private PhoneNumber phoneNumber;
 
     public Contract() {
@@ -35,8 +35,8 @@ public class Contract  implements Serializable {
 
     @OneToOne
     @JoinColumn(name = "ABONENT_ID")
-    public Abonent getAbonent() {
-        return abonent;
+    public Person getPerson() {
+        return person;
     }
 
     @OneToOne
@@ -53,8 +53,8 @@ public class Contract  implements Serializable {
         this.rate = rate;
     }
 
-    public void setAbonent(Abonent abonent) {
-        this.abonent = abonent;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public void setPhoneNumber(PhoneNumber phoneNumber) {

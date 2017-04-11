@@ -1,5 +1,6 @@
 package com.tsystems.jschool20.srvengine.entites;
 
+import com.tsystems.jschool20.srvengine.dtos.DTORate;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.Collection;
 @Entity
 @Table(name = "RATES")
 public class Rate implements Serializable{
+
 
     private long id;
 

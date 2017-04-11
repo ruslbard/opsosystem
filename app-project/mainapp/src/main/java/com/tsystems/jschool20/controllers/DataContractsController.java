@@ -23,9 +23,9 @@ public class DataContractsController {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/createNewContract", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST, path = "/saveNewContract", consumes = "application/json")
     public void createNewContract(@RequestBody DTOContract dto){
 
-        contractService.createNewContract(dto);
+        contractService.saveNewContract(dto);
     }
 }

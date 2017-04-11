@@ -22,8 +22,26 @@ import java.util.Collection;
 public class RateServiceImpl implements RateService {
 
     private final RateRepository rateRepository;
-
     private final OptionRepository optionRepository;
+
+    public static Rate RateFactory(DTORate dto, OptionRepository optionRepository){
+        Rate entity = new Rate();
+
+        entity.setId(dto.getId());
+        entity.setName(dto.getName());
+        entity.setPrice((long)dto.getPrice()*100);
+
+        Collection<Option> options = new ArrayList<Option>(dto.getOptionsIds().size());
+
+        for (Long optionId : dto.getOptionsIds()) {
+
+            options.add(optionRepository.findById(optionId));
+        }
+
+        entity.setOptions(options);
+
+        return entity;
+    }
 
     @Autowired
     public RateServiceImpl(RateRepository rateRepository, OptionRepository optionRepository){

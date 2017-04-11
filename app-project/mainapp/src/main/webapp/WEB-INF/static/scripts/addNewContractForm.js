@@ -10,6 +10,32 @@ $(document).ready(function(){
     var phoneNumbersSelect = $("#allPhoneNumbersSelect").first();
     var phoneNumbersFromServer;
 
+
+    $.ajax({
+
+        url: "/mainapp/getPerson",
+        type: "GET",
+        data:{
+            id:$(".person-info").attr("id")
+        },
+        success: function (data) {
+            $(".person-info").append([
+                "<div class=\"form-group\">", "<label>", "FirstName: ", data.firstName,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "LastName: ", data.lastName,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Date Of Birth: ", data.dateOfBirth,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Pass Serias: ", data.passSerias,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Pass Number: ", data.passNumber,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Pass IssuedBy: ", data.passIssuedBy,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Pass IssuedDate: ", data.passIssuedDate,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Pass Email: ", data.email,"</label>", "</div>"
+            ].join(""));
+        },
+        error:function(error){
+            errorMessageSpan.text(error.responseText);
+            errorMessageSpan.show();
+        }
+    });
+
     $.ajax({
         url: "/mainapp/getAllRates",
         success: function (data) {
@@ -102,4 +128,57 @@ $(document).ready(function(){
             }
         });
     }
+
+    var saveNewContract = function (){
+
+        errorMessageSpan.hide();
+
+        var person = {};
+        var rate = {};
+        var phoneNumber = {};
+        var contract = {};
+
+        person.firstName = $("#personFirstName").val();
+        person.lastName = $("#personLastName").val();
+        person.dateOfBirth = $("#personDateOfBirth").val();
+        person.passSerias = $("#personPassSerias").val();
+        person.passNumber = $("#personPassNumber").val();
+        person.passIssuedBy = $("#personPassIssuedBy").val();
+        person.passIssuedDate = $("#personPassIssuedDate").val();
+        person.email = $("#personEmail").val();
+
+        rate.id = $("#allRatesSelect").children(":selected").attr("id");
+        rate.optionsIds = [];
+
+        var checkedOptionsForSelectedRate = $("#allOptionsOfSelectedRate").find("input:checked");
+
+        checkedOptionsForSelectedRate.each(function(index,element){
+
+            rate.optionsIds.push(element.id);
+        });
+
+        phoneNumber.id = $("#allPhoneNumbersSelect").children(":selected").attr("id");
+
+        contract.person = person;
+        contract.rate = rate;
+        contract.phoneNumber;
+
+        $.ajax({
+
+            url:"/mainapp/saveNewContract",
+            data: JSON.stringify(contract),
+            contentType: "application/json",
+            type: "POST",
+            dataType: 'json',
+            success: function (data) {
+                  alert("SUCCESS");
+            },
+            error: function (error) {
+                  errorMessageSpan.text(error.responseText);
+                  errorMessageSpan.show();
+            }
+        });
+    };
+
+    $("#saveContractButton").click(saveNewContract);
 });

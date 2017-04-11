@@ -1,7 +1,12 @@
 package com.tsystems.jschool20.controllers;
 
+import com.tsystems.jschool20.srvengine.api.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by ruslbard on 09.04.2017.
@@ -9,9 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ContractsController {
 
-    @RequestMapping(path = "/showNewContractForm")
-    public String getNewContractForm(){
+    @Autowired
+    private PersonService personService;
 
+    @RequestMapping(method = RequestMethod.GET, path = "/showNewContractForm")
+    public String getNewContractForm(Model model, @RequestParam ("id") long id){
+
+        model.addAttribute("person", personService.getPersonById(id));
         return "newContractForm";
     }
 }
