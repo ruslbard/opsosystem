@@ -133,35 +133,19 @@ $(document).ready(function(){
 
         errorMessageSpan.hide();
 
-        var person = {};
-        var rate = {};
-        var phoneNumber = {};
         var contract = {};
 
-        person.firstName = $("#personFirstName").val();
-        person.lastName = $("#personLastName").val();
-        person.dateOfBirth = $("#personDateOfBirth").val();
-        person.passSerias = $("#personPassSerias").val();
-        person.passNumber = $("#personPassNumber").val();
-        person.passIssuedBy = $("#personPassIssuedBy").val();
-        person.passIssuedDate = $("#personPassIssuedDate").val();
-        person.email = $("#personEmail").val();
-
-        rate.id = $("#allRatesSelect").children(":selected").attr("id");
-        rate.optionsIds = [];
+        contract.personId = $(".person-info").attr("id");
+        contract.rateId = $("#allRatesSelect").children(":selected").attr("id");
+        contract.phoneNumberId = $("#allPhoneNumbersSelect").children(":selected").attr("id");
 
         var checkedOptionsForSelectedRate = $("#allOptionsOfSelectedRate").find("input:checked");
+        contract.optionsIds = [];
 
         checkedOptionsForSelectedRate.each(function(index,element){
 
-            rate.optionsIds.push(element.id);
+            contract.optionsIds.push(element.id);
         });
-
-        phoneNumber.id = $("#allPhoneNumbersSelect").children(":selected").attr("id");
-
-        contract.person = person;
-        contract.rate = rate;
-        contract.phoneNumber;
 
         $.ajax({
 

@@ -1,6 +1,7 @@
 package com.tsystems.jschool20.srvengine.dtos;
 
-import java.io.Serializable;
+import com.tsystems.jschool20.srvengine.entities.Person;
+
 import java.util.Date;
 
 /**
@@ -20,6 +21,19 @@ public class DTOPerson {
 
     public DTOPerson(){
 
+    }
+
+    public DTOPerson(Person entity){
+
+        this.id = entity.getId();
+        this.firstName = entity.getFirstName();
+        this.lastName = entity.getLastName();
+        this.dateOfBirth = entity.getDateOfBirth();
+        this.passSerias = entity.getPassSerias();
+        this.passNumber = entity.getPassNumber();
+        this.passIssuedBy = entity.getPassIssuedBy();
+        this.passIssuedDate = entity.getPassIssuedDate();
+        this.email = entity.getEmail();
     }
 
     public void setId(long id) {

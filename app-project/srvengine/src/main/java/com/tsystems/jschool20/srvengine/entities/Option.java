@@ -1,4 +1,4 @@
-package com.tsystems.jschool20.srvengine.entites;
+package com.tsystems.jschool20.srvengine.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

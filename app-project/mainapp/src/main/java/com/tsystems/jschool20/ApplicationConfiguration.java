@@ -48,7 +48,7 @@ public class ApplicationConfiguration {
         LocalContainerEntityManagerFactoryBean localFactory = new LocalContainerEntityManagerFactoryBean();
         localFactory.setJpaVendorAdapter(vendorAdapter);
         localFactory.setDataSource(dataSource);
-        localFactory.setPackagesToScan("com.tsystems.jschool20.srvengine.entites");
+        localFactory.setPackagesToScan("com.tsystems.jschool20.srvengine.entities");
         localFactory.afterPropertiesSet();
 
         return localFactory.getObject();

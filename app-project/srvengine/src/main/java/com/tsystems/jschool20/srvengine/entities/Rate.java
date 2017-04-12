@@ -1,7 +1,4 @@
-package com.tsystems.jschool20.srvengine.entites;
-
-import com.tsystems.jschool20.srvengine.dtos.DTORate;
-import org.hibernate.annotations.ColumnDefault;
+package com.tsystems.jschool20.srvengine.entities;
 
 import javax.persistence.*;
 import javax.persistence.Table;

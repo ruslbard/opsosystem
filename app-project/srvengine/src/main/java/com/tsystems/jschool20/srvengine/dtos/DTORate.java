@@ -1,5 +1,9 @@
 package com.tsystems.jschool20.srvengine.dtos;
 
+import com.tsystems.jschool20.srvengine.entities.Option;
+import com.tsystems.jschool20.srvengine.entities.Rate;
+
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -14,6 +18,21 @@ public class DTORate {
     private double price;
 
     private Collection<Long> optionsIds;
+
+    public DTORate() {
+    }
+
+    public DTORate(Rate entity){
+
+        this.id = entity.getId();
+        this.name = entity.getName();
+        this.price = entity.getPrice();
+        this.optionsIds = new ArrayList<Long>(entity.getOptions().size());
+
+        for (Option option : entity.getOptions()) {
+            this.optionsIds.add(option.getId());
+        }
+    }
 
     public long getId() {
         return id;

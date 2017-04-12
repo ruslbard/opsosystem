@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by ruslbard on 11.04.2017.
  */
 @RestController
-public class DataPersonController {
+public class DataPersonsController {
 
     @Autowired
     private PersonService personService;

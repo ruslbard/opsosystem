@@ -1,4 +1,5 @@
 <%@include file="/WEB-INF/jspf/header.jspf" %>
+<%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
     <h2>Edit Rate</h2>

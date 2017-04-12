@@ -1,6 +1,6 @@
 package com.tsystems.jschool20.srvengine.dtos;
 
-import java.util.Date;
+import java.util.Collection;
 
 /**
  * Created by ruslbard on 09.04.2017.
@@ -8,42 +8,51 @@ import java.util.Date;
 public class DTOContract {
 
     private long id;
-    private DTOPerson person;
-    private DTORate rate;
-    private DTOPhoneNumber phoneNumber;
+    private long personId;
+    private long rateId;
+    private long phoneNumberId;
+    private Collection<Long> optionsIds;
 
     public DTOContract() {
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setPerson(DTOPerson person) {
-        this.person = person;
-    }
-
-    public void setRate(DTORate rate) {
-        this.rate = rate;
-    }
-
-    public void setPhoneNumber(DTOPhoneNumber phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     public long getId() {
         return id;
     }
 
-    public DTOPerson getPerson() {
-        return person;
+    public long getPersonId() {
+        return personId;
     }
 
-    public DTORate getRate() {
-        return rate;
+    public long getRateId() {
+        return rateId;
     }
 
-    public DTOPhoneNumber getPhoneNumber() {
-        return phoneNumber;
+    public long getPhoneNumberId() {
+        return phoneNumberId;
+    }
+
+    public Collection<Long> getOptionsIds() {
+        return optionsIds;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setPersonId(long personId) {
+        this.personId = personId;
+    }
+
+    public void setRateId(long rateId) {
+        this.rateId = rateId;
+    }
+
+    public void setPhoneNumberId(long phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
+    }
+
+    public void setOptionsIds(Collection<Long> optionsIds) {
+        this.optionsIds = optionsIds;
     }
 }

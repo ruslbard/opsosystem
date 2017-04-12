@@ -2,11 +2,9 @@ package com.tsystems.jschool20.controllers;
 
 import com.tsystems.jschool20.srvengine.api.ContractService;
 import com.tsystems.jschool20.srvengine.dtos.DTOContract;
+import com.tsystems.jschool20.srvengine.dtos.DTOContractDetail;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by ruslbard on 09.04.2017.
@@ -27,5 +25,12 @@ public class DataContractsController {
     public void createNewContract(@RequestBody DTOContract dto){
 
         contractService.saveNewContract(dto);
+    }
+
+    @RequestMapping(path = "/getContractDetailForPerson", produces = "application/json")
+    public @ResponseBody
+    DTOContractDetail getContractDetailForPerson(@RequestParam ("id") long id){
+
+        return contractService.getContractDetailByPersonId(id);
     }
 }

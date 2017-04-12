@@ -1,19 +1,21 @@
-package com.tsystems.jschool20.srvengine.entites;
+package com.tsystems.jschool20.srvengine.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 
 /**
  * Created by ruslbard on 09.04.2017.
  */
 @Entity
 @Table(name = "CONTRACTS")
-public class Contract  implements Serializable {
+public class Contract implements Serializable {
 
     private long id;
     private Rate rate;
     private Person person;
     private PhoneNumber phoneNumber;
+    private Collection<Option> options;
 
     public Contract() {
 
@@ -34,7 +36,7 @@ public class Contract  implements Serializable {
     }
 
     @OneToOne
-    @JoinColumn(name = "ABONENT_ID")
+    @JoinColumn(name = "PERSON_ID")
     public Person getPerson() {
         return person;
     }
@@ -43,6 +45,16 @@ public class Contract  implements Serializable {
     @JoinColumn(name = "PHONE_NUMBER_ID")
     public PhoneNumber getPhoneNumber() {
         return phoneNumber;
+    }
+
+    @ManyToMany
+    @JoinTable(
+            name = "CONTRACTS_OPTIONS_LINK",
+            joinColumns = {@JoinColumn(name = "CONTRACT_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "OPTION_ID")}
+    )
+    public Collection<Option> getOptions() {
+        return options;
     }
 
     public void setId(long id) {
@@ -59,5 +71,9 @@ public class Contract  implements Serializable {
 
     public void setPhoneNumber(PhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void setOptions(Collection<Option> options) {
+        this.options = options;
     }
 }

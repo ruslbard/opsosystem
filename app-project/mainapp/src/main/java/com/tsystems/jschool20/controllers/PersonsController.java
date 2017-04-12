@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by ruslbard on 11.04.2017.
  */
 @Controller
-public class PersonController {
+public class PersonsController {
 
 
     @RequestMapping(path = "/showNewPersonForm")

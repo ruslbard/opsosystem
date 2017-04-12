@@ -2,7 +2,7 @@ package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.PersonService;
 import com.tsystems.jschool20.srvengine.dtos.DTOPerson;
-import com.tsystems.jschool20.srvengine.entites.Person;
+import com.tsystems.jschool20.srvengine.entities.Person;
 import com.tsystems.jschool20.srvengine.repos.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

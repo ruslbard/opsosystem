@@ -1,6 +1,6 @@
 package com.tsystems.jschool20.srvengine.repos;
 
-import com.tsystems.jschool20.srvengine.entites.PhoneNumber;
+import com.tsystems.jschool20.srvengine.entities.PhoneNumber;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 

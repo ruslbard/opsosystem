@@ -1,6 +1,4 @@
-package com.tsystems.jschool20.srvengine.entites;
-
-import com.tsystems.jschool20.srvengine.dtos.DTOPerson;
+package com.tsystems.jschool20.srvengine.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

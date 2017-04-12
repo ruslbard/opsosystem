@@ -2,7 +2,7 @@ package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.PhoneNumbersService;
 import com.tsystems.jschool20.srvengine.dtos.DTOPhoneNumber;
-import com.tsystems.jschool20.srvengine.entites.PhoneNumber;
+import com.tsystems.jschool20.srvengine.entities.PhoneNumber;
 import com.tsystems.jschool20.srvengine.repos.PhoneNumberRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

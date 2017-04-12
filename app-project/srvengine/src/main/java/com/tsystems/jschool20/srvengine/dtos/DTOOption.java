@@ -1,5 +1,8 @@
 package com.tsystems.jschool20.srvengine.dtos;
 
+import com.tsystems.jschool20.srvengine.entities.Option;
+
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -21,6 +24,30 @@ public class DTOOption {
 
     public DTOOption(){
 
+    }
+
+    public DTOOption(Option entity){
+
+        this.id = entity.getId();
+        this.name = entity.getName();
+        this.price = entity.getPrice();
+        this.add_coast = entity.getAdd_coast();
+        this.isActive = entity.getIsActive();
+        this.defaultForRates = entity.getDefaultForRates();
+
+        this.includeOptionsIds = new ArrayList<Long>(entity.getIncludeOptions().size());
+
+        for (Option option : entity.getIncludeOptions()) {
+
+            this.includeOptionsIds.add(option.getId());
+        }
+
+        this.excludeOptionsIds = new ArrayList<Long>(entity.getExcludeOptions().size());
+
+        for (Option option : entity.getExcludeOptions()) {
+
+            this.excludeOptionsIds.add(option.getId());
+        }
     }
 
     public DTOOption(long id, String name, long price, long add_coast, char isActive, char defaultForRates, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
