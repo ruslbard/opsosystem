@@ -30,7 +30,7 @@ $(document).ready(function(){
                   alert("SUCCESS");
             },
             error: function (error) {
-                  errorMessageSpan.text(error.responseText);
+                  errorMessageSpan.text("Error. Please, contact with administrator.");
                   errorMessageSpan.show();
             }
         });

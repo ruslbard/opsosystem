@@ -9,5 +9,6 @@ import java.util.Collection;
 public interface OptionService {
 
     Collection<DTOOption> getAllOptions();
+    Collection<DTOOption> getAllOptionsForRate(long id);
 
 }

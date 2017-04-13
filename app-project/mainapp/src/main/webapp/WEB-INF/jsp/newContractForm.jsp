@@ -2,7 +2,7 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <h2>Create New Contract</h2>
+    <div class="well">CREATE NEW CONTRACT FOR</div>
     <div class="has-error has-feedback">
         <span id="errorMessage"></span>
     </div>

@@ -22,6 +22,8 @@ public class Option implements Serializable{
     private Collection<Option> includeOptions;
     private Collection<Option> excludeOptions;
 
+    private Collection<Rate> rates;
+
     public Option() {
 
     }
@@ -79,6 +81,16 @@ public class Option implements Serializable{
         return excludeOptions;
     }
 
+    @ManyToMany
+    @JoinTable(
+            name = "RATES_OPTIONS_LINK",
+            joinColumns = {@JoinColumn(name = "OPTION_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "RATE_ID")}
+    )
+    public Collection<Rate> getRates() {
+        return rates;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -109,5 +121,9 @@ public class Option implements Serializable{
 
     public void setExcludeOptions(Collection<Option> excludeOptions) {
         this.excludeOptions = excludeOptions;
+    }
+
+    public void setRates(Collection<Rate> rates) {
+        this.rates = rates;
     }
 }

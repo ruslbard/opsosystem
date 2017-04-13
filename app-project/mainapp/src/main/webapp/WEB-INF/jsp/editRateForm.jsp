@@ -2,7 +2,7 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <h2>Edit Rate</h2>
+    <div class="well">EDIT RATE</div>
     <div>
         <span class="has-error" id="errorMessage"></span>
     </div>

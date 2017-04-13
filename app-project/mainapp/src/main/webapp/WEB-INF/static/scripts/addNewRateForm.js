@@ -20,7 +20,7 @@ $(document).ready(function(){
                 parent_element.append($(options.join("")));
             },
             error: function (error) {
-                errorMessageSpan.text(error.responseText);
+                errorMessageSpan.text("Error. Please, contact with administrator.");
             }
         });
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
                         alert("SUCCESS");
                     },
                     error: function (error) {
-                        errorMessageSpan.text(error.responseText);
+                        errorMessageSpan.text("Error. Please, contact with administrator.");
                     }
                 });
             };

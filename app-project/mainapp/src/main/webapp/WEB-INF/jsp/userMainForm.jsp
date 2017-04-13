@@ -2,7 +2,7 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <h2>Welcome, ${person.firstName}!</h2>
+    <div class="well">WELLCOM, ${person.firstName}!</div>
     <div class="has-error has-feedback">
         <span id="errorMessage"></span>
     </div>

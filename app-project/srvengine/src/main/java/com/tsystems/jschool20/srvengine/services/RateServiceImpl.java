@@ -24,8 +24,7 @@ public class RateServiceImpl implements RateService {
     private final RateRepository rateRepository;
     private final OptionRepository optionRepository;
 
-    public static Rate RateFactory(DTORate dto, OptionRepository optionRepository){
-        Rate entity = new Rate();
+    public static Rate RateFactory(Rate entity, DTORate dto, OptionRepository optionRepository){
 
         entity.setId(dto.getId());
         entity.setName(dto.getName());
@@ -35,7 +34,7 @@ public class RateServiceImpl implements RateService {
 
         for (Long optionId : dto.getOptionsIds()) {
 
-            options.add(optionRepository.findById(optionId));
+            options.add(optionRepository.findOne(optionId));
         }
 
         entity.setOptions(options);
@@ -59,11 +58,7 @@ public class RateServiceImpl implements RateService {
 
         for (Rate rate : rates) {
 
-            DTORate dto = new DTORate();
-
-            dto.setId(rate.getId());
-            dto.setName(rate.getName());
-
+            DTORate dto = new DTORate(rate);
             dtos.add(dto);
         }
 
@@ -72,103 +67,24 @@ public class RateServiceImpl implements RateService {
 
     public DTORate createNewRate(DTORate dto) {
 
-        Rate newRate = new Rate();
-
-        newRate.setName(dto.getName());
-        newRate.setPrice((long)dto.getPrice()*100);
-
-        System.out.println(dto.getPrice());
-        System.out.println(newRate.getPrice());
-
-        Collection<Option> options = new ArrayList<Option>(dto.getOptionsIds().size());
-
-        for (Long optionId : dto.getOptionsIds()) {
-
-            options.add(optionRepository.findById(optionId));
-        }
-
-        newRate.setOptions(options);
-
-        rateRepository.save(newRate);
+        rateRepository.save(RateServiceImpl.RateFactory(new Rate(), dto, optionRepository));
 
         return dto;
+    }
+
+    @Transactional
+    public void saveEditRate(DTORate dto) {
+
+        Rate rate = rateRepository.getOne(dto.getId());
+        if (rate != null){
+            RateServiceImpl.RateFactory(rate, dto, optionRepository);
+            rateRepository.save(rate);
+        }
     }
 
     public DTORate getRate(long id){
 
         Rate rate = rateRepository.getOne(id);
-
-        DTORate dto = new DTORate();
-
-        dto.setId(rate.getId());
-        dto.setName(rate.getName());
-        dto.setPrice(rate.getPrice());
-
-        Collection<Long> optionsIds = new ArrayList<Long>(rate.getOptions().size());
-
-        for (Option option : rate.getOptions()) {
-
-            Long optionId = option.getId();
-            optionsIds.add(optionId);
-
-        }
-
-        dto.setOptionsIds(optionsIds);
-
-        return dto;
+        return new DTORate(rate);
     }
-
-    public Collection<DTOOption> getAllRateOptions(long id) {
-
-        Rate rate = rateRepository.getOne(id);
-
-        Collection<Option> rateOptions = rate.getOptions();
-        Collection<DTOOption> dtos = new ArrayList<DTOOption>(rateOptions.size());
-
-        System.out.println(rateOptions.toString());
-
-        for (Option option : rateOptions) {
-
-            DTOOption dto = new DTOOption();
-            dto.setId(option.getId());
-            dto.setName(option.getName());
-            dto.setPrice(option.getPrice());
-            dto.setAdd_coast(option.getAdd_coast());
-            dto.setIsActive(option.getIsActive());
-            dto.setDefaultForRates(option.getDefaultForRates());
-
-            Collection<Option> includeOptions = option.getIncludeOptions();
-
-            if (!includeOptions.isEmpty()) {
-
-                dto.setIncludeOptionsIds(new ArrayList<Long>(includeOptions.size()));
-
-                for (Option includeOption : includeOptions) {
-
-                    dto.getIncludeOptionsIds().add(includeOption.getId());
-                }
-
-            }
-
-            Collection<Option> excludeOptions = option.getExcludeOptions();
-
-            if (!excludeOptions.isEmpty()) {
-
-                dto.setExcludeOptionsIds(new ArrayList<Long>(excludeOptions.size()));
-
-                for (Option excludeOption : excludeOptions) {
-
-                    dto.getExcludeOptionsIds().add(excludeOption.getId());
-                }
-
-            }
-
-
-            dtos.add(dto);
-
-        }
-
-        return dtos;
-    }
-
 }

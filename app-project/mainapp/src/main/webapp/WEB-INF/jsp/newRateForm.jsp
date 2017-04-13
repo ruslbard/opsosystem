@@ -2,7 +2,7 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <h2>Create New Rate</h2>
+    <div class="well">ADD NEW RATE</div>
                 <div>
                     <span class="has-error" id="errorMessage"></span>
                 </div>

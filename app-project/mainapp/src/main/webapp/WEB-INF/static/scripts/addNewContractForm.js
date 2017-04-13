@@ -22,16 +22,16 @@ $(document).ready(function(){
             $(".person-info").append([
                 "<div class=\"form-group\">", "<label>", "FirstName: ", data.firstName,"</label>", "</div>",
                 "<div class=\"form-group\">", "<label>", "LastName: ", data.lastName,"</label>", "</div>",
-                "<div class=\"form-group\">", "<label>", "Date Of Birth: ", data.dateOfBirth,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Date Of Birth: ", new Date(data.dateOfBirth).toDateString(),"</label>", "</div>",
                 "<div class=\"form-group\">", "<label>", "Pass Serias: ", data.passSerias,"</label>", "</div>",
                 "<div class=\"form-group\">", "<label>", "Pass Number: ", data.passNumber,"</label>", "</div>",
                 "<div class=\"form-group\">", "<label>", "Pass IssuedBy: ", data.passIssuedBy,"</label>", "</div>",
-                "<div class=\"form-group\">", "<label>", "Pass IssuedDate: ", data.passIssuedDate,"</label>", "</div>",
+                "<div class=\"form-group\">", "<label>", "Pass IssuedDate: ", new Date(data.passIssuedDate).toDateString(),"</label>", "</div>",
                 "<div class=\"form-group\">", "<label>", "Pass Email: ", data.email,"</label>", "</div>"
             ].join(""));
         },
         error:function(error){
-            errorMessageSpan.text(error.responseText);
+            errorMessageSpan.text("Error. Please, contact with administrator.");
             errorMessageSpan.show();
         }
     });
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
         },
         error: function (error) {
-            errorMessageSpan.text(error.responseText);
+            errorMessageSpan.text("Error. Please, contact with administrator.");
         }
     });
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
 
             },
             error: function (error) {
-                errorMessageSpan.text(error.responseText);
+                errorMessageSpan.text("Error. Please, contact with administrator.");
                 errorMessageSpan.show();
             }
     });
@@ -123,7 +123,7 @@ $(document).ready(function(){
             },
             error: function(error){
                 errorMessageSpan.text("");
-                errorMessageSpan.text(error.responseText);
+                errorMessageSpan.text("Error. Please, contact with administrator.");
                 errorMessageSpan.show();
             }
         });

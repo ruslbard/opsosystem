@@ -13,5 +13,5 @@ public interface RateService {
     Collection<DTORate> getAllRates();
     DTORate createNewRate(DTORate dto);
     DTORate getRate(long id);
-    Collection<DTOOption> getAllRateOptions(long rateId);
+    void saveEditRate(DTORate dto);
 }

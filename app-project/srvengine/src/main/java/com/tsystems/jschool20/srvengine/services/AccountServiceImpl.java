@@ -4,6 +4,8 @@ import com.tsystems.jschool20.srvengine.api.AccountService;
 import com.tsystems.jschool20.srvengine.dtos.DTOAccount;
 import com.tsystems.jschool20.srvengine.entities.Account;
 import com.tsystems.jschool20.srvengine.repos.AccountRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +30,8 @@ public class AccountServiceImpl implements AccountService {
         return dto;
     }
 
+    private Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class.getCanonicalName());
+
     private final AccountRepository accountRepository;
 
     @Autowired
@@ -38,10 +42,16 @@ public class AccountServiceImpl implements AccountService {
 
     public DTOAccount getAccountById(long id) {
 
+        logger.info("Try get account information by ID in getAccountById().");
+
         return AccountServiceImpl.dtoFactory(accountRepository.findOne(id));
+
     }
 
     public DTOAccount getAccountByLogin(String login) {
+
+        logger.info("Try get account information by LOGIN in getAccountByLogin().");
+
         return AccountServiceImpl.dtoFactory(accountRepository.findAccountByLogin(login));
     }
 }

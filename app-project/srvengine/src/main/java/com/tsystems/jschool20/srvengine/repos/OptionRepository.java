@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ public interface OptionRepository extends JpaRepository<Option, Long> {
     List<Option> findAll();
 
     @Query("SELECT o FROM Option o WHERE o.id = :id")
-    Option findById(@Param("id") Long id);
+    Option findOne(@Param("id") Long id);
 
+    Collection<Option> findOptionByRatesId(long id);
 }

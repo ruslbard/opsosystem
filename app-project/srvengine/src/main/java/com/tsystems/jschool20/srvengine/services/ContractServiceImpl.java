@@ -5,7 +5,10 @@ import com.tsystems.jschool20.srvengine.dtos.*;
 import com.tsystems.jschool20.srvengine.entities.Contract;
 import com.tsystems.jschool20.srvengine.entities.Option;
 import com.tsystems.jschool20.srvengine.repos.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -66,6 +69,8 @@ public class ContractServiceImpl implements ContractService {
         return dtoContractDetail;
     }
 
+    private Logger logger = LoggerFactory.getLogger(ContractServiceImpl.class.getCanonicalName());
+
     private final ContractRepository contractRepository;
     private final PersonRepository personRepository;
     private final RateRepository rateRepository;
@@ -85,14 +90,21 @@ public class ContractServiceImpl implements ContractService {
 
     public DTOContract saveNewContract(DTOContract dto) {
 
+        logger.info("Try save new Contract in saveNewContract.");
+
         contractRepository.save(ContractServiceImpl.entityFactory(dto, personRepository, rateRepository, phoneNumberRepository, optionRepository));
 
-        System.out.println("Contract saved.");
         return dto;
     }
 
-    public DTOContractDetail getContractDetailByPersonId(long id) {
+    public Collection<DTOContractDetail> getContractDetailByPersonId(long id) {
 
-        return ContractServiceImpl.dtoContractDetailFactory(contractRepository.findContractByPersonId(id));
+        Collection<Contract> contracts = contractRepository.findContractByPersonId(id);
+        Collection<DTOContractDetail> contractsDetails = new ArrayList<DTOContractDetail>(contracts.size());
+
+        for (Contract contract : contracts) {
+            contractsDetails.add(ContractServiceImpl.dtoContractDetailFactory(contract));
+        }
+        return contractsDetails;
     }
 }

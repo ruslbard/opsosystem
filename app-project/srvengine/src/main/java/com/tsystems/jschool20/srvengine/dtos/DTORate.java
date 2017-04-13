@@ -26,7 +26,7 @@ public class DTORate {
 
         this.id = entity.getId();
         this.name = entity.getName();
-        this.price = entity.getPrice();
+        this.price = entity.getPrice()/100;
         this.optionsIds = new ArrayList<Long>(entity.getOptions().size());
 
         for (Option option : entity.getOptions()) {

@@ -77,4 +77,18 @@ public class OptionServiceImpl implements OptionService {
         return dtos;
     }
 
+    public Collection<DTOOption> getAllOptionsForRate(long id){
+
+        Collection<Option> rateOptions = optionRepository.findOptionByRatesId(id);
+
+        Collection<DTOOption> dtos = new ArrayList<DTOOption>(rateOptions.size());
+
+        for (Option option : rateOptions) {
+
+            DTOOption dto = new DTOOption(option);
+            dtos.add(dto);
+        }
+
+        return dtos;
+    }
 }

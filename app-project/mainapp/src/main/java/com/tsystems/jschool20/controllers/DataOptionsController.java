@@ -1,10 +1,15 @@
 package com.tsystems.jschool20.controllers;
 
 import com.tsystems.jschool20.srvengine.api.OptionService;
+import com.tsystems.jschool20.srvengine.dtos.DTOOption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Collection;
 
 /**
  * Created by ruslbard on 03.04.2017.
@@ -21,4 +26,10 @@ public class DataOptionsController {
         return optionService.getAllOptions();
     }
 
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, path = "/getAllRateOptions", produces = "application/json")
+    public Collection<DTOOption> getAllOptionsForRate(@RequestParam("id") long id){
+
+        return optionService.getAllOptionsForRate(id);
+    }
 }

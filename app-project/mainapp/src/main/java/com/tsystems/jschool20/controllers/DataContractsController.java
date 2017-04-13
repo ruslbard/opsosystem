@@ -6,6 +6,8 @@ import com.tsystems.jschool20.srvengine.dtos.DTOContractDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+
 /**
  * Created by ruslbard on 09.04.2017.
  */
@@ -29,7 +31,7 @@ public class DataContractsController {
 
     @RequestMapping(path = "/getContractDetailForPerson", produces = "application/json")
     public @ResponseBody
-    DTOContractDetail getContractDetailForPerson(@RequestParam ("id") long id){
+    Collection<DTOContractDetail> getContractDetailForPerson(@RequestParam ("id") long id){
 
         return contractService.getContractDetailByPersonId(id);
     }

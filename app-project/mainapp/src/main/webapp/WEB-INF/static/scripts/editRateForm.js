@@ -20,13 +20,14 @@ $(document).ready(function(){
                 parent_element.append($(options.join("")));
             },
             error: function (error) {
-                errorMessageSpan.text(error.responseText);
+                errorMessageSpan.text("Error. Please, contact with administrator.");
             }
         });
 
         var saveEditRate = function(){
 
             errorMessageSpan.text("");
+
 
             if ($("#rateTitle").val().length === 0){
 
@@ -41,6 +42,7 @@ $(document).ready(function(){
 
                 var rate = {};
 
+                rate.id = $(".options_list").attr("id");
                 rate.name = $("#rateTitle").val();
                 rate.price = $("#ratePrice").val();
                 rate.optionsIds = [];
@@ -57,7 +59,7 @@ $(document).ready(function(){
 
                 $.ajax({
 
-                    url:"/mainapp/editRate",
+                    url:"/mainapp/saveEditRate",
                     data: JSON.stringify(rate),
                     contentType: "application/json",
                     type: "POST",
@@ -66,7 +68,7 @@ $(document).ready(function(){
                         alert("SUCCESS");
                     },
                     error: function (error) {
-                        errorMessageSpan.text(error.responseText);
+                        errorMessageSpan.text("Error. Please, contact with administrator.");
                     }
                 });
             };
