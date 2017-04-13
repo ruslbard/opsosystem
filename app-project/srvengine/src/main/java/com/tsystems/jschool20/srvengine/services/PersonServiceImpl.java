@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -59,12 +60,21 @@ public class PersonServiceImpl implements PersonService {
         return dto;
     }
 
-    public Collection<DTOPerson> getAllPerson() {
-        return null;
+    public Collection<DTOPerson> getAllPersons() {
+
+        Collection<Person> persons = personRepository.findAll();
+        Collection<DTOPerson> dtos = new ArrayList<DTOPerson>(persons.size());
+
+        for (Person person : persons) {
+            dtos.add(PersonServiceImpl.dtoFactory(person));
+        }
+        return dtos;
     }
 
-    public void addNewPerson(DTOPerson dto) {
+    public DTOPerson addNewPerson(DTOPerson dto) {
+
         personRepository.save(PersonServiceImpl.entityFactory(dto));
+        return dto;
     }
 
     public DTOPerson getPersonById(long id) {

@@ -13,10 +13,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PersonsController {
 
 
-    @RequestMapping(path = "/showNewPersonForm")
+    @RequestMapping(path = "/showAddNewPersonForm")
     public String showNewPersonForm(){
 
         return "newPersonForm";
     }
 
+    @RequestMapping(path = "/showAllPersonsForm")
+    public String showAllPersonsForm(){
+
+        return "allPersonsForm";
+    }
 }

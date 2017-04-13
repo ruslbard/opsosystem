@@ -5,6 +5,8 @@ import com.tsystems.jschool20.srvengine.dtos.DTOPerson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+
 /**
  * Created by ruslbard on 11.04.2017.
  */
@@ -15,10 +17,9 @@ public class DataPersonsController {
     private PersonService personService;
 
     @RequestMapping(method = RequestMethod.POST, path = "/addNewPerson", consumes = "application/json")
-    public Object addNewPerson(@RequestBody DTOPerson dto){
+    public DTOPerson addNewPerson(@RequestBody DTOPerson dto){
 
-        personService.addNewPerson(dto);
-        return null;
+        return personService.addNewPerson(dto);
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/getPerson", produces = "application/json")
@@ -26,4 +27,12 @@ public class DataPersonsController {
 
         return personService.getPersonById(id);
     }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/getAllPersons", produces = "application/json")
+    public Collection<DTOPerson> getAllPersons(){
+
+        return personService.getAllPersons();
+    }
+
+
 }

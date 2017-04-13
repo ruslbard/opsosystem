@@ -39,7 +39,7 @@ public class OptionServiceImpl implements OptionService {
             dto.setId(option.getId());
             dto.setName(option.getName());
             dto.setPrice(option.getPrice());
-            dto.setAdd_coast(option.getAdd_coast());
+            dto.setAddCoast(option.getAddCoast());
             dto.setIsActive(option.getIsActive());
             dto.setDefaultForRates(option.getDefaultForRates());
 

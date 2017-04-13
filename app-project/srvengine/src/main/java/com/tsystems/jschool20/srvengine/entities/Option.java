@@ -15,7 +15,7 @@ public class Option implements Serializable{
     private long id;
     private String name;
     private long price;
-    private long add_coast;
+    private long addCoast;
     private char isActive;
     private char defaultForRates;
 
@@ -47,8 +47,8 @@ public class Option implements Serializable{
     }
 
     @Column(name = "ADD_COAST")
-    public long getAdd_coast() {
-        return add_coast;
+    public long getAddCoast() {
+        return addCoast;
     }
 
     @Column(name = "ACTIVE")
@@ -103,8 +103,8 @@ public class Option implements Serializable{
         this.price = price;
     }
 
-    public void setAdd_coast(long add_coast) {
-        this.add_coast = add_coast;
+    public void setAddCoast(long addCoast) {
+        this.addCoast = addCoast;
     }
 
     public void setIsActive(char isActive) {

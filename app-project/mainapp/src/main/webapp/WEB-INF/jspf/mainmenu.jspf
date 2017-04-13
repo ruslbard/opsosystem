@@ -4,9 +4,9 @@
             <a class="navbar-brand" href="/mainapp/">OP!SYSTEM</a>
         </div>
             <ul class="nav navbar-nav">
-                <li class="link"><a href="/mainapp/showNewPersonForm" class="link">Manage Persons</a></li>
+                <li class="link"><a href="/mainapp/showAllPersonsForm" class="link">Manage Persons</a></li>
                 <li class="link"><a href="/mainapp/showAllRatesForm" class="link">Manage Rates</a></li>
-                <li class="link"><a href="/mainapp/showNewContractForm?id=4" class="link">Manage Contracts</a></li>
+                <li class="link"><a href="/mainapp/showAllOptionsForm" class="link">Manage Options</a></li>
                 <%--<li class="link"><a href="/mainapp/showAllOptionsForm" class="link"><h5>Manage Optoins</h5></a></li>--%>
             </ul>
 

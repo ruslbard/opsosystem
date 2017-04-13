@@ -15,7 +15,7 @@ public class DTOOption {
     private long id;
     private String name;
     private long price;
-    private long add_coast;
+    private long addCoast;
     private char isActive;
     private char defaultForRates;
 
@@ -31,7 +31,7 @@ public class DTOOption {
         this.id = entity.getId();
         this.name = entity.getName();
         this.price = entity.getPrice();
-        this.add_coast = entity.getAdd_coast();
+        this.addCoast = entity.getAddCoast();
         this.isActive = entity.getIsActive();
         this.defaultForRates = entity.getDefaultForRates();
 
@@ -50,12 +50,12 @@ public class DTOOption {
         }
     }
 
-    public DTOOption(long id, String name, long price, long add_coast, char isActive, char defaultForRates, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
+    public DTOOption(long id, String name, long price, long addCoast, char isActive, char defaultForRates, Collection<Long> includeOptionsIds, Collection<Long> excludeOptionsIds) {
 
         this.id = id;
         this.name = name;
         this.price = price;
-        this.add_coast = add_coast;
+        this.addCoast = addCoast;
         this.isActive = isActive;
         this.defaultForRates = defaultForRates;
         this.includeOptionsIds = includeOptionsIds;
@@ -75,8 +75,8 @@ public class DTOOption {
         this.price = price;
     }
 
-    public void setAdd_coast(long add_coast) {
-        this.add_coast = add_coast;
+    public void setAddCoast(long addCoast) {
+        this.addCoast = addCoast;
     }
 
     public void setIsActive(char isActive) {
@@ -107,8 +107,8 @@ public class DTOOption {
         return price;
     }
 
-    public long getAdd_coast() {
-        return add_coast;
+    public long getAddCoast() {
+        return addCoast;
     }
 
     public char getIsActive() {

@@ -22,7 +22,7 @@ public class DataOptionsController {
 
     @ResponseBody
     @RequestMapping(value = "/getAllOptions", produces = "application/json")
-    public Object getAllOptions(){
+    public Collection<DTOOption> getAllOptions(){
         return optionService.getAllOptions();
     }
 

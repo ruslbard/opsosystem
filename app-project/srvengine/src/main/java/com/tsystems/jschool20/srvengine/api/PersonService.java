@@ -9,7 +9,7 @@ import java.util.Collection;
  */
 public interface PersonService {
 
-    Collection<DTOPerson> getAllPerson();
-    void addNewPerson(DTOPerson dto);
+    Collection<DTOPerson> getAllPersons();
+    DTOPerson addNewPerson(DTOPerson dto);
     DTOPerson getPersonById(long id);
 }
