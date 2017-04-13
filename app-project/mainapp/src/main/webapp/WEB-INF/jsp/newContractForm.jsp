@@ -2,11 +2,12 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <div class="well">CREATE NEW CONTRACT FOR</div>
-    <div class="has-error has-feedback">
-        <span id="errorMessage"></span>
-    </div>
+
     <div class="container">
+        <div class="well">CREATE NEW CONTRACT</div>
+        <div class="has-error has-feedback">
+            <span id="errorMessage"></span>
+        </div>
         <form>
             <h3>Person Info</h3>
             <div class="form-group person-info" id="${person.id}"></div>

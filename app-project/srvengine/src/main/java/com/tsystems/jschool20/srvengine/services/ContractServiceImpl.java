@@ -92,7 +92,10 @@ public class ContractServiceImpl implements ContractService {
 
         logger.info("Try save new Contract in saveNewContract.");
 
-        contractRepository.save(ContractServiceImpl.entityFactory(dto, personRepository, rateRepository, phoneNumberRepository, optionRepository));
+        Contract contract = ContractServiceImpl.entityFactory(dto, personRepository, rateRepository, phoneNumberRepository, optionRepository);
+        contractRepository.save(contract);
+        contract.getPhoneNumber().setIsIssued('Y');
+        contract.getPhoneNumber().setContract(contract);
 
         return dto;
     }

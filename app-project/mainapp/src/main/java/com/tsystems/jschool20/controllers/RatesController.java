@@ -26,10 +26,10 @@ public class RatesController {
         return "allRatesForm";
     }
 
-    @RequestMapping("/showNewRateForm")
+    @RequestMapping("/showAddNewRateForm")
     public String addNewRateForm(){
 
-        return "newRateForm";
+        return "addNewRateForm";
     }
 
     @RequestMapping("/showEditRateForm")

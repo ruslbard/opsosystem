@@ -1,6 +1,8 @@
-<footer>
-    Copyright http://www.opsystem.com
-</footer>
+<div class="container">
+    <footer class="well">
+        Copyright http://www.opsystem.com
+    </footer>
+</div>
 </body>
 
 </html>

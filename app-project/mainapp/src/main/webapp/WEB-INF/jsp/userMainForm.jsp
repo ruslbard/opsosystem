@@ -2,11 +2,12 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <div class="well">WELLCOM, ${person.firstName}!</div>
-    <div class="has-error has-feedback">
-        <span id="errorMessage"></span>
-    </div>
+
     <div class="container">
+        <div class="well">WELLCOM, ${person.firstName}!</div>
+        <div class="has-error has-feedback">
+            <span id="errorMessage"></span>
+        </div>
         <form>
             <div class="panel panel-default">
                 <div class="panel-heading">Person Info</div>

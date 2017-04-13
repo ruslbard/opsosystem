@@ -2,11 +2,12 @@
 <%@include file="/WEB-INF/jspf/mainmenu.jspf" %>
 
 <section>
-    <div class="well">EDIT RATE</div>
-    <div>
-        <span class="has-error" id="errorMessage"></span>
-    </div>
+
     <div class="container">
+        <div class="well">EDIT RATE</div>
+        <div>
+            <span class="has-error" id="errorMessage"></span>
+        </div>
         <form>
             <div class="form-group">
                 <label for="rateTitle">Title</label>

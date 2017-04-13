@@ -53,4 +53,9 @@ $(document).ready(function(){
             window.location.href = "/mainapp/showEditRateForm?"
             + "id=" + rateId;
     };
+
+    var addNewRate = function () {
+        window.location.href = "/mainapp/showAddNewRateForm"
+    }
+    $("input.btn.btn-success#addNewRateButton").click(addNewRate);
 });
