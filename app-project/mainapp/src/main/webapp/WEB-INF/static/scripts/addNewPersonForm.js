@@ -25,7 +25,6 @@ $(document).ready(function(){
             data: JSON.stringify(person),
             contentType: "application/json",
             type: "POST",
-            dataType: 'json',
             success: function (data) {
                 window.location.href = "/mainapp/showAllPersonsForm";
             },

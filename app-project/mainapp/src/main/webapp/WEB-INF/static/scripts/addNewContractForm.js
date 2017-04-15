@@ -153,9 +153,8 @@ $(document).ready(function(){
             data: JSON.stringify(contract),
             contentType: "application/json",
             type: "POST",
-            dataType: 'json',
             success: function (data) {
-                  alert("SUCCESS");
+                  window.location.href = "/mainapp/showAllPersonsForm";
             },
             error: function (error) {
                   errorMessageSpan.text(error.responseText);

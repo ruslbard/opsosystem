@@ -73,13 +73,14 @@ public class RateServiceImpl implements RateService {
     }
 
     @Transactional
-    public void saveEditRate(DTORate dto) {
+    public DTORate saveEditRate(DTORate dto) {
 
         Rate rate = rateRepository.getOne(dto.getId());
         if (rate != null){
             RateServiceImpl.RateFactory(rate, dto, optionRepository);
             rateRepository.save(rate);
         }
+        return dto;
     }
 
     public DTORate getRate(long id){

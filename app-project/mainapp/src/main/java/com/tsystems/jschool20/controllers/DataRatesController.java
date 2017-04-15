@@ -30,12 +30,12 @@ public class DataRatesController {
 
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/saveEditRate", consumes = "application/json")
-    public void saveEditRate(@RequestBody DTORate dto){
+    @RequestMapping(method = RequestMethod.POST, path = "/saveEditRate", consumes = "application/json", produces = "application/json")
+    public DTORate saveEditRate(@RequestBody DTORate dto){
 
         logger.info("Add new rate controller method.");
         logger.debug(dto.toString());
-        rateService.saveEditRate(dto);
+        return rateService.saveEditRate(dto);
 
     }
 

@@ -16,7 +16,8 @@ public class DataPersonsController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping(method = RequestMethod.POST, path = "/addNewPerson", consumes = "application/json")
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST, path = "/addNewPerson", consumes = "application/json", produces = "application/json")
     public DTOPerson addNewPerson(@RequestBody DTOPerson dto){
 
         return personService.addNewPerson(dto);

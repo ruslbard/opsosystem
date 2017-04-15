@@ -37,7 +37,7 @@ $(document).ready(function(){
                 ].join(""));
             });
 
-            $("input.btn.btn-success.btn-edit-option").click(editRate);
+            $("input.btn.btn-success.btn-edit-option").click(editOption);
         },
         error: function (error) {
             errorMessageSpan.text("Error. Please, contact with administrator.");
