@@ -1,14 +1,15 @@
 package com.tsystems.jschool20.srvengine.services;
 
+import com.tsystems.jschool20.srvengine.api.AccountService;
 import com.tsystems.jschool20.srvengine.api.ContractService;
 import com.tsystems.jschool20.srvengine.dtos.*;
 import com.tsystems.jschool20.srvengine.entities.Contract;
 import com.tsystems.jschool20.srvengine.entities.Option;
+import com.tsystems.jschool20.srvengine.entities.Rate;
 import com.tsystems.jschool20.srvengine.repos.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -76,15 +77,17 @@ public class ContractServiceImpl implements ContractService {
     private final RateRepository rateRepository;
     private final OptionRepository optionRepository;
     private final PhoneNumberRepository phoneNumberRepository;
+    private final AccountRepository accountRepository;
 
     @Autowired
-    public ContractServiceImpl(ContractRepository contractRepository, PersonRepository personRepository, RateRepository rateRepository, OptionRepository optionRepository, PhoneNumberRepository phoneNumberRepository){
+    public ContractServiceImpl(ContractRepository contractRepository, PersonRepository personRepository, RateRepository rateRepository, OptionRepository optionRepository, PhoneNumberRepository phoneNumberRepository, AccountRepository accountRepository){
 
         this.contractRepository = contractRepository;
         this.personRepository = personRepository;
         this.rateRepository = rateRepository;
         this.optionRepository = optionRepository;
         this.phoneNumberRepository = phoneNumberRepository;
+        this.accountRepository = accountRepository;
 
     }
 
@@ -100,14 +103,35 @@ public class ContractServiceImpl implements ContractService {
         return dto;
     }
 
-    public Collection<DTOContractDetail> getContractDetailByPersonId(long id) {
+    public Collection<DTOContractDetail> getContractsDetailByPersonId(long id) {
 
-        Collection<Contract> contracts = contractRepository.findContractByPersonId(id);
+        Collection<Contract> contracts = contractRepository.findAllByPersonId(id);
         Collection<DTOContractDetail> contractsDetails = new ArrayList<DTOContractDetail>(contracts.size());
 
         for (Contract contract : contracts) {
             contractsDetails.add(ContractServiceImpl.dtoContractDetailFactory(contract));
         }
         return contractsDetails;
+    }
+
+    public DTOContractDetail getContractDetailByPhoneNumber(String phone) {
+
+        Contract contract = contractRepository.findOneByPhoneNumberPhone(phone);
+        return ContractServiceImpl.dtoContractDetailFactory(contract);
+    }
+
+    public void changeContractRateTo(long newRateId, String accountLogin) {
+        Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
+        contract.setRate(rateRepository.findOne(newRateId));
+        contract.setOptions(new ArrayList<Option>(0));
+        contractRepository.save(contract);
+    }
+
+    public void addOption(long id){
+
+    }
+
+    public void removeOption(long id){
+
     }
 }

@@ -21,7 +21,7 @@ public class DataRatesController {
 
     Logger logger = LoggerFactory.getLogger(DataRatesController.class.getCanonicalName());
 
-    @RequestMapping(method = RequestMethod.POST, path = "/addNewRate", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST, path = "/operator/addNewRate", consumes = "application/json")
     public void addNewRate(@RequestBody DTORate dto){
 
         logger.info("Add new rate controller method.");
@@ -30,7 +30,7 @@ public class DataRatesController {
 
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/saveEditRate", consumes = "application/json", produces = "application/json")
+    @RequestMapping(method = RequestMethod.POST, path = "/operator/saveEditRate", consumes = "application/json", produces = "application/json")
     public DTORate saveEditRate(@RequestBody DTORate dto){
 
         logger.info("Add new rate controller method.");

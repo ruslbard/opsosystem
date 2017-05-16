@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class PhoneNumber implements Serializable {
 
     private long id;
-    private String phoneNumber;
+    private String phone;
     private char isIssued;
     private Contract contract;
 
@@ -27,8 +27,8 @@ public class PhoneNumber implements Serializable {
     }
 
     @Column(name = "PHONE_NUMBER")
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
     @Column(name = "ISSUED")
@@ -46,8 +46,8 @@ public class PhoneNumber implements Serializable {
         this.id = id;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public void setIsIssued(char isIssued) {

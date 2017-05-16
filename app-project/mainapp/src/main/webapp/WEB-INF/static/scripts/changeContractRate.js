@@ -7,18 +7,11 @@ $(document).ready(function(){
     var rates = [];
     var rates_from_server;
 
-    var editRate;
-
     $.ajax({
         url: "/mainapp/getAllRates",
         success: function (data) {
 
             rates_from_server = data;
-
-            // for (var i = 0; i < data.length; i++){
-            //
-            //     rates[i] = "<div class=\"form-group\"><div class=\"row\"><div class=\"col-sm-9\"><label>" + data[i].name + "</label></div><div class=\"col-sm-3\"><input class=\"btn btn-success btn-edit-rate\" type=\"button\" id=\"" + data[i].id + "\" value=\"Edit\"/></div></div></div>";
-            // };
 
             $("thead.rates-table-thead").append([
                 "<tr>",
@@ -35,27 +28,35 @@ $(document).ready(function(){
                         "<td>", rate.id, "</td>",
                         "<td>", rate.name, "</td>",
                         "<td>", rate.price, "</td>",
-                        "<td>", "<input class=\"btn btn-success btn-edit-rate\" type=\"button\" id=\"", rate.id, "\" value=\"Edit\"/>", "</td>",
+                        "<td>", "<input class=\"btn btn-success btn-edit-rate\" type=\"button\" id=\"", rate.id, "\" value=\"Change\"/>", "</td>",
                     "</tr>"
                 ].join(""));
             });
 
-            $("input.btn.btn-success.btn-edit-rate").click(editRate);
+            $("input.btn.btn-success.btn-edit-rate").click(changeRate);
         },
         error: function (error) {
             errorMessageSpan.text("Error. Please, contact with administrator.");
         }
     });
 
-    editRate = function(){
+    var changeRate = function(){
 
-            rateId = $(this).attr("id");
-            window.location.href = "/mainapp/operator/showEditRateForm?"
-            + "id=" + rateId;
+        var newRateId = $(this).attr("id");
+
+        $.ajax({
+
+            url:"/mainapp/common/changeContractRateTo",
+            data: newRateId,
+            contentType: "application/json",
+            type: "PUT",
+            success: function (data) {
+                window.location.href = "/mainapp/common";
+            },
+            error: function (error) {
+                errorMessageSpan.text(error.responseText);
+                errorMessageSpan.show();
+            }
+        });
     };
-
-    var addNewRate = function () {
-        window.location.href = "/mainapp/operator/showAddNewRateForm"
-    }
-    $("input.btn.btn-success#addNewRateButton").click(addNewRate);
 });

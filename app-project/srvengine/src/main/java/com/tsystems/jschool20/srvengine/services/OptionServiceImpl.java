@@ -28,6 +28,43 @@ public class OptionServiceImpl implements OptionService {
         this.rateService = rateService;
     }
 
+    private static Option entityFactory(Option entity, DTOOption dto, OptionRepository optionRepository){
+
+        entity.setId(dto.getId());
+        entity.setPrice(dto.getPrice());
+        entity.setAddCoast(dto.getAddCoast());
+
+        if (dto.getIncludeOptionsIds() != null) {
+            Collection<Option> includeOptions = new ArrayList<Option>(dto.getIncludeOptionsIds().size());
+
+            for (Long optionId : dto.getIncludeOptionsIds()) {
+                Option option = optionRepository.getOne(optionId);
+                includeOptions.add(option);
+            }
+
+            entity.setIncludeOptions(includeOptions);
+        }
+        else{
+            entity.setIncludeOptions(null);
+        }
+
+
+        if (dto.getExcludeOptionsIds() != null) {
+            Collection<Option> excludeOptions = new ArrayList<Option>(dto.getExcludeOptionsIds().size());
+
+            for (Long optionId : dto.getExcludeOptionsIds()) {
+                Option option = optionRepository.getOne(optionId);
+                excludeOptions.add(option);
+            }
+            entity.setExcludeOptions(excludeOptions);
+        }
+        else{
+            entity.setExcludeOptions(null);
+        }
+
+        return entity;
+    }
+
     @Transactional
     public Collection<DTOOption> getAllOptions() {
 
@@ -90,5 +127,21 @@ public class OptionServiceImpl implements OptionService {
         }
 
         return dtos;
+    }
+
+    public DTOOption getOption(long id) {
+
+        DTOOption dto = new DTOOption(optionRepository.findOne(id));
+        return dto;
+    }
+
+    public void saveOption(DTOOption dto) {
+
+        Option option = optionRepository.getOne(dto.getId());
+
+        if (option != null){
+
+            optionRepository.save(OptionServiceImpl.entityFactory(option, dto, optionRepository));
+        }
     }
 }

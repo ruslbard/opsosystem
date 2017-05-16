@@ -4,10 +4,7 @@ import com.tsystems.jschool20.srvengine.api.OptionService;
 import com.tsystems.jschool20.srvengine.dtos.DTOOption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -32,4 +29,23 @@ public class DataOptionsController {
 
         return optionService.getAllOptionsForRate(id);
     }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllContractOptions", produces = "application/json")
+    public Collection<DTOOption> getAllContractOptions(@RequestParam ("id") long id){
+        return null;
+    }
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, path = "/getOption", produces = "application/json")
+    public DTOOption getOption(@RequestParam ("id") long id){
+
+        return optionService.getOption(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = "saveEditOption", consumes = "application/json")
+    public DTOOption saveEditOption(@RequestBody DTOOption dto){
+        optionService.saveOption(dto);
+        return dto;
+    }
+
 }

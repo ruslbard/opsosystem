@@ -4,27 +4,28 @@
 <section>
 
     <div class="container">
-        <div class="well">WELLCOM, ${person.firstName}!</div>
+        <div class="well"></div>
         <div class="has-error has-feedback">
             <span id="errorMessage"></span>
         </div>
         <form>
-            <div class="panel panel-default">
-                <div class="panel-heading">Person Info</div>
-                <div class="panel-body form-group person-info" id="${person.id}"></div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">Rate Info</div>
-                <div class="panel-body form-group rate-info"></div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">Options Info</div>
-                <div class="panel-body form-group options-info"></div>
-            </div>
-            <div class="panel panel-default">
+            <div class="panel panel-success">
                 <div class="panel-heading">Phone Number Info</div>
                 <div class="panel-body form-group phonenumber-info"></div>
             </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">Person Info</div>
+                <div class="panel-body form-group person-info" id="${account.login}"></div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">Rate Info</div>
+                <div class="panel-body form-group rate-info"></div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">Options Info</div>
+                <div class="panel-body form-group options-info"></div>
+            </div>
+
         </form>
     </div>
 </section>

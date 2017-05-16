@@ -43,7 +43,7 @@ public class PhoneNumbersServiceImpl implements PhoneNumbersService{
             DTOPhoneNumber dto = new DTOPhoneNumber();
 
             dto.setId(phoneNumber.getId());
-            dto.setPhoneNumber(phoneNumber.getPhoneNumber());
+            dto.setPhone(phoneNumber.getPhone());
 
             dtos.add(dto);
 

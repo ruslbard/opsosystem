@@ -20,22 +20,30 @@ public class RatesController {
 
     private static final Logger logger = LoggerFactory.getLogger("com.tsystems.jschool20.srvengine.api.RateService");
 
-    @RequestMapping("/showAllRatesForm")
+    @RequestMapping("/operator/showAllRatesForm")
     public String rates(){
         logger.info("Enter in rates controller");
         return "allRatesForm";
     }
 
-    @RequestMapping("/showAddNewRateForm")
+    @RequestMapping("/operator")
+    public String operatorMainForm(){
+        logger.info("Operator main form");
+        return "redirect:/operator/showAllRatesForm";
+    }
+
+    @RequestMapping("/operator/showAddNewRateForm")
     public String addNewRateForm(){
 
         return "addNewRateForm";
     }
 
-    @RequestMapping("/showEditRateForm")
+    @RequestMapping("/operator/showEditRateForm")
     public String editRateForm(Model model, @RequestParam long id){
 
         model.addAttribute("rate", rateService.getRate(id));
         return "editRateForm";
     }
+
+
 }

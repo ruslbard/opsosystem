@@ -7,7 +7,7 @@ $(document).ready(function(){
         var options = [];
         var options_from_server;
         $.ajax({
-            url: "/mainapp/getAllOptions",
+            url: "/mainapp/operator/getAllOptions",
             success: function (data) {
 
                 options_from_server = data;
@@ -59,13 +59,13 @@ $(document).ready(function(){
 
                 $.ajax({
 
-                    url:"/mainapp/saveEditRate",
+                    url:"/mainapp/operator/saveEditRate",
                     data: JSON.stringify(rate),
                     contentType: "application/json",
                     type: "POST",
                     dataType: 'json',
                     success: function (data) {
-                        window.location.href = "/mainapp/showAllRatesForm";
+                        window.location.href = "/mainapp/operator/showAllRatesForm";
                     },
                     error: function (error) {
                         errorMessageSpan.text("Error. Please, contact with administrator.");

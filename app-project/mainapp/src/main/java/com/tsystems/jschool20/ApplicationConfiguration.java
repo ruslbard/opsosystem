@@ -1,6 +1,7 @@
 package com.tsystems.jschool20;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -18,6 +19,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("com.tsystems.jschool20.srvengine.repos")
+@ComponentScan(basePackages = "com.tsystems.jschool20")
 public class ApplicationConfiguration {
 
 
@@ -61,4 +63,5 @@ public class ApplicationConfiguration {
         txManager.setEntityManagerFactory(entityManagerFactory(dataSource(), hibernateJpaVendorAdapter()));
         return txManager;
     }
+
 }

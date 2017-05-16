@@ -87,6 +87,7 @@ public class Option implements Serializable{
             joinColumns = {@JoinColumn(name = "OPTION_ID")},
             inverseJoinColumns = {@JoinColumn(name = "RATE_ID")}
     )
+
     public Collection<Rate> getRates() {
         return rates;
     }

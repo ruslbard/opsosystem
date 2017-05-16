@@ -8,14 +8,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 
-@EnableWebMvc
 @Configuration
-@ComponentScan({"com.tsystems.jschool20"})
+@EnableWebMvc
+@ComponentScan(basePackages = "com.tsystems.jschool20")
+@Import(SecurityConfiguration.class)
 public class WebApplicationConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**")
+        registry.addResourceHandler("/static/**", "/common/static/**", "/operator/static/**", "/admin/static/**")
                 .addResourceLocations("/WEB-INF/static/");
     }
 

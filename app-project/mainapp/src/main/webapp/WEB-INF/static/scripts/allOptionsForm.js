@@ -21,7 +21,8 @@ $(document).ready(function(){
                     "<th>", "Name", "</th>",
                     "<th>", "Price", "</th>",
                     "<th>", "Add Coast", "</th>",
-                    // "<th>", "", "</th>",
+                    "<th>", "", "</th>",
+                    "<th>", "", "</th>",
                 "</tr>"
             ].join(""));
 
@@ -32,7 +33,11 @@ $(document).ready(function(){
                         "<td>", option.name, "</td>",
                         "<td>", option.price, "</td>",
                         "<td>", option.addCoast, "</td>",
-                        // "<td>", "<input class=\"btn btn-success btn-edit-rate\" type=\"button\" id=\"", option.id, "\" value=\"Edit\"/>", "</td>",
+                        "<td>", "<input class=\"btn btn-success btn-edit-option\" type=\"button\" id=\"", option.id, "\" value=\"Edit\"/>", "</td>",
+                        "<td>",
+                            "<input class=\"btn btn-success btn-incl-options\" type=\"button\" id=\"", option.id, "\" value=\"Incl.\"/>",
+                            "<input class=\"btn btn-success btn-exclude-options\" type=\"button\" id=\"", option.id, "\" value=\"Excl.\"/>",
+                        "</td>",
                     "</tr>"
                 ].join(""));
             });
@@ -46,9 +51,9 @@ $(document).ready(function(){
 
     editOption = function(){
 
-            rateId = $(this).attr("id");
+            optionId = $(this).attr("id");
             window.location.href = "/mainapp/showEditOptionForm?"
-            + "id=" + rateId;
+            + "id=" + optionId;
     };
 
     var addNewOption = function () {

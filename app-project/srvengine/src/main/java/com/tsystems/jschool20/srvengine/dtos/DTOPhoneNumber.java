@@ -8,7 +8,7 @@ import com.tsystems.jschool20.srvengine.entities.PhoneNumber;
 public class DTOPhoneNumber {
 
     private long id;
-    private String phoneNumber;
+    private String phone;
     private char isIssued;
     private long contractId;
 
@@ -18,7 +18,7 @@ public class DTOPhoneNumber {
     public DTOPhoneNumber(PhoneNumber entity) {
 
         this.id = entity.getId();
-        this.phoneNumber = entity.getPhoneNumber();
+        this.phone = entity.getPhone();
         this.isIssued = entity.getIsIssued();
         if (entity.getContract() != null) {
             this.contractId = entity.getContract().getId();
@@ -29,8 +29,8 @@ public class DTOPhoneNumber {
         return id;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
     public char getIsIssued() {
@@ -45,8 +45,8 @@ public class DTOPhoneNumber {
         this.id = id;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public void setIsIssued(char isIssued) {

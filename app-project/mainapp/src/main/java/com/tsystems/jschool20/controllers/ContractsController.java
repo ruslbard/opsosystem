@@ -23,4 +23,9 @@ public class ContractsController {
         model.addAttribute("person", personService.getPersonById(id));
         return "newContractForm";
     }
+
+    @RequestMapping(value = "/operator/showAllContractsForm")
+    public String showAllContractsForm(){
+        return "allContractsForm";
+    }
 }

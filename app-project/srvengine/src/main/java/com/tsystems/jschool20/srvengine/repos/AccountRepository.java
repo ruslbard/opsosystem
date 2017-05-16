@@ -15,6 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
     @Query("SELECT a FROM Account a WHERE LOGIN = :login")
-    Account findAccountByLogin(@Param("login") String login);
+    Account findOneByLogin(@Param("login") String login);
 
 }

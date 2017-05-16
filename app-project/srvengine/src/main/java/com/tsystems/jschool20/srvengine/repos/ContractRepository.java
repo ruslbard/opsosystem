@@ -12,5 +12,7 @@ import java.util.Collection;
 @Transactional
 public interface ContractRepository extends JpaRepository<Contract, Long>{
 
-    Collection<Contract> findContractByPersonId(long id);
+    Collection<Contract> findAllByPersonId(long id);
+    Contract findOneByPhoneNumberPhone(String phone);
+    Contract findOneByPhoneNumberId(long id);
 }

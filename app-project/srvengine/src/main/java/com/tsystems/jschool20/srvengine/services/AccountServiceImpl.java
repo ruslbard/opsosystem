@@ -2,11 +2,17 @@ package com.tsystems.jschool20.srvengine.services;
 
 import com.tsystems.jschool20.srvengine.api.AccountService;
 import com.tsystems.jschool20.srvengine.dtos.DTOAccount;
+import com.tsystems.jschool20.srvengine.dtos.security.DTOAccountDetails;
 import com.tsystems.jschool20.srvengine.entities.Account;
 import com.tsystems.jschool20.srvengine.repos.AccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,11 +39,13 @@ public class AccountServiceImpl implements AccountService {
     private Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class.getCanonicalName());
 
     private final AccountRepository accountRepository;
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public AccountServiceImpl(AccountRepository accountRepository){
+    public AccountServiceImpl(AccountRepository accountRepository, PasswordEncoder passwordEncoder){
 
         this.accountRepository = accountRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public DTOAccount getAccountById(long id) {
@@ -52,6 +60,8 @@ public class AccountServiceImpl implements AccountService {
 
         logger.info("Try get account information by LOGIN in getAccountByLogin().");
 
-        return AccountServiceImpl.dtoFactory(accountRepository.findAccountByLogin(login));
+        return AccountServiceImpl.dtoFactory(accountRepository.findOneByLogin(login));
     }
+
+
 }
