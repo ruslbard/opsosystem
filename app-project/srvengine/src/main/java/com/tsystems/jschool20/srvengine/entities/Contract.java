@@ -16,6 +16,7 @@ public class Contract implements Serializable {
     private Person person;
     private PhoneNumber phoneNumber;
     private Collection<Option> options;
+    private String isBlocked;
 
     public Contract() {
 
@@ -57,6 +58,12 @@ public class Contract implements Serializable {
         return options;
     }
 
+
+    @Column(name = "ISBLOCKED")
+    public String getIsBlocked() {
+        return isBlocked;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -75,5 +82,9 @@ public class Contract implements Serializable {
 
     public void setOptions(Collection<Option> options) {
         this.options = options;
+    }
+
+    public void setIsBlocked(String isBlocked) {
+        this.isBlocked = isBlocked;
     }
 }

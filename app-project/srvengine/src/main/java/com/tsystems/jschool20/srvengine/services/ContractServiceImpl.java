@@ -1,11 +1,9 @@
 package com.tsystems.jschool20.srvengine.services;
 
-import com.tsystems.jschool20.srvengine.api.AccountService;
 import com.tsystems.jschool20.srvengine.api.ContractService;
 import com.tsystems.jschool20.srvengine.dtos.*;
 import com.tsystems.jschool20.srvengine.entities.Contract;
 import com.tsystems.jschool20.srvengine.entities.Option;
-import com.tsystems.jschool20.srvengine.entities.Rate;
 import com.tsystems.jschool20.srvengine.repos.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,6 +38,7 @@ public class ContractServiceImpl implements ContractService {
             options.add(option);
         }
         entity.setOptions(options);
+        entity.setIsBlocked(dto.getIsBlocked());
 
         return entity;
     }
@@ -66,6 +65,8 @@ public class ContractServiceImpl implements ContractService {
 
         DTOPhoneNumber dtoPhoneNumber = new DTOPhoneNumber(entityContract.getPhoneNumber());
         dtoContractDetail.setPhoneNumber(dtoPhoneNumber);
+
+        dtoContractDetail.setIsBlocked(entityContract.getIsBlocked());
 
         return dtoContractDetail;
     }
@@ -103,6 +104,16 @@ public class ContractServiceImpl implements ContractService {
         return dto;
     }
 
+    public Collection<DTOContractDetail> getAllContracts() {
+        Collection<Contract> contracts = contractRepository.findAll();
+        Collection<DTOContractDetail> contractsDetails = new ArrayList<DTOContractDetail>(contracts.size());
+
+        for (Contract contract : contracts) {
+            contractsDetails.add(ContractServiceImpl.dtoContractDetailFactory(contract));
+        }
+        return contractsDetails;
+    }
+
     public Collection<DTOContractDetail> getContractsDetailByPersonId(long id) {
 
         Collection<Contract> contracts = contractRepository.findAllByPersonId(id);
@@ -120,18 +131,36 @@ public class ContractServiceImpl implements ContractService {
         return ContractServiceImpl.dtoContractDetailFactory(contract);
     }
 
-    public void changeContractRateTo(long newRateId, String accountLogin) {
+    public void changeContractRateTo(String accountLogin, long newRateId) {
         Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
         contract.setRate(rateRepository.findOne(newRateId));
         contract.setOptions(new ArrayList<Option>(0));
         contractRepository.save(contract);
     }
 
-    public void addOption(long id){
-
+    public void addOption(String accountLogin, long optionId){
+        Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
+        Option option = optionRepository.findOne(optionId);
+        contract.getOptions().add(option);
+        contractRepository.save(contract);
     }
 
-    public void removeOption(long id){
+    public void removeOption(String accountLogin, long optionId){
+        Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
+        Option option = optionRepository.findOne(optionId);
+        contract.getOptions().remove(option);
+        contractRepository.save(contract);
+    }
 
+    public void blockContractByOperator(long contractId) {
+        Contract contract = contractRepository.findOne(contractId);
+        contract.setIsBlocked(new String(new StringBuffer().append('O')));
+        contractRepository.save(contract);
+    }
+
+    public void unblockContractByOperator(long contractId) {
+        Contract contract = contractRepository.findOne(contractId);
+        contract.setIsBlocked(null);
+        contractRepository.save(contract);
     }
 }

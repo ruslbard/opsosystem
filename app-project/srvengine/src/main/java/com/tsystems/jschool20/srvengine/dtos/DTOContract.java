@@ -12,6 +12,7 @@ public class DTOContract {
     private long rateId;
     private long phoneNumberId;
     private Collection<Long> optionsIds;
+    private String isBlocked;
 
     public DTOContract() {
     }
@@ -36,6 +37,10 @@ public class DTOContract {
         return optionsIds;
     }
 
+    public String getIsBlocked() {
+        return isBlocked;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -54,5 +59,9 @@ public class DTOContract {
 
     public void setOptionsIds(Collection<Long> optionsIds) {
         this.optionsIds = optionsIds;
+    }
+
+    public void setIsBlocked(String isBlocked) {
+        this.isBlocked = isBlocked;
     }
 }

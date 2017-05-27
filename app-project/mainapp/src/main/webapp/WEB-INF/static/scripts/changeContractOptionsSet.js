@@ -4,18 +4,11 @@ $(document).ready(function () {
     errorMessageSpan.text("");
     $(".alert.alert-danger").hide();
     var contract = {};
-
     var options = [];
-    var all_options_from_server;
-
     var editOption;
 
-
     $.ajax({
-        url: "/mainapp/common/getContractDetailForPhoneNumber",
-        data: {
-            phoneNumber: $(".person-info").attr("id")
-        },
+        url: "/mainapp/common/getContractDetail",
         contentType: "application/json",
         type: "GET",
         success: function (data) {
@@ -58,7 +51,7 @@ $(document).ready(function () {
                         option.includeOptionsIds.forEach(function (includeOption) {
                             var count = 0;
                             for (var i = 0; i < contract.contractOptions.length; i++) {
-                                if (includeOption.id === contract.contractOptions[i].id){
+                                if (includeOption === contract.contractOptions[i].id){
                                     count++;
                                 }
                             }
@@ -71,7 +64,7 @@ $(document).ready(function () {
                         option.excludeOptionsIds.forEach(function (excludeOption) {
                             var count = 0;
                             for (var i = 0; i < contract.contractOptions.length; i++) {
-                                if (excludeOption.id === contract.contractOptions[i].id){
+                                if (excludeOption === contract.contractOptions[i].id){
                                     count++;
                                 }
                             }
@@ -96,14 +89,14 @@ $(document).ready(function () {
                             "</tr>"
                         ].join(""));
                     })
+
+                    $("input.check-option").click(editOption);
                 },
                 error: function (error) {
                     errorMessageSpan.text("Error. Please, contact with administrator.");
                     errorMessageSpan.show();
                 }
             });
-
-            $("input.btn.btn-success.btn-edit-option").click(editOption);
         },
         error: function (error) {
             errorMessageSpan.text("Error. Please, contact with administrator.");
@@ -111,21 +104,41 @@ $(document).ready(function () {
     });
 
     editOption = function () {
+
+        var optionId = $(this).attr("id");
+
         if ($(this).is(":checked")) {
-            optionId = $(this).attr("id");
-            window.location.href = "/mainapp/common/addContractOption?"
-                + "id=" + optionId;
+
+            $.ajax({
+                url:"/mainapp/common/addContractOption",
+                data: optionId,
+                contentType: "application/json",
+                type: "PUT",
+                success: function (data) {
+                    window.location.href = "/mainapp/common/showChangeContractOptionsSet";
+                },
+                error: function (error) {
+                    errorMessageSpan.text(error.responseText);
+                    errorMessageSpan.show();
+                }
+            });
         }
         else {
-            optionId = $(this).attr("id");
-            window.location.href = "/mainapp/common/removeContractOption?"
-                + "id=" + optionId;
+
+            $.ajax({
+                url:"/mainapp/common/removeContractOption",
+                data: optionId,
+                contentType: "application/json",
+                type: "PUT",
+                success: function (data) {
+                    window.location.href = "/mainapp/common/showChangeContractOptionsSet";
+                },
+                error: function (error) {
+                    errorMessageSpan.text(error.responseText);
+                    errorMessageSpan.show();
+                }
+            });
         }
     };
-
-    var addNewOption = function () {
-
-    }
-    $("input.btn.btn-success#addNewOptionButton").click(addNewOption);
 })
 ;

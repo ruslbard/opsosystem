@@ -51,14 +51,14 @@ $(document).ready(function(){
     editPerson = function(){
 
             rateId = $(this).attr("id");
-            window.location.href = "/mainapp/showEditPersonForm?"
+            window.location.href = "/mainapp/operator/showEditPersonForm?"
             + "id=" + rateId;
     };
 
     var addContractForPerson = function(){
 
         personId = $(this).attr("id");
-        window.location.href = "/mainapp/showNewContractForm?"
+        window.location.href = "/mainapp/operator/showNewContractForm?"
             + "id=" + personId;
     };
 

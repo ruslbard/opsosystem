@@ -81,16 +81,6 @@ public class CommonController {
         return "changeContractOptionsSet";
     }
 
-    @RequestMapping(value = "/common/addContractOption")
-    public void addContractOption(@RequestParam ("id") long id){
-        contractService.addOption(id);
-    }
-
-    @RequestMapping(value = "/common/removeContractOption")
-    public void removeContractOption(@RequestParam ("id") long id){
-        contractService.removeOption(id);
-    }
-
     private UserDetails getPrincipal() {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

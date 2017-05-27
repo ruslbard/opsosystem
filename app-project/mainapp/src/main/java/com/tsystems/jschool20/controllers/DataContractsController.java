@@ -19,13 +19,14 @@ public class DataContractsController {
     @Autowired
     private ContractService contractService;
 
-    @RequestMapping(path = "/getAllContracts")
-    public DTOContract getAllContracts(){
+    @RequestMapping(path = "/operator/getAllContracts", produces = "application/json")
+    @ResponseBody
+    public Collection<DTOContractDetail> getAllContracts(){
 
-        return null;
+        return contractService.getAllContracts();
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/saveNewContract", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST, path = "/operator/saveNewContract", consumes = "application/json")
     public void createNewContract(@RequestBody DTOContract dto){
 
         contractService.saveNewContract(dto);
@@ -45,10 +46,39 @@ public class DataContractsController {
         return contractService.getContractDetailByPhoneNumber(phoneNumber);
     }
 
+    @RequestMapping(value = "/common/getContractDetail", produces = "application/json")
+    public @ResponseBody
+    DTOContractDetail getContractDetail(){
+
+        return contractService.getContractDetailByPhoneNumber(getPrincipal().getUsername());
+    }
+
     @RequestMapping(value = "/common/changeContractRateTo", method = RequestMethod.PUT, consumes = "application/json")
     public void changeContractRateTo(@RequestBody long id){
 
-        contractService.changeContractRateTo(id, getPrincipal().getUsername());
+        contractService.changeContractRateTo(getPrincipal().getUsername(), id);
+    }
+
+    @RequestMapping(value = "/common/addContractOption", method = RequestMethod.PUT, consumes = "application/json")
+    public void addContractOption(@RequestBody long optionId){
+
+        contractService.addOption(getPrincipal().getUsername(), optionId);
+    }
+
+    @RequestMapping(value = "/common/removeContractOption", method = RequestMethod.PUT, consumes = "application/json")
+    public void removeContractOption(@RequestBody long optionId){
+
+        contractService.removeOption(getPrincipal().getUsername(), optionId);
+    }
+
+    @RequestMapping(value = "/operator/blockContract", method = RequestMethod.PUT, consumes = "application/json")
+    public void blockContract(@RequestBody long contractId){
+        contractService.blockContractByOperator(contractId);
+    }
+
+    @RequestMapping(value = "/operator/unblockContract", method = RequestMethod.PUT, consumes = "application/json")
+    public void unblockContract(@RequestBody long contractId){
+        contractService.unblockContractByOperator(contractId);
     }
 
     private UserDetails getPrincipal() {

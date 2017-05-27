@@ -14,9 +14,6 @@
                     <tbody class="options-table-tbody"></tbody>
                 </table>
             </div>
-            <%--<div class="form-group">--%>
-                <%--<input class="btn btn-success" id="addNewRateButton" type="button" value="Add New">--%>
-            <%--</div>--%>
         </form>
     </div>
 </section>

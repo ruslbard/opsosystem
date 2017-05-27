@@ -11,11 +11,8 @@ $(document).ready(function () {
 
     $.ajax({
 
-        url: "/mainapp/common/getContractDetailForPhoneNumber",
+        url: "/mainapp/common/getContractDetail",
         type: "GET",
-        data: {
-            phoneNumber: login
-        },
         success: function (data) {
 
             var contractDetailFromServer = data;

@@ -17,7 +17,7 @@ public class ContractsController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/showNewContractForm")
+    @RequestMapping(method = RequestMethod.GET, path = "/operator/showNewContractForm")
     public String getNewContractForm(Model model, @RequestParam ("id") long id){
 
         model.addAttribute("person", personService.getPersonById(id));
