@@ -44,7 +44,7 @@ $(document).ready(function () {
                     blockedButtonClass = "unblock"
                 }else if (contract.isBlocked == 'C'){
                     blocked = "C";
-                    trClass = "class=\"danger\"";
+                    trClass = "class=\"warning\"";
                     blockedButtonLabel = "Unblock";
                     blockedButtonClass = "unblock"
                 }

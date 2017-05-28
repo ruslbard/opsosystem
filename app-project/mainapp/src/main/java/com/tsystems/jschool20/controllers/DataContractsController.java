@@ -72,13 +72,23 @@ public class DataContractsController {
     }
 
     @RequestMapping(value = "/operator/blockContract", method = RequestMethod.PUT, consumes = "application/json")
-    public void blockContract(@RequestBody long contractId){
+    public void blockContractByOperator(@RequestBody long contractId){
         contractService.blockContractByOperator(contractId);
     }
 
     @RequestMapping(value = "/operator/unblockContract", method = RequestMethod.PUT, consumes = "application/json")
-    public void unblockContract(@RequestBody long contractId){
+    public void unblockContractByOperator(@RequestBody long contractId){
         contractService.unblockContractByOperator(contractId);
+    }
+
+    @RequestMapping(value = "/common/blockContract")
+    public void blockContractByCommonUser(){
+        contractService.blockContractByCommonUser(getPrincipal().getUsername());
+    }
+
+    @RequestMapping(value = "/common/unblockContract")
+    public void unblockContractByCommon(){
+        contractService.unblockContractByCommonUser(getPrincipal().getUsername());
     }
 
     private UserDetails getPrincipal() {

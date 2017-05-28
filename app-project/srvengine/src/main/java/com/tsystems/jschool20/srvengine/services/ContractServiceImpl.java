@@ -163,4 +163,16 @@ public class ContractServiceImpl implements ContractService {
         contract.setIsBlocked(null);
         contractRepository.save(contract);
     }
+
+    public void blockContractByCommonUser(String accountLogin) {
+        Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
+        contract.setIsBlocked(new String(new StringBuffer().append('C')));
+        contractRepository.save(contract);
+    }
+
+    public void unblockContractByCommonUser(String accountLogin) {
+        Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
+        contract.setIsBlocked(null);
+        contractRepository.save(contract);
+    }
 }

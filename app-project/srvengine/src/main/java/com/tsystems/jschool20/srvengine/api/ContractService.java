@@ -19,4 +19,7 @@ public interface ContractService {
     void removeOption (String accountLogin, long optionId);
     void blockContractByOperator(long contractId);
     void unblockContractByOperator(long contractId);
+    void blockContractByCommonUser(String accountLogin);
+    void unblockContractByCommonUser(String accountLogin);
+
 }

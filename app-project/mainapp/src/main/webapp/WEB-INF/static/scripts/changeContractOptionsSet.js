@@ -39,15 +39,23 @@ $(document).ready(function () {
                     options.forEach(function (option) {
 
                         isChecked = "";
-
                         for (var i = 0; i < contract.contractOptions.length; i++) {
                             if (option.id === contract.contractOptions[i].id) {
                                 isChecked = "checked";
                                 break;
                             }
-                        }
-                        ;
+                        };
+
                         isDisabled = "";
+                        for (var i = 0; i < contract.contractOptions.length; i++) {
+                            for (var j = 0; j < contract.contractOptions[i].includeOptionsIds.length; j++){
+                                if (option.id === contract.contractOptions[i].includeOptionsIds[j]) {
+                                    isDisabled = "disabled";
+                                    break;
+                                }
+                            }
+                        };
+
                         option.includeOptionsIds.forEach(function (includeOption) {
                             var count = 0;
                             for (var i = 0; i < contract.contractOptions.length; i++) {
