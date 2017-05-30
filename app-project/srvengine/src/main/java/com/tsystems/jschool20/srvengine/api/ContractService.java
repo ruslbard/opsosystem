@@ -15,11 +15,15 @@ public interface ContractService {
     Collection<DTOContractDetail> getContractsDetailByPersonId(long id);
     DTOContractDetail getContractDetailByPhoneNumber(String phoneNumber);
     void changeContractRateTo(String accountLogin, long newRateId);
+    void changeContractRateTo(long contractId, long newRateId);
     void addOption (String accountLogin, long optionId);
+    void addOption (long contractId, long optionId);
     void removeOption (String accountLogin, long optionId);
+    void removeOption (long contractId, long optionId);
     void blockContractByOperator(long contractId);
     void unblockContractByOperator(long contractId);
     void blockContractByCommonUser(String accountLogin);
     void unblockContractByCommonUser(String accountLogin);
+    DTOContractDetail getContractDetail(long contractId);
 
 }

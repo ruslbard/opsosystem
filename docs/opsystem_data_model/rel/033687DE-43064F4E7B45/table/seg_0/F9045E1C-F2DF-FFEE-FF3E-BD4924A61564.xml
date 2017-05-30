@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9045E1C-F2DF-FFEE-FF3E-BD4924A61564" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="RATES_OPTIONS_LINK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>RATES_OPTIONS_LINK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OPTION_ID" id="0D90A02F-2775-0EB2-171A-3E601625CAF7">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>RATES_OPTIONS_LINK</sourceObjSchema>
+<sourceObjName>OPTION_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3520B5AE-AD92-C6D9-DA39-AD44FE08C91C" referredColumn="D6C683C0-511F-93F5-254A-8DCB79EF4804"/>
+</associations>
+</Column>
+<Column name="RATE_ID" id="35D55A37-D73E-A75D-799B-2FAD3979B4B8">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>RATES_OPTIONS_LINK</sourceObjSchema>
+<sourceObjName>RATE_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC272C21-82A3-5A49-11B9-04C94286A6E1" referredColumn="079D4032-BC7C-15D1-A1A3-223D5C49BD56"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6050769-570C-4C23-8D5A-F6676FE2C1C8" name="PK_RATES_OPTIONS_LINK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_RATES_OPTIONS_LINK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35D55A37-D73E-A75D-799B-2FAD3979B4B8"/>
+<colUsage columnID="0D90A02F-2775-0EB2-171A-3E601625CAF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ADD0DF47-922B-B8A4-B273-31EDC00B9EE3" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_TARIFFS_OPTIONS_LINK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_TARIFFS_OPTIONS_LINK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35D55A37-D73E-A75D-799B-2FAD3979B4B8"/>
+<colUsage columnID="0D90A02F-2775-0EB2-171A-3E601625CAF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E2A3BA1-7758-34DB-30DA-B2D5D4D5B7C6" name="FK_OPTIONS_RATES_OPTIONS_LINK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D90A02F-2775-0EB2-171A-3E601625CAF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9578428-8F1D-B16D-850B-97E57E071291" name="FK_RATES_RATES_OPTIONS_LINK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35D55A37-D73E-A75D-799B-2FAD3979B4B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

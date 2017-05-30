@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="13DCC577-4107-9941-0479-99B447B58930" containerWithKeyObject="02321073-F68A-646B-D7B7-483B1CFA66B6" localFKIndex="5354F7DB-3C7C-096B-7818-64CE73DAD4ED" name="EXCLUDE_OPTIONS_ID_OPTIONS_FK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>EXCLUDE_OPTIONS_ID_OPTIONS_FK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<referredTableLongName>OPSYSTEM.OPTIONS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>14B1657B-0E59-D4E9-6424-F5A41579144E</referredTableID>
+<keyObject>F0E1136F-9E32-4D74-4DDC-C4DC63D976DD</keyObject>
+<referredKeyID>F0E1136F-9E32-4D74-4DDC-C4DC63D976DD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,204 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3ADB258-8FA3-4BD9-D20F-D1A03014DCA6" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="CONTRACTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>CONTRACTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0AB6B9B8-EC05-E5BF-74D8-5A36BC78675E">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>CONTRACTS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERSON_ID" id="EBF7A465-D281-5F6C-25E1-27F74E5C22BF">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>CONTRACTS</sourceObjSchema>
+<sourceObjName>PERSON_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20F53C49-0656-F6BC-0070-10F5C2412117" referredColumn="CD9002D9-BC04-1714-3026-1AC859F58158"/>
+</associations>
+</Column>
+<Column name="RATE_ID" id="B1041A7D-4345-A849-A471-FDAEACB4CDD5">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>CONTRACTS</sourceObjSchema>
+<sourceObjName>RATE_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5874C6C9-80A8-EF63-6B10-7C38DAF08CDB" referredColumn="079D4032-BC7C-15D1-A1A3-223D5C49BD56"/>
+</associations>
+</Column>
+<Column name="PHONE_NUMBER_ID" id="02F91ABF-22DF-AA0E-6F00-970057724080">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>CONTRACTS</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98C9518B-D1C4-0583-C08C-AF8DA325BEC8" referredColumn="231CE70F-D3EF-3C2D-1E65-D453C03020D3"/>
+</associations>
+</Column>
+<Column name="ISBLOCKED" id="AC477929-6E73-F0D5-68CA-A909DC39A9E3">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>CONTRACTS</sourceObjSchema>
+<sourceObjName>ISBLOCKED</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="80A94491-8F7F-8DA5-A942-E6D79417EC28" referredColumn="21CDB20A-A1FF-B0F7-53D1-BA82E90867D9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB0402C3-4DF3-D2D0-A833-EF5221557012" name="PK_CONTRACTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_CONTRACTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AB6B9B8-EC05-E5BF-74D8-5A36BC78675E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B62443A-6695-0140-335D-1C8EBF4DA752" name="CONTRACTS_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>CONTRACTS_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AB6B9B8-EC05-E5BF-74D8-5A36BC78675E"/>
+<colUsage columnID="EBF7A465-D281-5F6C-25E1-27F74E5C22BF"/>
+<colUsage columnID="B1041A7D-4345-A849-A471-FDAEACB4CDD5"/>
+<colUsage columnID="02F91ABF-22DF-AA0E-6F00-970057724080"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A79C89FA-78C7-0306-9BF7-F0374161AB8A" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="CONTRACTS_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>CONTRACTS_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AB6B9B8-EC05-E5BF-74D8-5A36BC78675E"/>
+<colUsage columnID="EBF7A465-D281-5F6C-25E1-27F74E5C22BF"/>
+<colUsage columnID="B1041A7D-4345-A849-A471-FDAEACB4CDD5"/>
+<colUsage columnID="02F91ABF-22DF-AA0E-6F00-970057724080"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F5AC1F5-689A-B271-6598-7CBF484139D0" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_CONTRACTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_CONTRACTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AB6B9B8-EC05-E5BF-74D8-5A36BC78675E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14B88F10-507F-ECB1-03DC-DE4288FE5E18" name="CONTRACTS_BLOCKING_TYPES_FK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC477929-6E73-F0D5-68CA-A909DC39A9E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="164ACA7A-45BA-2D74-C5E1-0F312EA11B85" name="FK_CONTRACTS_PERSONS">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBF7A465-D281-5F6C-25E1-27F74E5C22BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CB2D35B-1D09-CB75-24BB-AADAD190BDFE" name="FK_CONTRACTS_PHONE_NUMBERS">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02F91ABF-22DF-AA0E-6F00-970057724080"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3BD50F9-03D8-351E-C736-C1E7EC9C1540" name="FK_CONTRACTS_RATES">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1041A7D-4345-A849-A471-FDAEACB4CDD5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -4,8 +4,7 @@
 <section>
     <div class="container">
         <div class="well">MANAGE CONTRACTS</div>
-        <div class="alert alert-danger">
-            <span class="form-control" id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form role="form-inline" class="allContractsList">
             <div class="form-group">

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="02321073-F68A-646B-D7B7-483B1CFA66B6" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="EXCLUDE_OPTIONS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>EXCLUDE_OPTIONS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="BFDA3CC0-07BA-F928-EFDF-6B628557BBCD">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>EXCLUDE_OPTIONS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13DCC577-4107-9941-0479-99B447B58930" referredColumn="D6C683C0-511F-93F5-254A-8DCB79EF4804"/>
+</associations>
+</Column>
+<Column name="CHILD_OPTION_ID" id="9AE0045C-AE3D-BD17-0E38-975710531206">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>EXCLUDE_OPTIONS</sourceObjSchema>
+<sourceObjName>CHILD_OPTION_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="39861C4B-F2B8-54E9-36A9-D8EECC0315F7" referredColumn="D6C683C0-511F-93F5-254A-8DCB79EF4804"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B52DCC3-9338-2F3F-839E-5F6E614BD82D" name="PK_exclude_option14">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_exclude_option14</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<nameHasQuotes>true</nameHasQuotes>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AE0045C-AE3D-BD17-0E38-975710531206"/>
+<colUsage columnID="BFDA3CC0-07BA-F928-EFDF-6B628557BBCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B7E93FD-DAD6-1AAA-650B-E5591A7AC7FA" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_exclude_option14">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_exclude_option14</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<nameHasQuotes>true</nameHasQuotes>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AE0045C-AE3D-BD17-0E38-975710531206"/>
+<colUsage columnID="BFDA3CC0-07BA-F928-EFDF-6B628557BBCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78DF423D-8A3D-724A-E5D0-47C4C13B04D2" name="EXCL_OPTIONS_CHILD_OPTIONS_FK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AE0045C-AE3D-BD17-0E38-975710531206"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5354F7DB-3C7C-096B-7818-64CE73DAD4ED" name="EXCLUDE_OPTIONS_ID_OPTIONS_FK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFDA3CC0-07BA-F928-EFDF-6B628557BBCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

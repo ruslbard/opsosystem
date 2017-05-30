@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14B1657B-0E59-D4E9-6424-F5A41579144E" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="OPTIONS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>OPTIONS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="D6C683C0-511F-93F5-254A-8DCB79EF4804">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPTIONS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>OPTIONS_ID_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>OPTIONS_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="NAME" id="BEA425EA-21A0-83E8-4547-8CED76DA2CCA">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPTIONS</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="E1494C40-C673-F78C-9391-B8F585B6454B">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPTIONS</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADD_COAST" id="5BD360BE-AB32-6CF7-51F8-A3E969F05D4A">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPTIONS</sourceObjSchema>
+<sourceObjName>ADD_COAST</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVE" id="8F0C7659-DF9F-9B7D-6852-1CEDFE2F703A">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPTIONS</sourceObjSchema>
+<sourceObjName>ACTIVE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<defaultValue>&apos;Y&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEFAULT_FOR_RATES" id="AE6B9422-8931-03AE-2433-28DB6559FFC8">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPTIONS</sourceObjSchema>
+<sourceObjName>DEFAULT_FOR_RATES</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F0E1136F-9E32-4D74-4DDC-C4DC63D976DD" name="PK_OPTIONS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_OPTIONS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6C683C0-511F-93F5-254A-8DCB79EF4804"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98E519DD-5604-5A51-3729-D09D821FC671" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_OPTIONS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_OPTIONS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6C683C0-511F-93F5-254A-8DCB79EF4804"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

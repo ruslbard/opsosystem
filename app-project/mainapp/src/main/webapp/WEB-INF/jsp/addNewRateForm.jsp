@@ -5,8 +5,7 @@
 
     <div class="container">
         <div class="well">ADD NEW RATE</div>
-        <div class="has-error has-feedback">
-            <span id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form role="form" class="addRate">
             <div class="form-group">

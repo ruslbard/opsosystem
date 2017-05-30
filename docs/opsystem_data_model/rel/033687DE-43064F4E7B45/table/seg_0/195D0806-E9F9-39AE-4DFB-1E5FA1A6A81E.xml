@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="195D0806-E9F9-39AE-4DFB-1E5FA1A6A81E" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="OPSYSTEM_ROLES">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>OPSYSTEM_ROLES</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="82B4A39A-DDD4-BD93-0F0F-0383C3FCFC21">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM_ROLES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>OPSYSTEM_ROLES_ID_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>OPSYSTEM_ROLES_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="NAME" id="B1EE5A10-F356-4219-D009-1783C230D23E">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM_ROLES</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESC_ROLE" id="11FBBEBC-6413-FF2A-65B1-B7B0E6CC90B1">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM_ROLES</sourceObjSchema>
+<sourceObjName>DESC_ROLE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0661B861-B618-E1FD-A81D-5812F51618AF" name="OPSYSTEM_ROLES_PK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>OPSYSTEM_ROLES_PK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82B4A39A-DDD4-BD93-0F0F-0383C3FCFC21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C278D3E-3114-F52D-4972-F95E56787BD8" name="OPSYSTEM_ROLES_NAME_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>OPSYSTEM_ROLES_NAME_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1EE5A10-F356-4219-D009-1783C230D23E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="07F1B7A9-CD56-1043-A9A9-65B07C3032B2" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="OPSYSTEM_ROLES_NAME_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>OPSYSTEM_ROLES_NAME_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1EE5A10-F356-4219-D009-1783C230D23E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A1E4DA2-D555-2E20-6C11-CB36996BD0BA" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="OPSYSTEM_ROLES_PK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>OPSYSTEM_ROLES_PK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82B4A39A-DDD4-BD93-0F0F-0383C3FCFC21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

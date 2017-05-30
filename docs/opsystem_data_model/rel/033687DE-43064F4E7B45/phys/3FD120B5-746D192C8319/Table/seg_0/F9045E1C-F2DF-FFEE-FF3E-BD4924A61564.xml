@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="RATES_OPTIONS_LINK" directorySegmentName="seg_0" id="F9045E1C-F2DF-FFEE-FF3E-BD4924A61564">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<schemaObject>5F9B9C80-DDFE-31B7-25D5-3FA9D400707E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0AC3F982-C5FC-9DF0-4438-7DD4E82560B0</segment>
+<tableSpace>2D9D36AA-BB43-A42C-8772-963B8A243ABA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="OPTION_ID" id="0D90A02F-2775-0EB2-171A-3E601625CAF7">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RATE_ID" id="35D55A37-D73E-A75D-799B-2FAD3979B4B8">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_TARIFFS_OPTIONS_LINK" id="ADD0DF47-922B-B8A4-B273-31EDC00B9EE3">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<schemaObject>5F9B9C80-DDFE-31B7-25D5-3FA9D400707E</schemaObject>
+<segment>80DA1CD4-0F74-C827-0F86-051588BCA291</segment>
+<tableSpace>2D9D36AA-BB43-A42C-8772-963B8A243ABA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_OPTIONS_RATES_OPTIONS_LINK" id="0E2A3BA1-7758-34DB-30DA-B2D5D4D5B7C6">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_RATES_RATES_OPTIONS_LINK" id="E9578428-8F1D-B16D-850B-97E57E071291">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_RATES_OPTIONS_LINK" id="E6050769-570C-4C23-8D5A-F6676FE2C1C8">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<segment>80DA1CD4-0F74-C827-0F86-051588BCA291</segment>
+<tableSpace>2D9D36AA-BB43-A42C-8772-963B8A243ABA</tableSpace>
+<existingIndex>ADD0DF47-922B-B8A4-B273-31EDC00B9EE3</existingIndex>
+<indexSegment>80DA1CD4-0F74-C827-0F86-051588BCA291</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * Created by ruslbard on 09.04.2017.
@@ -48,9 +49,16 @@ public class DataContractsController {
 
     @RequestMapping(value = "/common/getContractDetail", produces = "application/json")
     public @ResponseBody
-    DTOContractDetail getContractDetail(){
+    DTOContractDetail getContractDetailByCommonUsser(){
 
         return contractService.getContractDetailByPhoneNumber(getPrincipal().getUsername());
+    }
+
+    @RequestMapping(value = "/operator/getContractDetail", produces = "application/json")
+    public @ResponseBody
+    DTOContractDetail getContractDetailByOperator(@RequestParam("id") long contractId){
+
+        return contractService.getContractDetail(contractId);
     }
 
     @RequestMapping(value = "/common/changeContractRateTo", method = RequestMethod.PUT, consumes = "application/json")
@@ -59,16 +67,44 @@ public class DataContractsController {
         contractService.changeContractRateTo(getPrincipal().getUsername(), id);
     }
 
+    @RequestMapping(value = "/operator/changeContractRateTo", method = RequestMethod.PUT, consumes = "application/json")
+    public void changeContractRateTo(@RequestBody Map map){
+
+        long contractId = ((Integer)map.get("contractId")).longValue();
+        long optionId = ((Integer)map.get("optionId")).longValue();
+
+        contractService.changeContractRateTo(contractId, optionId);
+    }
+
     @RequestMapping(value = "/common/addContractOption", method = RequestMethod.PUT, consumes = "application/json")
-    public void addContractOption(@RequestBody long optionId){
+    public void addContractOptionByCommonUser(@RequestBody long optionId){
 
         contractService.addOption(getPrincipal().getUsername(), optionId);
     }
 
     @RequestMapping(value = "/common/removeContractOption", method = RequestMethod.PUT, consumes = "application/json")
-    public void removeContractOption(@RequestBody long optionId){
+    public void removeContractOptionByCommonUser(@RequestBody long optionId){
 
         contractService.removeOption(getPrincipal().getUsername(), optionId);
+    }
+
+    @RequestMapping(value = "/operator/addContractOption", method = RequestMethod.PUT, consumes = "application/json")
+//    public void addContractOptionByOperator(@RequestBody long contractId, @RequestBody long optionId){
+    public void addContractOptionByOperator(@RequestBody Map map){
+
+        long contractId = ((Integer)map.get("contractId")).longValue();
+        long optionId = ((Integer)map.get("optionId")).longValue();
+
+        contractService.addOption(contractId, optionId);
+    }
+
+    @RequestMapping(value = "/operator/removeContractOption", method = RequestMethod.PUT, consumes = "application/json")
+    public void removeContractOptionByOperator(@RequestBody Map map){
+
+        long contractId = ((Integer)map.get("contractId")).longValue();
+        long optionId = ((Integer)map.get("optionId")).longValue();
+
+        contractService.removeOption(contractId, optionId);
     }
 
     @RequestMapping(value = "/operator/blockContract", method = RequestMethod.PUT, consumes = "application/json")

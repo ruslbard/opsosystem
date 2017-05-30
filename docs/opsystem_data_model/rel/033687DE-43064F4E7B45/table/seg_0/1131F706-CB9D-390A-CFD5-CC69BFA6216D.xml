@@ -1,0 +1,203 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1131F706-CB9D-390A-CFD5-CC69BFA6216D" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PERSONS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PERSONS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CD9002D9-BC04-1714-3026-1AC859F58158">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRSTNAME" id="0E9535A7-F5C4-1021-F7C2-6BDBCFF65A83">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>FIRSTNAME</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LASTNAME" id="6988474C-D67F-0BF2-6BE4-7B54573CCB36">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>LASTNAME</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTHDATE" id="A38B6D10-53F5-FDD8-B1E9-7185FAD0F9AA">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>BIRTHDATE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASS_SERIAS" id="BF175CBE-1EE5-0931-E6B8-7645CCAA7CAD">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>PASS_SERIAS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4 CHAR</dataTypeSize>
+<ownDataTypeParameters>4 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASS_NUMBER" id="11582D93-91A6-ACBC-CF1B-43C9DD781E95">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>PASS_NUMBER</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASS_ISSUED_BY" id="7518692C-48C8-730D-B7FB-4D018023F2C7">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>PASS_ISSUED_BY</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASS_ISSUED_DATE" id="0E5DF1EA-880E-D6FC-0E13-B67CCA1B06DA">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>PASS_ISSUED_DATE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="4F3BE4CC-6DF6-24F3-37FC-F99B9FFCBC60">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PERSONS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<constraintName>ABONENTS_EMAIL_CHK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12c" definition="EMAIL LIKE &apos;%@%&apos;"/>
+</checkConstraint>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D220F7F1-64E0-EDE3-2EEC-E8D305095802" name="PK_PERSONS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_PERSONS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD9002D9-BC04-1714-3026-1AC859F58158"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8DB8134-21FD-0BD9-79C1-083F5EEFEC0B" name="ABONENTS_PASS_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>ABONENTS_PASS_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF175CBE-1EE5-0931-E6B8-7645CCAA7CAD"/>
+<colUsage columnID="11582D93-91A6-ACBC-CF1B-43C9DD781E95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15034E97-35F2-1A3D-1136-CF3F1160EB5C" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="ABONENTS_PASS_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>ABONENTS_PASS_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF175CBE-1EE5-0931-E6B8-7645CCAA7CAD"/>
+<colUsage columnID="11582D93-91A6-ACBC-CF1B-43C9DD781E95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="90466C54-32EF-9571-CAC9-DC16043E7DA0" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_CLIENTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_CLIENTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD9002D9-BC04-1714-3026-1AC859F58158"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

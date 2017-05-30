@@ -114,6 +114,11 @@ public class ContractServiceImpl implements ContractService {
         return contractsDetails;
     }
 
+    public DTOContractDetail getContractDetail(long contractId) {
+        Contract contract = contractRepository.findOne(contractId);
+        return ContractServiceImpl.dtoContractDetailFactory(contract);
+    }
+
     public Collection<DTOContractDetail> getContractsDetailByPersonId(long id) {
 
         Collection<Contract> contracts = contractRepository.findAllByPersonId(id);
@@ -138,6 +143,13 @@ public class ContractServiceImpl implements ContractService {
         contractRepository.save(contract);
     }
 
+    public void changeContractRateTo(long contractId, long newRateId) {
+        Contract contract = contractRepository.findOne(contractId);
+        contract.setRate(rateRepository.findOne(newRateId));
+        contract.setOptions(new ArrayList<Option>(0));
+        contractRepository.save(contract);
+    }
+
     public void addOption(String accountLogin, long optionId){
         Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
         Option option = optionRepository.findOne(optionId);
@@ -147,6 +159,20 @@ public class ContractServiceImpl implements ContractService {
 
     public void removeOption(String accountLogin, long optionId){
         Contract contract = contractRepository.findOneByPhoneNumberPhone(accountLogin);
+        Option option = optionRepository.findOne(optionId);
+        contract.getOptions().remove(option);
+        contractRepository.save(contract);
+    }
+
+    public void addOption(long contractId, long optionId) {
+        Contract contract = contractRepository.findOne(contractId);
+        Option option = optionRepository.findOne(optionId);
+        contract.getOptions().add(option);
+        contractRepository.save(contract);
+    }
+
+    public void removeOption(long contractId, long optionId) {
+        Contract contract = contractRepository.findOne(contractId);
         Option option = optionRepository.findOne(optionId);
         contract.getOptions().remove(option);
         contractRepository.save(contract);
@@ -175,4 +201,5 @@ public class ContractServiceImpl implements ContractService {
         contract.setIsBlocked(null);
         contractRepository.save(contract);
     }
+
 }

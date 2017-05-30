@@ -5,8 +5,7 @@
 
     <div class="container">
         <div class="well">EDIT OPTION</div>
-        <div>
-            <span class="has-error" id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form class="option-edit-form" id="${option.id}">
             <div class="form-group">

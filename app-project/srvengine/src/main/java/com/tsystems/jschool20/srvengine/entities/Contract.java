@@ -1,5 +1,7 @@
 package com.tsystems.jschool20.srvengine.entities;
 
+import com.tsystems.jschool20.srvengine.dtos.DTOContract;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
@@ -87,4 +89,5 @@ public class Contract implements Serializable {
     public void setIsBlocked(String isBlocked) {
         this.isBlocked = isBlocked;
     }
+
 }

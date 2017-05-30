@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BB021C5B-9257-478F-F894-6440EB54772C" containerWithKeyObject="A91927F9-E081-ECC4-A3CF-302DDE1EA7A9" localFKIndex="30987B6F-26B6-1C16-26BE-B4F5EADCE898" name="CONTRACTS_OPTIONS_OPTIONS_FK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>CONTRACTS_OPTIONS_OPTIONS_FK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<referredTableLongName>OPSYSTEM.OPTIONS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>14B1657B-0E59-D4E9-6424-F5A41579144E</referredTableID>
+<keyObject>F0E1136F-9E32-4D74-4DDC-C4DC63D976DD</keyObject>
+<referredKeyID>F0E1136F-9E32-4D74-4DDC-C4DC63D976DD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

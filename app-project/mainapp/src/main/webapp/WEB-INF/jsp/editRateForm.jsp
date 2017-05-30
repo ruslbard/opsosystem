@@ -5,8 +5,7 @@
 
     <div class="container">
         <div class="well">EDIT RATE</div>
-        <div>
-            <span class="has-error" id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form>
             <div class="form-group">

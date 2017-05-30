@@ -52,12 +52,12 @@ $(document).ready(function(){
     editOption = function(){
 
             optionId = $(this).attr("id");
-            window.location.href = "/mainapp/showEditOptionForm?"
+            window.location.href = "/mainapp/operator/showEditOptionForm?"
             + "id=" + optionId;
     };
 
     var addNewOption = function () {
-        window.location.href = "/mainapp/showAddNewOptionForm"
+        window.location.href = "/mainapp/operator/showAddNewOptionForm"
     }
     $("input.btn.btn-success#addNewOptionButton").click(addNewOption);
 });

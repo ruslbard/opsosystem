@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="CONTRACTS_ID_SEQ" directorySegmentName="seg_0" id="73377BE9-8DB9-FFFF-3EEF-E7F642E96813">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>CONTRACTS_ID_SEQ</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:54 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>9999999999</maxValue>
+<minValue>0</minValue>
+<order>YES</order>
+<user>EF74B32D-4C2B-3DB5-FDF9-0009E1AD7223</user>
+</SequenceOraclev10g>

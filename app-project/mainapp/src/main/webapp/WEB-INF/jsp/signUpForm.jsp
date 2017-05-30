@@ -5,8 +5,7 @@
 
     <div class="container">
         <div class="well">SIGN UP</div>
-        <div class="has-error has-feedback">
-            <span id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form role="form" class="addAccount">
             <div class="form-group">

@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2A99E408-5D9C-6C83-CE07-35433369D616" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PHONE_NUMBERS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PHONE_NUMBERS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="231CE70F-D3EF-3C2D-1E65-D453C03020D3">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PHONE_NUMBERS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>PHONE_NUMBERS_ID_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>PHONE_NUMBERS_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="PHONE_NUMBER" id="F3388FCF-D2DA-2ABB-8FDB-A9914641B299">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PHONE_NUMBERS</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISSUED" id="535069C4-58CC-C60D-DC16-B5C824FCA93F">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PHONE_NUMBERS</sourceObjSchema>
+<sourceObjName>ISSUED</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTRACT_ID" id="B7A5F14C-CE1E-2D9A-2346-394F0CD83C75">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>PHONE_NUMBERS</sourceObjSchema>
+<sourceObjName>CONTRACT_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E769E61E-CEAA-0D83-FBDC-CB494ABE88CC" name="PK_PHONE_NUMBERS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_PHONE_NUMBERS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="231CE70F-D3EF-3C2D-1E65-D453C03020D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7D295C24-3226-1C66-3786-191EF32CDFDA" name="TC_PHONE_NUMBERS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>TC_PHONE_NUMBERS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3388FCF-D2DA-2ABB-8FDB-A9914641B299"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="057ACC85-122D-8ADA-ED55-8E991C739E0E" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_PHONE_NUMBERS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_PHONE_NUMBERS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="231CE70F-D3EF-3C2D-1E65-D453C03020D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

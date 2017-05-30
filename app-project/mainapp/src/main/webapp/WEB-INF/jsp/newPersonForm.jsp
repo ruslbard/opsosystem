@@ -5,8 +5,7 @@
 
     <div class="container">
         <div class="well">REGISTER NEW PERSON</div>
-        <div class="has-error has-feedback">
-            <span id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form>
             <h3>Person Info</h3>

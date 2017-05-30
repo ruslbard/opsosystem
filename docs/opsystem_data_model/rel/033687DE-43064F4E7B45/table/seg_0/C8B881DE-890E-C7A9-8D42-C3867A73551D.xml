@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C8B881DE-890E-C7A9-8D42-C3867A73551D" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="RATES_PRICES_HISTORY">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>RATES_PRICES_HISTORY</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8CED419D-017B-CE78-C4DD-6AFCE3883EB6">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>RATES_PRICES_HISTORY</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RATE_ID" id="9CCD62D8-8A99-73BD-2694-07998CCA5BFC">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>RATES_PRICES_HISTORY</sourceObjSchema>
+<sourceObjName>RATE_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F887D50E-623B-A7C1-F0D8-4A289B1C42A2" referredColumn="079D4032-BC7C-15D1-A1A3-223D5C49BD56"/>
+</associations>
+</Column>
+<Column name="DATE" id="2E2F0D26-B698-0CB7-070C-3C0DE7F216BB">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>RATES_PRICES_HISTORY</sourceObjSchema>
+<sourceObjName>DATE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="BBF8B9EC-7819-564E-E011-428B1BA26B5D">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>RATES_PRICES_HISTORY</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8BCC5360-9041-D4BF-9A15-D387111ACB52" name="PK_RATES_PRICES_HISTORY">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_RATES_PRICES_HISTORY</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CCD62D8-8A99-73BD-2694-07998CCA5BFC"/>
+<colUsage columnID="8CED419D-017B-CE78-C4DD-6AFCE3883EB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="202C3934-2A1D-2797-14E7-E1DA88FED2B7" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_TARIFFS_PRICES_HISTORY">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_TARIFFS_PRICES_HISTORY</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CCD62D8-8A99-73BD-2694-07998CCA5BFC"/>
+<colUsage columnID="8CED419D-017B-CE78-C4DD-6AFCE3883EB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1B78D0F-80C2-5557-2D89-CC50BF74FBB2" name="FK_RATES_PRICES_HISTORY">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CCD62D8-8A99-73BD-2694-07998CCA5BFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -5,8 +5,7 @@
 
     <div class="container">
         <div class="well">CREATE NEW CONTRACT</div>
-        <div class="has-error has-feedback">
-            <span id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form>
             <h3>Person Info</h3>

@@ -4,8 +4,7 @@
 <section>
     <div class="container">
         <div class="well">MANAGE OPTIONS FOR ${account.login}</div>
-        <div class="alert alert-danger">
-            <span class="form-control" id="errorMessage"></span>
+        <div class="alert alert-danger" id="errorMessage">
         </div>
         <form role="form-inline" class="allOptionsList">
             <div class="form-group person-info" id="${account.login}">

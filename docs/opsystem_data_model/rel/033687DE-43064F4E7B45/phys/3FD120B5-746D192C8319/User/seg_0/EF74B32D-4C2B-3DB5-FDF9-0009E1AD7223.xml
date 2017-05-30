@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="OPSYSTEM" directorySegmentName="seg_0" id="EF74B32D-4C2B-3DB5-FDF9-0009E1AD7223">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjName>OPSYSTEM</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:54 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<schemaObject>5F9B9C80-DDFE-31B7-25D5-3FA9D400707E</schemaObject>
+<defTableSpace>2D9D36AA-BB43-A42C-8772-963B8A243ABA</defTableSpace>
+<privileges>ALTER ANY TABLE, CREATE TABLE, DROP TABLESPACE, CREATE VIEW, CREATE TYPE, ALTER ANY TRIGGER, CREATE ROLE, DROP ANY SYNONYM, CREATE SYNONYM, DROP ANY TRIGGER, UPDATE ANY TABLE, DROP ANY TABLE, CREATE ANY TABLE, DROP ANY TYPE, SELECT ANY SEQUENCE, CREATE TABLESPACE, CREATE ANY TYPE, CREATE ANY TRIGGER, CREATE TRIGGER, SELECT ANY TABLE, CREATE USER, CREATE SESSION, CREATE SEQUENCE, DROP ANY VIEW, CREATE ANY VIEW, DROP USER</privileges>
+<profile>DEFAULT</profile>
+<temptableSpace>A5DDB17C-D5DE-D03C-C15A-0993002A41D9</temptableSpace>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="7E7FF139-12B3-9CB8-5170-CC7C037AD612">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:54 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<tableSpace>2D9D36AA-BB43-A42C-8772-963B8A243ABA</tableSpace>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

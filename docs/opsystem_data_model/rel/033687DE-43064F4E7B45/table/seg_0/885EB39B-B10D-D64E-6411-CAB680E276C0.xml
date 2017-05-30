@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="885EB39B-B10D-D64E-6411-CAB680E276C0" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="ACCOUNTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>ACCOUNTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0A7953DE-7E2D-D48C-1AA2-2009842374A2">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>ACCOUNTS_ID_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>ACCOUNTS_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="LOGIN" id="20B7A947-1D2F-2CAC-23FF-5F4295B3082F">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>LOGIN</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PWD" id="647486F7-84FC-FCAD-29EC-96DAFEAA5CE9">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>PWD</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROLE_ID" id="4B3ECFA4-77B7-1554-F811-25190FAF9E93">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>ROLE_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F3FF87CC-C54F-AFA9-A2D0-869841285B89" referredColumn="82B4A39A-DDD4-BD93-0F0F-0383C3FCFC21"/>
+</associations>
+</Column>
+<Column name="PERSON_ID" id="AF777942-D1B3-31D3-EB8A-23C411C6D649">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>PERSON_ID</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:55 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7167FBBC-8DD4-C661-39E6-B6C9CDE6AB72" referredColumn="CD9002D9-BC04-1714-3026-1AC859F58158"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="97B09811-E888-EBEB-237E-A027026A5F66" name="PK_ACCOUNTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_ACCOUNTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A7953DE-7E2D-D48C-1AA2-2009842374A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8998E8A-120C-5E11-F973-7A2124DAEBC7" name="ACCOUNTS_LOGIN_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>ACCOUNTS_LOGIN_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20B7A947-1D2F-2CAC-23FF-5F4295B3082F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C4B92E7-D3A5-C6C2-D936-1F1DF7EE47DB" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="ACCOUNTS_LOGIN_UK">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>ACCOUNTS_LOGIN_UK</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20B7A947-1D2F-2CAC-23FF-5F4295B3082F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56928955-4840-96CF-F225-0EDF4AD6CC0F" schemaObject="5F9B9C80-DDFE-31B7-25D5-3FA9D400707E" name="PK_ACCOUNTS">
+<sourceConnName>OPSYSTEM</sourceConnName>
+<sourceObjSchema>OPSYSTEM</sourceObjSchema>
+<sourceObjName>PK_ACCOUNTS</sourceObjName>
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:56 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A7953DE-7E2D-D48C-1AA2-2009842374A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F06A8524-9CBC-94EF-6496-295829958281" name="ACCOUNTS_PERSONS_FK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF777942-D1B3-31D3-EB8A-23C411C6D649"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F6BE326D-DE38-A2A7-93CE-E2379706F707" name="ACCOUNTS_ROLES_FK">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 20:04:57 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B3ECFA4-77B7-1554-F811-25190FAF9E93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

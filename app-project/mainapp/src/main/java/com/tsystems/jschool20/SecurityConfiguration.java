@@ -36,6 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/getAllRates").access("hasRole('CLIENT') or hasRole('OPERATOR')" )
                 .antMatchers("/getAllOptions").access("hasRole('CLIENT') or hasRole('OPERATOR')" )
+                .antMatchers("/getAllRateOptions").access("hasRole('CLIENT') or hasRole('OPERATOR')" )
                 .antMatchers("/common/**").access("hasAuthority('ROLE_CLIENT')")
                 .antMatchers("/operator/**").access("hasAuthority('ROLE_OPERATOR')")
                 .antMatchers("/admin/**").access("hasAuthority('ROLE_ADMIN')")

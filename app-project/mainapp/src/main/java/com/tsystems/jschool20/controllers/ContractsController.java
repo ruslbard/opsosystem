@@ -1,6 +1,8 @@
 package com.tsystems.jschool20.controllers;
 
+import com.tsystems.jschool20.srvengine.api.ContractService;
 import com.tsystems.jschool20.srvengine.api.PersonService;
+import com.tsystems.jschool20.srvengine.dtos.DTOContractDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,8 @@ public class ContractsController {
 
     @Autowired
     private PersonService personService;
+    @Autowired
+    private ContractService contractService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/operator/showNewContractForm")
     public String getNewContractForm(Model model, @RequestParam ("id") long id){
@@ -26,6 +30,14 @@ public class ContractsController {
 
     @RequestMapping(value = "/operator/showAllContractsForm")
     public String showAllContractsForm(){
+
         return "allContractsForm";
+    }
+
+    @RequestMapping(value = "/operator/showEditContractForm")
+    public String showEditContractForm(Model model, @RequestParam("id") long contractId){
+        DTOContractDetail dtoContractDetail = contractService.getContractDetail(contractId);
+        model.addAttribute("contractDetail", dtoContractDetail);
+        return "editContractForm";
     }
 }

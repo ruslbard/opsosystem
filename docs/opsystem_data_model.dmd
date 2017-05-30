@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="opsystem_data_model" id="F0EF135A-F776-38F2-ECAA-107E832A33BD" version="3.5">
+<createdBy>ruslbard</createdBy>
+<createdTime>2017-05-29 19:59:35 UTC</createdTime>
+<ownerDesignName>opsystem_data_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F0EF135A-F776-38F2-ECAA-107E832A33BD</designId>
+</OSDM_Design>
