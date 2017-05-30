@@ -28,7 +28,7 @@ public class OptionServiceImpl implements OptionService {
         this.rateService = rateService;
     }
 
-    private static Option entityFactory(Option entity, DTOOption dto, OptionRepository optionRepository){
+    private static void entityFactory(Option entity, DTOOption dto, OptionRepository optionRepository){
 
         entity.setId(dto.getId());
         entity.setPrice(dto.getPrice());
@@ -62,7 +62,6 @@ public class OptionServiceImpl implements OptionService {
             entity.setExcludeOptions(null);
         }
 
-        return entity;
     }
 
     @Transactional
@@ -137,11 +136,12 @@ public class OptionServiceImpl implements OptionService {
 
     public void saveOption(DTOOption dto) {
 
-        Option option = optionRepository.getOne(dto.getId());
+        Option option = optionRepository.findOne(dto.getId());
 
         if (option != null){
+            OptionServiceImpl.entityFactory(option, dto, optionRepository);
 
-            optionRepository.save(OptionServiceImpl.entityFactory(option, dto, optionRepository));
+            optionRepository.save(option);
         }
     }
 }

@@ -23,13 +23,13 @@ public class DataPersonsController {
         return personService.addNewPerson(dto);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/getPerson", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, path = "/operator/getPerson", produces = "application/json")
     public DTOPerson getPersonById(@RequestParam ("id") long id){
 
         return personService.getPersonById(id);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/getAllPersons", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, path = "/operator/getAllPersons", produces = "application/json")
     public Collection<DTOPerson> getAllPersons(){
 
         return personService.getAllPersons();

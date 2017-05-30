@@ -10,7 +10,7 @@ $(document).ready(function(){
     var editPerson;
 
     $.ajax({
-        url: "/mainapp/getAllPersons",
+        url: "/mainapp/operator/getAllPersons",
         success: function (data) {
 
             rates_from_server = data;
@@ -63,7 +63,7 @@ $(document).ready(function(){
     };
 
     var addNewPerson = function () {
-        window.location.href = "/mainapp/showAddNewPersonForm"
+        window.location.href = "/mainapp/operator/showAddNewPersonForm"
     }
 
 

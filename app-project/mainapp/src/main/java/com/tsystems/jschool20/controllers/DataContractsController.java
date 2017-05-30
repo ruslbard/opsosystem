@@ -33,6 +33,11 @@ public class DataContractsController {
         contractService.saveNewContract(dto);
     }
 
+    @RequestMapping(value = "/operator/saveEditContract", method = RequestMethod.POST, consumes = "application/json")
+    public void saveEditContract(@RequestBody DTOContract dtoEditContract){
+        contractService.saveEditContract(dtoEditContract);
+    }
+
     @RequestMapping(value = "/common/getContractDetailForPerson", produces = "application/json")
     public @ResponseBody
     Collection<DTOContractDetail> getContractDetailForPerson(@RequestParam ("id") long id){

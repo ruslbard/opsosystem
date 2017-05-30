@@ -16,4 +16,5 @@ public interface PhoneNumberRepository extends JpaRepository<PhoneNumber, Long> 
     @Query("SELECT p FROM PhoneNumber p WHERE ISSUED <> 'Y'")
     List<PhoneNumber> findAll();
     PhoneNumber findOneByPhone(String phone);
+    PhoneNumber findOneByPhoneAndIsIssued(String login, char isIssued);
 }

@@ -2,12 +2,13 @@ $(document).ready(function(){
 
         var errorMessageSpan = $("#errorMessage");
         errorMessageSpan.text("");
+        errorMessageSpan.hide();
 
         var parent_element = $(".options_list").first();
         var options = [];
         var options_from_server;
         $.ajax({
-            url: "/mainapp/operator/getAllOptions",
+            url: "/mainapp/getAllOptions",
             success: function (data) {
 
                 options_from_server = data;
@@ -27,16 +28,19 @@ $(document).ready(function(){
         var saveEditRate = function(){
 
             errorMessageSpan.text("");
+            errorMessageSpan.hide();
 
 
             if ($("#rateTitle").val().length === 0){
 
                 $("#rateTitle").addClass("has-error");
                 errorMessageSpan.text("Enter rate title.");
+                errorMessageSpan.show();
             }
             else if ($("#ratePrice").val() < 0){
 
                 errorMessageSpan.text("Enter valid price.");
+                errorMessageSpan.show();
             }
             else {
 
@@ -54,6 +58,7 @@ $(document).ready(function(){
                 });
 
                 errorMessageSpan.text("");
+                errorMessageSpan.show();
 
 
 
@@ -69,6 +74,7 @@ $(document).ready(function(){
                     },
                     error: function (error) {
                         errorMessageSpan.text("Error. Please, contact with administrator.");
+                        errorMessageSpan.show();
                     }
                 });
             };

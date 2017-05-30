@@ -34,6 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.authorizeRequests()
+                .antMatchers("/addNewCommonAccount").permitAll()
                 .antMatchers("/getAllRates").access("hasRole('CLIENT') or hasRole('OPERATOR')" )
                 .antMatchers("/getAllOptions").access("hasRole('CLIENT') or hasRole('OPERATOR')" )
                 .antMatchers("/getAllRateOptions").access("hasRole('CLIENT') or hasRole('OPERATOR')" )

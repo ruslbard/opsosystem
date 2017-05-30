@@ -223,15 +223,16 @@ $(document).ready(function(){
         }
     };
 
-    var saveNewContract = function (){
+    var saveEditContract = function (){
 
         errorMessageSpan.hide();
 
         var contract = {};
 
-        contract.personId = $(".person-info").attr("id");
+        contract.id = contractDetailFromServer.id;
+        contract.personId = contractDetailFromServer.person.id;
         contract.rateId = $("#allRatesSelect").children(":selected").attr("id");
-        contract.phoneNumberId = $("#allPhoneNumbersSelect").children(":selected").attr("id");
+        contract.phoneNumberId = contractDetailFromServer.phoneNumber.id;
 
         var checkedOptionsForSelectedRate = $("#allOptionsOfSelectedRate").find("input:checked");
         contract.optionsIds = [];
@@ -243,12 +244,12 @@ $(document).ready(function(){
 
         $.ajax({
 
-            url:"/mainapp/saveNewContract",
+            url:"/mainapp/operator/saveEditContract",
             data: JSON.stringify(contract),
             contentType: "application/json",
             type: "POST",
             success: function (data) {
-                  window.location.href = "/mainapp/showAllPersonsForm";
+                  window.location.href = "/mainapp/operator/showAllContractsForm";
             },
             error: function (error) {
                   errorMessageSpan.text(error.responseText);
@@ -257,5 +258,5 @@ $(document).ready(function(){
         });
     };
 
-    $("#saveContractButton").click(saveNewContract);
+    $("#saveContractButton").click(saveEditContract);
 });

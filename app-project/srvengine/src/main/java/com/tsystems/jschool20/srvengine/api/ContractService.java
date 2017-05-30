@@ -11,6 +11,7 @@ import java.util.Collection;
 public interface ContractService {
 
     DTOContract saveNewContract(DTOContract newContract);
+    DTOContract saveEditContract(DTOContract saveEditContract);
     Collection<DTOContractDetail> getAllContracts();
     Collection<DTOContractDetail> getContractsDetailByPersonId(long id);
     DTOContractDetail getContractDetailByPhoneNumber(String phoneNumber);

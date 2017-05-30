@@ -26,7 +26,7 @@ $(document).ready(function(){
             contentType: "application/json",
             type: "POST",
             success: function (data) {
-                window.location.href = "/mainapp/showAllPersonsForm";
+                window.location.href = "/mainapp/operator/showAllPersonsForm";
             },
             error: function (error) {
                   errorMessageSpan.text("Error. Please, contact with administrator.");

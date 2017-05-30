@@ -101,7 +101,25 @@ public class ContractServiceImpl implements ContractService {
         contract.getPhoneNumber().setIsIssued('Y');
         contract.getPhoneNumber().setContract(contract);
 
+
+
         return dto;
+    }
+
+    public DTOContract saveEditContract(DTOContract saveEditContract) {
+        logger.info("Try save new Contract in saveNewContract.");
+
+        Contract contract = contractRepository.findOne(saveEditContract.getId());
+
+        contract.setRate(rateRepository.findOne(saveEditContract.getRateId()));
+        Collection<Option> newOptionsSet = new ArrayList<Option>(saveEditContract.getOptionsIds().size());
+        for (Long optionId : saveEditContract.getOptionsIds()) {
+            Option option = optionRepository.findOne(optionId);
+            newOptionsSet.add(option);
+        }
+        contract.setOptions(newOptionsSet);
+        contractRepository.save(contract);
+        return saveEditContract;
     }
 
     public Collection<DTOContractDetail> getAllContracts() {

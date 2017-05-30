@@ -25,7 +25,7 @@ public class DataPhoneNumbersController {
     }
 
     @ResponseBody
-    @RequestMapping(method = RequestMethod.GET, path = "getAllPhoneNumbers", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, path = "/operator/getAllPhoneNumbers", produces = "application/json")
     public Collection<DTOPhoneNumber> getAllPhoneNumbers(){
 
         return phoneNumbersService.getAllPhoneNumbers();

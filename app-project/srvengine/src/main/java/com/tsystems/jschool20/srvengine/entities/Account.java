@@ -20,6 +20,7 @@ public class Account implements Serializable {
     }
 
     @Id
+    @Column(name = "ID")
     @GeneratedValue(generator = "account_sequence")
     @SequenceGenerator(name = "account_sequence", sequenceName = "ACCOUNTS_ID_SEQ", allocationSize = 1)
     public long getId() {

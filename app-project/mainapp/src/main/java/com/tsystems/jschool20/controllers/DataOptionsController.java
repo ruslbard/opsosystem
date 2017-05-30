@@ -42,7 +42,8 @@ public class DataOptionsController {
         return optionService.getOption(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "saveEditOption", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.PUT, path = "/operator/saveEditOption", consumes = "application/json", produces = "application/json")
+    @ResponseBody
     public DTOOption saveEditOption(@RequestBody DTOOption dto){
         optionService.saveOption(dto);
         return dto;

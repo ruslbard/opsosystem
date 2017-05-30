@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     $.ajax({
 
-        url: "/mainapp/getPerson",
+        url: "/mainapp/operator/getPerson",
         type: "GET",
         data:{
             id:$(".person-info").attr("id")
@@ -53,6 +53,7 @@ $(document).ready(function(){
             ratesSelect.append($(rates.join("")));
 
             ratesSelect.on("change", changeRateSelect);
+            ratesSelect.trigger("change");
 
         },
         error: function (error) {
@@ -61,7 +62,7 @@ $(document).ready(function(){
     });
 
     $.ajax({
-            url: "/mainapp/getAllPhoneNumbers",
+            url: "/mainapp/operator/getAllPhoneNumbers",
             success: function (data) {
 
                 var phoneNumbers = [];
@@ -71,7 +72,7 @@ $(document).ready(function(){
 
                 for (var i = 0; i < phoneNumbersFromServer.length; i++){
 
-                    phoneNumbers[i] = "<option class=\"phone-number-select\" id=\"" + phoneNumbersFromServer[i].id + "\">" + phoneNumbersFromServer[i].phoneNumber + "</option>";
+                    phoneNumbers[i] = "<option class=\"phone-number-select\" id=\"" + phoneNumbersFromServer[i].id + "\">" + phoneNumbersFromServer[i].phone + "</option>";
                 };
 
                 phoneNumbersSelect.append($(phoneNumbers.join("")));
@@ -149,12 +150,12 @@ $(document).ready(function(){
 
         $.ajax({
 
-            url:"/mainapp/saveNewContract",
+            url:"/mainapp/operator/saveNewContract",
             data: JSON.stringify(contract),
             contentType: "application/json",
             type: "POST",
             success: function (data) {
-                  window.location.href = "/mainapp/showAllPersonsForm";
+                  window.location.href = "/mainapp/operator/showAllPersonsForm";
             },
             error: function (error) {
                   errorMessageSpan.text(error.responseText);
